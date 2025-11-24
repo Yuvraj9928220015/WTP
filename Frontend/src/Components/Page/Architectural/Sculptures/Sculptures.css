@@ -1,0 +1,375 @@
+:root {
+    --color-background: #fdfdfd;
+    --color-card-bg: #1A1A1D;
+    --color-text: #EAEAEA;
+    --color-text-muted: #c7c7c7;
+    --color-headings: #1f2937;
+    --color-prag: #4b5563;
+    --radius-large: 16px;
+    --transition-timing: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-duration: 0.5s;
+    --section-gap: 80px;
+    --card-gap: 1.5rem;
+    /* --section-padding: 60px; */
+    --mobile-padding: 20px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.Sculptures {
+    padding-bottom: 50px;
+    background-color: #ffffe3;
+}
+
+.Project_Section {
+    padding: 0px 14px;
+    width: 100%;
+    font-family: var(--font-main);
+    position: relative;
+    min-height: 100vh;
+}
+
+.section-header {
+    padding: 0px;
+    text-align: center;
+    /* margin-bottom: 2rem; */
+}
+
+.Urban-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    line-height: 1.2;
+}
+
+.Urban-prag {
+    text-align: center;
+    color: #ffffffc7;
+    line-height: 1.6;
+}
+
+.project-row {
+    margin-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.Sculptures-Project_Section_title {
+    padding: 40px 0px;
+}
+
+.project-row:last-child {
+    margin-bottom: 0;
+}
+
+.row>[class*="col-"] {
+    display: flex;
+    flex-direction: column;
+}
+
+.Sculptures-project-card {
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    transition: transform var(--transition-duration) var(--transition-timing),
+        box-shadow 0.4s ease;
+    cursor: pointer;
+    width: 100%;
+    flex-grow: 1;
+    min-height: 650px;
+}
+
+.Sculptures-project-card:hover {
+    transform: translateY(-5px);
+}
+
+.image-container {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform var(--transition-duration) var(--transition-timing);
+}
+
+.Sculptures-project-card:hover .image-container img {
+    transform: scale(1.08);
+    border-radius: 8px;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: clamp(20px, 4vw, 40px);
+    background: #00000054;
+    opacity: 0;
+    transition: opacity var(--transition-duration) var(--transition-timing);
+}
+
+.Sculptures-project-card:hover .overlay {
+    opacity: 1;
+}
+
+.image-container:hover img {
+    filter: blur(2px) brightness(0.7);
+    transform: scale(1.05);
+    border-radius: 8px;
+}
+
+.overlay-content {
+    color: var(--color-text);
+    transform: translateY(30px);
+    opacity: 0;
+    transition: transform 0.6s ease 0.1s, opacity 0.6s ease 0.1s;
+    max-height: 80%;
+    overflow-y: auto;
+}
+
+.overlay-content::-webkit-scrollbar {
+    width: 4px;
+}
+
+.overlay-content::-webkit-scrollbar-track {
+    background: #ffffff1a;
+    border-radius: 10px;
+}
+
+.overlay-content::-webkit-scrollbar-thumb {
+    background: #ffffff66;
+    border-radius: 10px;
+}
+
+.Sculptures-project-card:hover .overlay-content {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.overlay-content h3 {
+    font-size: 27px;
+    font-weight: 400;
+    margin-bottom: 8px;
+    line-height: 1.2;
+}
+
+.overlay-content .category {
+    font-size: 20px;
+    margin-bottom: 16px;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.btn-view {
+    padding: 15px 24px;
+    background: #ffffff26;
+    border: 1px solid #ffffff4d;
+    color: var(--color-text);
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    align-self: flex-start;
+    text-decoration: none;
+    font-size: 18px;
+    display: inline-block;
+}
+
+.btn-view a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.btn-view:hover {
+    background-color: #ffffffe6;
+    color: #111;
+    border-color: #ffffffe6;
+    transform: translateY(-2px);
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000e6;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    cursor: pointer;
+    animation: fadeIn 0.3s ease;
+    padding: 20px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.modal-image {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    box-shadow: 0 0 60px #000000cc;
+    cursor: default;
+    animation: zoomIn 0.4s ease;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.modal-close-button {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    background: none;
+    border: none;
+    z-index: 1001;
+    padding: 10px;
+    border-radius: 50%;
+    background: #00000080;
+}
+
+.modal-close-button:hover {
+    transform: scale(1.1);
+    background: #000000b3;
+}
+
+.row {
+    --bs-gutter-x: var(--card-gap);
+    --bs-gutter-y: var(--card-gap);
+}
+
+@media (max-width: 991.98px) {
+    .section-header {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .Urban-prag {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .Sculptures-project-card {
+        min-height: 350px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .Sculptures-project-card {
+        min-height: 320px;
+    }
+
+    .overlay {
+        padding: 20px;
+    }
+
+    .modal-close-button {
+        top: 10px;
+        right: 15px;
+        font-size: 32px;
+    }
+
+    .overlay-content h3 {
+        font-size: 35px;
+    }
+
+    .modal-image {
+        max-width: 95vw;
+        max-height: 85vh;
+    }
+
+    #Sculptures-container-Project-card {
+        min-height: 900px;
+        height: 100%;
+    }
+
+}
+
+@media (max-width: 575.98px) {
+    .section-header {
+        margin-bottom: 25px;
+    }
+
+    .Urban-title {
+        font-size: 24px;
+        margin-bottom: 8px;
+    }
+
+    .Urban-prag {
+        font-size: 14px;
+    }
+
+    .Sculptures-project-card {
+        min-height: 300px;
+    }
+
+    #Sculptures-container-Project-card {
+        min-height: 900px;
+        height: 100%;
+    }
+
+    .overlay {
+        padding: 15px;
+    }
+
+    .overlay-content h3 {
+        font-size: 26px;
+    }
+
+    .overlay-content .category {
+        font-size: 11px;
+        margin-bottom: 12px;
+    }
+
+    .btn-view {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+}
+
+
+.Crocodile {
+    margin-top: 40px;
+}
+
+.Crocodile-Image img {
+    width: 100%;
+}

@@ -1,0 +1,324 @@
+/* Main Content */
+.Sustainability {
+    background-color: #ffffef
+}
+
+.main-content {
+    padding: 20px 0;
+}
+
+.Sustainability-section {
+    width: 100%;
+    border-radius: 20px;
+    margin-bottom: 40px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+#Sustainability-section {
+    border-radius: 20px;
+    margin-bottom: 40px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.Sustainability-section:hover {
+    transform: translateY(-5px);
+}
+
+.Sustainability-prag-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Sustainability-prag {
+    letter-spacing: 1px;
+    width: 40%;
+}
+
+.Sustainability-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    padding: 0px 20px;
+    align-items: center;
+    min-height: 500px;
+}
+
+.Sustainability-text {
+    padding: 30px;
+}
+
+.Sustainability-text h2 {
+    font-size: 37px;
+    margin-bottom: 30px;
+    color: #2e302e;
+    font-weight: 600;
+}
+
+.Sustainability-text p {
+    margin-bottom: 25px;
+    font-size: 24px;
+    color: #2a2b2a;
+    line-height: 1.8;
+}
+
+.Sustainability-text .highlight {
+    background: linear-gradient(135deg, #4a7c59 0%, #2c5530 100%);
+    color: white;
+    padding: 25px;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    margin: 30px 0;
+    position: relative;
+}
+
+.Sustainability-text .highlight::before {
+    content: '"';
+    font-size: 4rem;
+    position: absolute;
+    top: -10px;
+    left: 15px;
+    opacity: 0.3;
+}
+
+.Sustainability-image {
+    min-height: 600px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.Sustainability-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, #2c55301a 0%, #4a7c591a 100%);
+}
+
+.Sustainability-section:nth-child(even) .Sustainability-content {
+    grid-template-columns: 1fr 1fr;
+}
+
+.Sustainability-section:nth-child(even) .Sustainability-text {
+    order: 2;
+}
+
+.Sustainability-section:nth-child(even) .Sustainability-image {
+    order: 1;
+}
+
+/* Quote Section */
+.quote-section {
+    background: linear-gradient(135deg, #2c5530 0%, #4a7c59 100%);
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+    margin: 60px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.quote-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/></svg>') repeat;
+    opacity: 0.3;
+}
+
+.quote-section blockquote {
+    font-size: 2rem;
+    font-style: italic;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    line-height: 1.6;
+}
+
+/* Values Section */
+.values-section {
+    padding: 80px 30px;
+    text-align: center;
+}
+
+.values-section h2 {
+    font-size: 3rem;
+    margin-bottom: 60px;
+    color: #2c5530;
+    font-weight: 600;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin: 0 auto;
+}
+
+.value-item {
+    background-color: white;
+    box-shadow: #0000003d 0px 3px 8px;
+    padding: 40px 20px;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.value-item:hover {
+    transform: translateY(-10px);
+}
+
+.value-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #4a7c59 0%, #2c5530 100%);
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: white;
+}
+
+.value-item h3 {
+    font-size: 27px;
+    font-weight: 600;
+    color: #2c5530;
+    margin-bottom: 10px;
+}
+
+.value-item p {
+    color: #5a6c57;
+    letter-spacing: 1px;
+    font-size: 21px;
+}
+
+/* Responsive Design for 992px and below - 2 columns */
+@media screen and (max-width: 992px) {
+    .Sustainability-text h2 {
+        font-size: 30px;
+        margin-bottom: 30px;
+        color: #2e302e;
+        font-weight: 600;
+    }
+
+    .Sustainability-text p {
+        margin-bottom: 25px;
+        font-size: 20px;
+        color: #2a2b2a;
+        line-height: 1.8;
+    }
+
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .values-section {
+        padding: 60px 20px;
+    }
+
+    .values-section h2 {
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+    }
+}
+
+/* Responsive Design for 768px and below */
+@media (max-width: 768px) {
+    .Sustainability-content {
+        grid-template-columns: 1fr;
+    }
+
+    .Sustainability-section:nth-child(even) .Sustainability-content {
+        grid-template-columns: 1fr;
+    }
+
+    .Sustainability-section:nth-child(even) .Sustainability-text {
+        order: 1;
+    }
+
+    .Sustainability-section:nth-child(even) .Sustainability-image {
+        order: 2;
+    }
+
+    .Sustainability-text {
+        padding: 10px;
+    }
+
+    .header h1 {
+        font-size: 2.5rem;
+    }
+
+    .quote-section blockquote {
+        font-size: 1.5rem;
+    }
+
+    .Sustainability-prag {
+        width: 100%;
+    }
+
+    .Sustainability-text h2 {
+        font-size: 30px;
+    }
+
+    .Sustainability-text p {
+        font-size: 20px;
+    }
+
+    .values-grid {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    .values-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .values-section {
+        padding: 40px 15px;
+    }
+
+    .values-section h2 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    .value-item {
+        padding: 30px 15px;
+    }
+
+    .value-item h3 {
+        font-size: 24px;
+    }
+
+    .value-item p {
+        font-size: 18px;
+    }
+
+    .Sustainability-text h2 {
+        font-size: 24px;
+    }
+
+    .Sustainability-text p {
+        font-size: 18px;
+    }
+
+    .Sustainability-text .highlight {
+        padding: 20px;
+        font-size: 1rem;
+    }
+}

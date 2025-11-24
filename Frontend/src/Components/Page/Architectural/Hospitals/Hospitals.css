@@ -1,0 +1,1100 @@
+/* Property Match Section */
+.property-match-section {
+    padding: 80px 20px;
+    background-color: #f8f9fa;
+    position: relative;
+    z-index: 1;
+}
+
+.container-fluid {
+    margin: 0 auto;
+    position: relative;
+}
+
+.property-header {
+    margin-bottom: 60px;
+}
+
+.header-contents {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.main-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    line-height: 1.2;
+}
+
+.highlight-text {
+    color: #c4975f;
+}
+
+.header-description {
+    font-size: 22px;
+    color: #666;
+    line-height: 1.8;
+    width: 50%;
+}
+
+.properties-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: stretch;
+}
+
+.property-card {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 4px 20px #00000014;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+
+.property-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px #0000001f
+}
+
+.property-image-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+}
+
+.featured-property {
+    display: flex;
+    flex-direction: column;
+}
+
+.featured-property .property-image-wrapper {
+    min-height: 550px;
+    height: 100%;
+}
+
+.property-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.property-card:hover .property-image {
+    transform: scale(1.05);
+}
+
+.property-details-overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background: #fffffffa;
+    backdrop-filter: blur(10px);
+    padding: 20px 25px;
+    color: #1a1a1a;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px #0000001f
+}
+
+.property-price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.property-price {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.arrow-btn {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #c4975f;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.arrow-btn:hover {
+    background: #b38850;
+    transform: rotate(45deg);
+}
+
+.arrow-btn svg {
+    stroke: white;
+}
+
+.property-address {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 15px;
+    font-weight: 400;
+}
+
+.property-specs {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.spec-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.spec-value {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.spec-label {
+    font-size: 0.8rem;
+    color: #999;
+}
+
+.property-zip {
+    font-size: 0.85rem;
+    color: #666;
+    margin: 0;
+}
+
+.favorite-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #ffffffe6;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+.favorite-btn:hover {
+    background: white;
+    transform: scale(1.1);
+}
+
+.favorite-btn svg {
+    stroke: #666;
+    transition: all 0.3s ease;
+}
+
+.favorite-btn:hover svg {
+    stroke: #c4975f;
+    fill: #c4975f;
+}
+
+.properties-small-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    height: 100%;
+}
+
+.properties-small-grid .property-card:nth-child(3) {
+    grid-column: span 2;
+}
+
+.small-property {
+    min-height: 240px;
+}
+
+.small-property .property-image-wrapper {
+    height: 100%;
+}
+
+.property-match-section-About {
+    padding: 20px 20px;
+    background-color: #2a2a2a;
+    position: relative;
+    z-index: 1;
+}
+
+.about-content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.about-text-section {
+    display: flex;
+    align-items: center;
+}
+
+.about-text-content {
+    color: #ffffff;
+    padding: 60px 50px;
+    border-radius: 20px;
+}
+
+.about-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    line-height: 1.2;
+    color: #ffffff;
+}
+
+.highlight-text-about {
+    color: #c4975f;
+}
+
+.about-description {
+    font-size: 19px;
+    line-height: 1.8;
+    color: #d1d1d1;
+    margin-bottom: 20px;
+}
+
+.about-description:last-child {
+    margin-bottom: 0;
+}
+
+.about-image-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-image-wrapper {
+    width: 100%;
+    height: 600px;
+    border-radius: 0px 20px 20px 0px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px #00000026;
+}
+
+.about-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.about-image-wrapper:hover .about-image {
+    transform: scale(1.05);
+}
+
+.property-showcase-section {
+    padding: 150px 20px;
+    background-color: #f8f9fa;
+    position: relative;
+    z-index: 10000;
+    clear: both;
+}
+
+.showcase-container {
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.showcase-header {
+    margin-bottom: 50px;
+    position: relative;
+    z-index: 2;
+}
+
+.showcase-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #a07e5d;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.showcase-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.nav-btn {
+    padding: 12px 35px;
+    border: none;
+    background-color: transparent;
+    color: #666;
+    font-size: 19px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.nav-btn.active {
+    background-color: #c4975f;
+    color: white;
+}
+
+.nav-btn:hover {
+    background-color: #c4975f;
+    color: white;
+}
+
+.search-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    z-index: 2;
+}
+
+.search-input {
+    padding: 12px 50px 12px 20px;
+    border: 2px solid #e5e5e5;
+    border-radius: 50px;
+    font-size: 0.95rem;
+    width: 280px;
+    font-weight: 600;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+    border-color: #c4975f;
+}
+
+.search-btn {
+    position: absolute;
+    right: 5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #c4975f;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-btn:hover {
+    background-color: #b38850;
+}
+
+.search-btn svg {
+    stroke: white;
+}
+
+.Hospitals-slider-wrapper {
+    position: relative;
+    z-index: 2;
+}
+
+.slider-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 2px solid #e5e5e5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+    box-shadow: 0 4px 15px #0000001a
+}
+
+.slider-nav-btn:hover {
+    background-color: #c4975f;
+    border-color: #c4975f;
+    box-shadow: 0 6px 20px #c4975f4d
+}
+
+.slider-nav-btn:hover svg {
+    stroke: white;
+}
+
+.slider-nav-btn svg {
+    stroke: #1a1a1a;
+    transition: stroke 0.3s ease;
+}
+
+.prev-btn {
+    left: 0;
+}
+
+.next-btn {
+    right: 0;
+}
+
+.properties-slider {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    padding: 20px 5px 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.slider-card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px #00000014;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: white;
+    position: relative;
+}
+
+.slider-card:nth-child(n + 5) {
+    display: none;
+}
+
+.slider-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 30px #00000026;
+}
+
+.slider-image-wrapper {
+    width: 100%;
+    height: 340px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider-images {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.slider-card:hover .slider-images {
+    transform: scale(1.1);
+}
+
+.slider-details {
+    padding: 25px;
+    background: white;
+    position: relative;
+    z-index: 1;
+}
+
+.slider-location {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+}
+
+.slider-specs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.slider-spec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.slider-spec-value {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.slider-spec-label {
+    font-size: 16px;
+    color: #999;
+}
+
+.slider-spec-divider {
+    width: 1px;
+    height: 35px;
+    background-color: #e5e5e5;
+}
+
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+    position: relative;
+    z-index: 2;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #d1d1d1;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background-color: #c4975f;
+    width: 30px;
+    border-radius: 10px;
+}
+
+.dot:hover {
+    background-color: #999;
+}
+.Sustainability-prag {
+    width: 50%;
+}
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .featured-property .property-image-wrapper {
+        min-height: 500px;
+    }
+
+    .small-property {
+        min-height: 220px;
+    }
+
+    .property-price {
+        font-size: 1.6rem;
+    }
+
+    .about-content-wrapper {
+        gap: 40px;
+    }
+
+    .about-text-content {
+        padding: 50px 40px;
+    }
+
+    .about-title {
+        font-size: 2.5rem;
+    }
+
+    .about-image-wrapper {
+        height: 550px;
+    }
+
+    .properties-slider {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .slider-card:nth-child(n + 3) {
+        display: none;
+    }
+
+    .showcase-title {
+        font-size: 2.5rem;
+    }
+
+    .Hospitals-slider-wrapper {
+        padding: 20px 50px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .properties-grid {
+        grid-template-columns: 1fr;
+        align-items: start;
+    }
+
+    .featured-property .property-image-wrapper {
+        min-height: 400px;
+        height: 400px;
+    }
+
+    .properties-small-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        height: auto;
+    }
+
+    .small-property {
+        min-height: 200px;
+    }
+
+    .main-title {
+        font-size: 2.5rem;
+    }
+
+    .property-match-section-About {
+        padding: 60px 20px;
+    }
+
+    .about-content-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .about-text-content {
+        padding: 45px 35px;
+    }
+
+    .about-title {
+        font-size: 2.3rem;
+    }
+
+    .about-image-wrapper {
+        height: 500px;
+    }
+
+    .property-showcase-section {
+        padding: 60px 20px;
+    }
+
+    .showcase-title {
+        font-size: 2.3rem;
+    }
+
+    .slider-image-wrapper {
+        height: 260px;
+    }
+
+    .properties-slider {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .slider-card:nth-child(n + 3) {
+        display: none;
+    }
+
+    .Hospitals-slider-wrapper {
+        padding: 20px 45px;
+    }
+
+    .slider-nav-btn {
+        width: 45px;
+        height: 45px;
+    }
+    .Sustainability-prag {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .overlay_content h1 {
+        font-size: 2.5rem;
+    }
+    .header-contents {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .header-description {
+        width: 100%;
+        font-size: 19px;
+        letter-spacing: 1px;
+    }
+
+    .property-match-section {
+        padding: 50px 15px;
+    }
+
+    .main-title {
+        font-size: 2rem;
+    }
+
+    .properties-small-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 500px 700px 380px;
+    }
+
+    .properties-small-grid .property-card:nth-child(3) {
+        grid-column: span 1;
+    }
+
+    .featured-property .property-image-wrapper {
+        min-height: 350px;
+        height: 350px;
+    }
+
+    .small-property {
+        min-height: 250px;
+    }
+
+    .property-price {
+        font-size: 1.6rem;
+    }
+
+    .property-specs {
+        gap: 20px;
+    }
+
+    .property-details-overlay {
+        padding: 25px 20px 20px;
+    }
+
+    .property-match-section-About {
+        padding: 50px 15px;
+    }
+
+    .about-content-wrapper {
+        gap: 30px;
+    }
+
+    .about-text-content {
+        padding: 40px 30px;
+    }
+
+    .about-title {
+        font-size: 2rem;
+        margin-bottom: 25px;
+    }
+
+    .about-description {
+        font-size: 0.95rem;
+        line-height: 1.7;
+        margin-bottom: 18px;
+    }
+
+    .about-image-wrapper {
+        height: 400px;
+    }
+
+    .property-showcase-section {
+        padding: 50px 15px;
+    }
+
+    .showcase-title {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    .showcase-nav {
+        gap: 12px;
+    }
+
+    .nav-btn {
+        padding: 10px 25px;
+        font-size: 0.95rem;
+    }
+
+    .search-wrapper {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .search-input {
+        width: 100%;
+    }
+
+    .properties-slider {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .slider-card:nth-child(n + 2) {
+        display: none;
+    }
+
+    .Hospitals-slider-wrapper {
+        padding: 20px 40px;
+    }
+
+    .slider-nav-btn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .slider-image-wrapper {
+        height: 240px;
+    }
+
+    .slider-details {
+        padding: 20px;
+    }
+
+    .slider-location {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+    }
+
+    .slider-spec-value {
+        font-size: 1rem;
+    }
+
+    .slider-spec-label {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .overlay_content h1 {
+        font-size: 2rem;
+    }
+
+    .Sustainability-prag {
+        font-size: 0.95rem;
+    }
+
+    .property-match-section {
+        padding: 40px 10px;
+    }
+
+    .main-title {
+        font-size: 1.75rem;
+    }
+
+    .properties-grid {
+        gap: 15px;
+    }
+
+    .featured-property .property-image-wrapper {
+        min-height: 300px;
+        height: 300px;
+    }
+
+    .properties-small-grid {
+        gap: 15px;
+        grid-template-rows: 500px 700px 340px;
+    }
+
+    .small-property {
+        min-height: 220px;
+    }
+
+    .property-details-overlay {
+        padding: 20px 15px 15px;
+    }
+
+    .property-price {
+        font-size: 1.4rem;
+    }
+
+    .arrow-btn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .property-specs {
+        gap: 15px;
+    }
+
+    .favorite-btn {
+        width: 35px;
+        height: 35px;
+    }
+
+    .property-match-section-About {
+        padding: 40px 10px;
+    }
+
+    .about-text-content {
+        padding: 35px 12px;
+        border-radius: 16px;
+    }
+
+    .about-title {
+        font-size: 1.75rem;
+        margin-bottom: 20px;
+    }
+
+    .about-description {
+        font-size: 18px ;
+        letter-spacing: 1px;
+        line-height: 1.6;
+        margin-bottom: 15px;
+    }
+
+    .about-image-wrapper {
+        height: 350px;
+        border-radius: 16px;
+    }
+
+    .property-showcase-section {
+        padding: 40px 10px;
+    }
+
+    .showcase-title {
+        font-size: 1.75rem;
+    }
+
+    .showcase-header {
+        margin-bottom: 35px;
+    }
+
+    .nav-btn {
+        padding: 8px 20px;
+        font-size: 0.9rem;
+    }
+
+    .search-input {
+        padding: 10px 45px 10px 18px;
+        font-size: 0.9rem;
+    }
+
+    .search-btn {
+        width: 36px;
+        height: 36px;
+    }
+
+    .Hospitals-slider-wrapper {
+        padding: 20px 35px;
+    }
+
+    .slider-nav-btn {
+        width: 36px;
+        height: 36px;
+    }
+
+    .slider-nav-btn svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .slider-image-wrapper {
+        height: 220px;
+    }
+
+    .slider-details {
+        padding: 18px;
+    }
+
+    .slider-location {
+        font-size: 1.1rem;
+    }
+
+    .slider-specs {
+        gap: 10px;
+    }
+
+    .slider-spec-value {
+        font-size: 0.95rem;
+    }
+
+    .slider-spec-divider {
+        height: 30px;
+    }
+
+    .dot {
+        width: 8px;
+        height: 8px;
+    }
+
+    .dot.active {
+        width: 24px;
+    }
+}
+
+@media (max-width: 400px) {
+    .overlay_content h1 {
+        font-size: 36px;
+    }
+
+    .main-title {
+        font-size: 1.5rem;
+    }
+
+    .property-price {
+        font-size: 1.3rem;
+    }
+
+    .spec-value {
+        font-size: 1rem;
+    }
+
+    .featured-property .property-image-wrapper {
+        min-height: 280px;
+        height: 280px;
+    }
+
+    .properties-small-grid {
+        grid-template-rows: 200px 200px 200px;
+    }
+
+    .small-property {
+        min-height: 200px;
+    }
+
+    .property-match-section-About {
+        padding: 35px 10px;
+    }
+
+    .about-text-content {
+        padding: 30px 20px;
+    }
+
+    .about-title {
+        font-size: 1.5rem;
+    }
+
+    .about-description {
+        font-size: 0.85rem;
+    }
+
+    .about-image-wrapper {
+        height: 300px;
+    }
+
+    .showcase-title {
+        font-size: 1.5rem;
+    }
+
+    .nav-btn {
+        padding: 7px 18px;
+        font-size: 0.85rem;
+    }
+
+    .Hospitals-slider-wrapper {
+        padding: 20px 30px;
+    }
+
+    .slider-nav-btn {
+        width: 32px;
+        height: 32px;
+    }
+
+    .prev-btn {
+        left: -5px;
+    }
+
+    .next-btn {
+        right: -5px;
+    }
+
+    .slider-image-wrapper {
+        height: 240px;
+    }
+
+    .slider-location {
+        font-size: 1rem;
+    }
+
+    .slider-spec-value {
+        font-size: 0.9rem;
+    }
+}

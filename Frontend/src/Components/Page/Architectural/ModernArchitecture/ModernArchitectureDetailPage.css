@@ -1,0 +1,136 @@
+/* Basic styles for the detail page */
+.modern-architecture-detail-page {
+    background-color: #ffffee;
+    padding-bottom: 50px;
+    color: #333;
+}
+
+.detail-hero-section {
+    position: relative;
+    width: 100%;
+}
+
+.detail-hero-section img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.image_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #00000080;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.overlay_content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.detail-content-container {
+    padding: 80px 20px;
+    margin: 0 auto;
+}
+
+.detail-header {
+    text-align: center;
+    padding-top: 40px;
+}
+
+.detail-subtitle {
+    color: #2aabe1;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.detail-title {
+    font-size: 2.5rem;
+    margin-top: 0.5rem;
+    color: #1e293b;
+}
+
+.detail-description p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #64748b;
+    margin-bottom: 4rem;
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gallery-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    color: #1e293b;
+}
+
+.detail-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 1.5rem;
+}
+
+.gallery-image-wrapper {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px #0000001a;
+    height: 300px;
+}
+
+.gallery-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.gallery-image-wrapper:hover img {
+    transform: scale(1.05);
+}
+
+.back-to-home-section {
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.back-home-link {
+    color: #2aabe1;
+    text-decoration: none;
+    font-weight: 600;
+    border: 2px solid #2aabe1;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.back-home-link:hover {
+    background-color: #2aabe1;
+    color: white;
+}
+
+.not-found-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+@media screen and (max-width: 576px) {
+    .overlay_content h1 {
+        font-size: 30px;
+    }
+}

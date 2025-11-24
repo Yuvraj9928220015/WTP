@@ -1,0 +1,106 @@
+[
+    {
+        "id": "intuition",
+        "headline": "Design Begins with Intuition, Not Templates",
+        "description": "We don’t recycle design. Every project is born from observation, dialogue, and emotional understanding. Our approach begins with a silent reading of the space—its light, energy, and potential—and the people who will inhabit it. This intuitive process allows us to shape interiors that aren’t just functional, but instinctively right. ",
+        "bannerImage": "/InteriorDesigning-1.jpg",
+        "altText": "Modern kitchen with wooden cabinets and white island",
+        "details": {
+            "philosophy": "This intuitive process allows us to shape interiors that aren't just functional, but instinctively right.",
+            "points": [
+                "Deep client interviews to understand lifestyle and aspirations.",
+                "On-site analysis of natural light and spatial flow.",
+                "Mood board creation to capture emotional essence.",
+                "Initial concepts are sketched by hand to preserve organic thought."
+            ]
+        },
+        "gallery": [
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=500&h=400&fit=crop&auto=format",
+            "https://images.unsplash.com/photo-1616046229478-9901c5536a45?w=500&h=400&fit=crop&auto=format",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=500&h=400&fit=crop&auto=format",
+            "https://images.unsplash.com/photo-1616046229478-9901c5536a45?w=500&h=400&fit=crop&auto=format",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=500&h=400&fit=crop&auto=format",
+            "https://images.unsplash.com/photo-1616046229478-9901c5536a45?w=500&h=400&fit=crop&auto=format",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=500&h=400&fit=crop&auto=format",
+            "https://images.unsplash.com/photo-1616046229478-9901c5536a45?w=500&h=400&fit=crop&auto=format"
+        ]
+    },
+    {
+        "id": "signature",
+        "headline": "Every Element is a Signature",
+        "description": "Details are not decorative—they are defining. From bespoke lighting fixtures and handcrafted finishes to custom furniture layouts, every component carries intent. Our detailing is precise, layered, and deeply personal—ensuring that nothing is ever out of place, and everything speaks of design integrity. ",
+        "bannerImage": "/InteriorDesigning-2.JPG",
+        "altText": "Modern living room with elegant furniture",
+        "details": {
+            "philosophy": "This ensures that nothing is ever out of place, and everything speaks of design integrity.",
+            "points": [
+                "Custom-designed furniture tailored to the space.",
+                "Sourcing unique materials from artisans worldwide.",
+                "Meticulous planning of hardware and joinery.",
+                "Integration of smart home technology seamlessly."
+            ]
+        },
+        "gallery": [
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=500&h=400&fit=crop&auto=format",
+            "https://images.unsplash.com/photo-1616046229478-9901c5536a45?w=500&h=400&fit=crop&auto=format",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=500&h=400&fit=crop&auto=format",
+            "https://images.unsplash.com/photo-1616046229478-9901c5536a45?w=500&h=400&fit=crop&auto=format",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=500&h=400&fit=crop&auto=format",
+            "https://images.unsplash.com/photo-1616046229478-9901c5536a45?w=500&h=400&fit=crop&auto=format",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=500&h=400&fit=crop&auto=format",
+            "https://images.unsplash.com/photo-1616046229478-9901c5536a45?w=500&h=400&fit=crop&auto=format"
+        ]
+    },
+    {
+        "id": "global",
+        "headline": "Global Design, Rooted in Indian Sensibility",
+        "description": "With an international design language and a deep cultural grounding, our interiors are both worldly and rooted. We blend the richness of Indian craftsmanship with modern sophistication—creating timeless environments that celebrate tradition without being bound by it.",
+        "bannerImage": "/InteriorDesigning-3.jpg",
+        "altText": "Traditional meets modern interior design",
+        "details": {
+            "philosophy": "Creating timeless environments that celebrate tradition without being bound by it.",
+            "points": [
+                "Use of traditional Indian textiles in modern contexts.",
+                "Collaboration with local craftsmen for unique pieces.",
+                "Fusion of minimalist aesthetics with intricate patterns.",
+                "Respect for principles of Vastu where requested."
+            ]
+        },
+        "gallery": [
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=500&h=400&fit=crop&auto=format",
+            "https://images.unsplash.com/photo-1616046229478-9901c5536a45?w=500&h=400&fit=crop&auto=format",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=500&h=400&fit=crop&auto=format",
+            "https://images.unsplash.com/photo-1616046229478-9901c5536a45?w=500&h=400&fit=crop&auto=format",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=500&h=400&fit=crop&auto=format",
+            "https://images.unsplash.com/photo-1616046229478-9901c5536a45?w=500&h=400&fit=crop&auto=format",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=500&h=400&fit=crop&auto=format",
+            "https://images.unsplash.com/photo-1616046229478-9901c5536a45?w=500&h=400&fit=crop&auto=format"
+        ]
+    },
+    {
+        "id": "light",
+        "headline": "Light Is Our Most Powerful Material",
+        "description": "Beyond walls and furniture, we sculpt with light. Natural, ambient, and architectural lighting are all orchestrated to enhance texture, form, and mood. In our designs, light becomes a narrative element—revealing and hiding with elegance, guiding the eye, and elevating the soul of the space. ",
+        "bannerImage": "/InteriorDesigning-4.jpg",
+        "altText": "Well-lit modern interior with natural lighting",
+        "details": {
+            "philosophy": "Revealing and hiding with elegance, guiding the eye, and elevating the soul of the space.",
+            "points": [
+                "Layered lighting schemes (ambient, task, accent).",
+                "Maximizing natural light through architectural changes.",
+                "Using smart lighting to create different moods.",
+                "Custom light fixture design as a focal point."
+            ]
+        },
+        "gallery": [
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=500&h=400&fit=crop&auto=format",
+            "https://images.unsplash.com/photo-1616046229478-9901c5536a45?w=500&h=400&fit=crop&auto=format",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=500&h=400&fit=crop&auto=format",
+            "https://images.unsplash.com/photo-1616046229478-9901c5536a45?w=500&h=400&fit=crop&auto=format",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=500&h=400&fit=crop&auto=format",
+            "https://images.unsplash.com/photo-1616046229478-9901c5536a45?w=500&h=400&fit=crop&auto=format",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=500&h=400&fit=crop&auto=format",
+            "https://images.unsplash.com/photo-1616046229478-9901c5536a45?w=500&h=400&fit=crop&auto=format"
+        ]
+    }
+]

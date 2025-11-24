@@ -1,0 +1,63 @@
+[
+    {
+        "id": 1,
+        "title": "Innovative Commercial Spaces",
+        "cardImage": "/ModernArchitecture-1.jpg",
+        "description": "Our innovative commercial spaces are designed to foster creativity and productivity. We focus on open-plan layouts, natural light, and sustainable materials to create environments where businesses can thrive. Each project is a testament to modern architectural principles, blending form and function seamlessly.",
+        "detailImages": [
+            "/ModernArchitecture-1.jpg",
+            "/Sun&moonComplex.jpg",
+            "/Commercial-Projects-1.jpeg",
+            "/Commercial-Projects-2.JPG",
+            "/Commercial-Projects-3.jpg"
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Luxury Hospitality Designs",
+        "cardImage": "/Screenshot.png",
+        "description": "Experience unparalleled luxury with our hospitality designs. We create resorts and hotels that are destinations in themselves, offering guests an escape from the ordinary. Our designs prioritize comfort, elegance, and a deep connection to the surrounding landscape, ensuring a memorable stay.",
+        "detailImages": [
+            "/Screenshot.png",
+            "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=2070&auto=format&fit=crop",
+            "https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=1925&auto=format&fit=crop",
+             "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=2070&auto=format&fit=crop",
+            "https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=1925&auto=format&fit=crop",
+             "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=2070&auto=format&fit=crop",
+            "https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=1925&auto=format&fit=crop"
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Healing Through Architecture",
+        "cardImage": "/ModernArchitecture-3.jpg",
+        "description": "Our approach to healthcare architecture focuses on creating spaces that promote healing and well-being. By integrating nature, optimizing patient flow, and using calming color palettes, we design hospitals and wellness centers that support both patients and staff in their journey towards recovery.",
+        "detailImages": [
+            "/ModernArchitecture-3.jpg",
+            "/ModernArchitecture-3.jpg",
+            "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=2070&auto=format&fit=crop"
+        ]
+    },
+    {
+        "id": 4,
+        "title": "Modern Living Spaces",
+        "cardImage": "/ModernArchitecture-4.jpg",
+        "description": "Redefining urban living, our residential projects offer a perfect balance of style, comfort, and functionality. From high-rise apartments to suburban villas, we design homes that are tailored to modern lifestyles, featuring smart technology, flexible spaces, and high-quality finishes.",
+        "detailImages": [
+            "/ModernArchitecture-4.jpg",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop",
+            "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2000&auto=format&fit=crop"
+        ]
+    },
+    {
+        "id": 5,
+        "title": "Educational Excellence in Form",
+        "cardImage": "/BhilwaraSchool.jpg",
+        "description": "We believe that the environment plays a crucial role in learning. Our educational buildings are designed to be inspiring, safe, and adaptable, supporting innovative teaching methods and encouraging student collaboration. Light-filled classrooms and dynamic common areas create a vibrant academic community.",
+        "detailImages": [
+            "https://images.unsplash.com/photo-1580582932707-520aed937b7b?q=80&w=2148&auto=format&fit=crop",
+            "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?q=80&w=2073&auto=format&fit=crop",
+            "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=2070&auto=format&fit=crop"
+        ]
+    }
+]

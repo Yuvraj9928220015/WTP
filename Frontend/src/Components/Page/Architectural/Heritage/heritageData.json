@@ -1,0 +1,524 @@
+{
+    "heritageItems": [
+        {
+            "id": 1,
+            "title": "Maharaj  Mansing Statue",
+            "shortDescription": "A striking bronze equestrian statue, capturing his royal valor and warrior spirit in lifelike detail.",
+            "mainImage": "/Heritage-1.jpg",
+            "gallery": [
+                {
+                    "src": "/Heritage-1.jpg",
+                    "alt": "Maharaj  Mansing Statue Main View"
+                },
+                {
+                    "src": "/Heritage-1.jpg",
+                    "alt": "Maharaj  Mansing Statue Detail 1"
+                },
+                {
+                    "src": "/Heritage-1.jpg",
+                    "alt": "Maharaj  Mansing Statue Detail 2"
+                },
+                {
+                    "src": "/Heritage-1.jpg",
+                    "alt": "Maharaj  Mansing Statue Main View"
+                },
+                {
+                    "src": "/Heritage-1.jpg",
+                    "alt": "Maharaj  Mansing Statue Detail 1"
+                },
+                {
+                    "src": "/Heritage-1.jpg",
+                    "alt": "Maharaj  Mansing Statue Detail 2"
+                }
+            ],
+            "location": "Jaipur, Rajasthan",
+            "yearBuilt": "1890",
+            "architect": "Local Artisans",
+            "detailedDescription": "This magnificent bronze equestrian statue of Maharaj Man Singh stands as a testament to the valor and leadership of one of Rajasthan's most celebrated rulers. The statue captures the essence of royal dignity, with intricate detailing that brings the warrior king to life. Every aspect of the sculpture, from the horse's muscular form to the king's regal posture, has been crafted with exceptional skill. The bronze work showcases the traditional craftsmanship of Rajasthani artisans, making it not just a monument but a piece of living history."
+        },
+        {
+            "id": 2,
+            "title": "Mashal at Jallianwala Bagh",
+            "shortDescription": "A powerful flame-shaped tribute, symbolizing the eternal spirit of the innocent lives lost in the 1919 Jallianwala Bagh massacre.",
+            "mainImage": "/Heritage-2.JPG",
+            "gallery": [
+                {
+                    "src": "/Heritage-2.JPG",
+                    "alt": "Raja Mansing Statue Main View"
+                },
+                {
+                    "src": "/Heritage-1.jpg",
+                    "alt": "Raja Mansing Statue Detail 1"
+                },
+                {
+                    "src": "/Heritage-1.jpg",
+                    "alt": "Raja Mansing Statue Detail 2"
+                },
+                {
+                    "src": "/Heritage-1.jpg",
+                    "alt": "Raja Mansing Statue Main View"
+                },
+                {
+                    "src": "/Heritage-1.jpg",
+                    "alt": "Raja Mansing Statue Detail 1"
+                },
+                {
+                    "src": "/Heritage-1.jpg",
+                    "alt": "Raja Mansing Statue Detail 2"
+                }
+            ],
+            "location": "Amritsar, Punjab",
+            "yearBuilt": "1961",
+            "architect": "Government of Punjab",
+            "detailedDescription": "The Mashal (torch) at Jallianwala Bagh entrance stands as an eternal flame of remembrance for the martyrs of the 1919 massacre. This monument serves as a powerful symbol of sacrifice and the struggle for freedom. The flame-shaped design represents the undying spirit of those who lost their lives on that tragic day. The structure is designed to evoke strong emotions and serves as a reminder of the price paid for India's independence. The memorial welcomes visitors with a solemn reminder of our history and the importance of remembering our heroes.",
+            "historicalSignificance": "Commemorates the Jallianwala Bagh massacre of April 13, 1919, where hundreds of innocent people were killed by British forces under General Dyer's command.",
+            "visitingHours": "6:00 AM - 7:30 PM",
+            "entryFee": "Free",
+            "nearbyAttractions": [
+                "Golden Temple",
+                "Wagah Border",
+                "Partition Museum"
+            ]
+        },
+        {
+            "id": 3,
+            "title": "Panch Batti, Jaipur",
+            "shortDescription": "Diwali decoration is in full swing in Pink City, and we can feel festive vibes throughout the city. Just like a colorful bloom of temporary lights in the sky, our beautiful Jaipur will shine again.",
+            "mainImage": "/Heritage-6.jpg",
+            "gallery": [
+                {
+                    "src": "/Heritage-6.jpg",
+                    "alt": "Raja Mansing Statue Main View"
+                },
+                {
+                    "src": "/Heritage-6.jpg",
+                    "alt": "Raja Mansing Statue Detail 1"
+                },
+                {
+                    "src": "/Heritage-1.jpg",
+                    "alt": "Raja Mansing Statue Detail 2"
+                },
+                {
+                    "src": "/Heritage-6.jpg",
+                    "alt": "Raja Mansing Statue Main View"
+                },
+                {
+                    "src": "/Heritage-1.jpg",
+                    "alt": "Raja Mansing Statue Detail 1"
+                },
+                {
+                    "src": "/Heritage-1.jpg",
+                    "alt": "Raja Mansing Statue Detail 2"
+                }
+            ],
+            "location": "Jaipur, Rajasthan",
+            "yearBuilt": "1970",
+            "architect": "Jaipur Municipal Corporation",
+            "detailedDescription": "Panch Batti is one of Jaipur's most iconic landmarks, serving as a major traffic junction and cultural hub. During festivals, especially Diwali, this area transforms into a spectacular display of lights and decorations. The name 'Panch Batti' literally means 'five lights,' referring to the five-way intersection it represents. This landmark has become synonymous with Jaipur's festive spirit and serves as a gathering point for celebrations. The area showcases the perfect blend of modern urban planning with traditional Rajasthani aesthetics, especially during festival seasons when the entire junction is adorned with colorful lights and decorations.",
+            "historicalSignificance": "Represents the modern development of Jaipur while maintaining its cultural identity. It's a symbol of how the Pink City has evolved while preserving its heritage.",
+            "visitingHours": "24/7 accessible",
+            "entryFee": "Free",
+            "nearbyAttractions": [
+                "MI Road",
+                "Birla Mandir",
+                "Statue Circle"
+            ]
+        },
+        {
+            "id": 4,
+            "title": "Patrika Gate, Jaipur",
+            "shortDescription": "Stands as a vibrant tapestry of Rajasthan, where every arch and mural artistically weaves together the soul, stories, and colors of its nine diverse regions.",
+            "mainImage": "/Heritage-7.JPG",
+            "gallery": [
+                {
+                    "src": "/Heritage-7.JPG",
+                    "alt": "Raja Mansing Statue Main View"
+                },
+                {
+                    "src": "/Heritage-7.JPG",
+                    "alt": "Raja Mansing Statue Detail 1"
+                },
+                {
+                    "src": "/Heritage-1.jpg",
+                    "alt": "Raja Mansing Statue Detail 2"
+                },
+                {
+                    "src": "/Heritage-1.jpg",
+                    "alt": "Raja Mansing Statue Main View"
+                },
+                {
+                    "src": "/Heritage-1.jpg",
+                    "alt": "Raja Mansing Statue Detail 1"
+                },
+                {
+                    "src": "/Heritage-1.jpg",
+                    "alt": "Raja Mansing Statue Detail 2"
+                }
+            ],
+            "location": "Jawahar Circle, Jaipur",
+            "yearBuilt": "2016",
+            "architect": "Rajasthan Patrika Group",
+            "detailedDescription": "Patrika Gate is a stunning architectural marvel that serves as a gateway to Jawahar Circle Garden. This magnificent structure showcases the rich cultural heritage of all nine regions of Rajasthan through intricate murals and artistic designs. Each arch tells a story of Rajasthan's diverse culture, traditions, and history. The gate features vibrant paintings depicting folk dances, traditional costumes, historical events, and cultural practices from different parts of the state. The craftsmanship is exceptional, with every detail meticulously planned to represent the true essence of Rajasthani art and culture. The gate has become one of the most photographed landmarks in Jaipur, attracting visitors from around the world.",
+            "historicalSignificance": "A modern tribute to Rajasthan's cultural diversity, showcasing the state's rich heritage through contemporary artistic expression.",
+            "visitingHours": "5:00 AM - 9:00 PM",
+            "entryFee": "Free",
+            "nearbyAttractions": [
+                "Jawahar Circle Garden",
+                "World Trade Park",
+                "Birla Auditorium"
+            ]
+        },
+        {
+            "id": 6,
+            "title": "Chambal Mata Statue, Chambal River Front, Kota",
+            "shortDescription": "A world record of the tallest Marble statue, standing as a proud symbol of reverence, faith, and architectural brilliance.",
+            "mainImage": "/Heritage-9.JPG",
+            "gallery": [
+                {
+                    "src": "/Heritage-9.JPG",
+                    "alt": "Raja Mansing Statue Main View"
+                },
+                {
+                    "src": "/Heritage-9.JPG",
+                    "alt": "Raja Mansing Statue Detail 1"
+                },
+                {
+                    "src": "/Heritage-1.jpg",
+                    "alt": "Raja Mansing Statue Detail 2"
+                },
+                {
+                    "src": "/Heritage-1.jpg",
+                    "alt": "Raja Mansing Statue Main View"
+                },
+                {
+                    "src": "/Heritage-1.jpg",
+                    "alt": "Raja Mansing Statue Detail 1"
+                },
+                {
+                    "src": "/Heritage-1.jpg",
+                    "alt": "Raja Mansing Statue Detail 2"
+                }
+            ],
+            "location": "Chambal River Front, Kota",
+            "yearBuilt": "2018",
+            "architect": "Rajasthan Government",
+            "detailedDescription": "The Chambal Mata Statue in Kota holds the distinction of being the world's tallest marble statue, standing majestically on the banks of the Chambal River. This magnificent sculpture represents the divine feminine energy and is revered by devotees from across the region. The statue is carved from pure white marble and showcases exceptional craftsmanship with intricate details that are visible even from a distance. The positioning of the statue on the riverfront creates a breathtaking silhouette against the sky, making it a landmark visible from far and wide. The statue not only serves as a religious monument but also as a testament to the skilled artisans of Rajasthan who have maintained the tradition of marble carving for centuries.",
+            "historicalSignificance": "Represents the spiritual significance of the Chambal River and showcases India's capability in creating world-record monuments.",
+            "visitingHours": "5:00 AM - 9:00 PM",
+            "entryFee": "Free",
+            "nearbyAttractions": [
+                "Chambal Garden",
+                "Kota Barrage",
+                "Seven Wonders Park"
+            ]
+        },
+        {
+            "id": 8,
+            "title": "Teej ki Savari, Jaipur",
+            "shortDescription": "Beautifully captures the joyous essence of the Teej festival—vibrant figures adorned in traditional attire traverse in rhythmic motion, all rendered in finely detailed bronze atop a gracefully sculpted pedestal.",
+            "mainImage": "/Heritage-11.jpg",
+            "gallery": [
+                {
+                    "src": "/Heritage-11.jpg",
+                    "alt": "Raja Mansing Statue Main View"
+                },
+                {
+                    "src": "/Heritage-11.jpg",
+                    "alt": "Raja Mansing Statue Detail 1"
+                },
+                {
+                    "src": "/Heritage-1.jpg",
+                    "alt": "Raja Mansing Statue Detail 2"
+                },
+                {
+                    "src": "/Heritage-1.jpg",
+                    "alt": "Raja Mansing Statue Main View"
+                },
+                {
+                    "src": "/Heritage-1.jpg",
+                    "alt": "Raja Mansing Statue Detail 1"
+                },
+                {
+                    "src": "/Heritage-1.jpg",
+                    "alt": "Raja Mansing Statue Detail 2"
+                }
+            ],
+            "location": "Jaipur, Rajasthan",
+            "yearBuilt": "2010",
+            "architect": "Rajasthan Lalit Kala Academy",
+            "detailedDescription": "The Teej ki Savari sculpture is a magnificent bronze artwork that captures the vibrant spirit of Rajasthan's most celebrated festival. This detailed sculpture depicts the traditional Teej procession with women dressed in colorful attire, dancing and celebrating the arrival of the monsoon. The artwork showcases the intricate details of traditional Rajasthani clothing, jewelry, and the festive atmosphere that characterizes the Teej celebration. Each figure in the sculpture is crafted with precision, showing the joy and cultural richness of the festival. The sculpture serves as a permanent reminder of Rajasthan's rich cultural traditions and the importance of festivals in bringing communities together. The bronze work demonstrates the exceptional skill of local artisans in preserving cultural heritage through art.",
+            "historicalSignificance": "Celebrates the traditional Teej festival, representing the cultural continuity and the role of festivals in Rajasthani society.",
+            "visitingHours": "6:00 AM - 8:00 PM",
+            "entryFee": "Free",
+            "nearbyAttractions": [
+                "Albert Hall Museum",
+                "Ram Niwas Garden",
+                "Central Museum"
+            ]
+        },
+        {
+            "id": 10,
+            "title": "Gair Nritya Sculptures, Jaipur",
+            "shortDescription": "Each figure carved mid-dance, celebrating the tribal rhythm, martial grace, and unyielding spirit of Rajasthan's vibrant folk heritage.",
+            "mainImage": "/Heritage-14.JPG",
+            "gallery": [
+                {
+                    "src": "/Heritage-14.JPG",
+                    "alt": "Raja Mansing Statue Main View"
+                },
+                {
+                    "src": "/Heritage-14.JPG",
+                    "alt": "Raja Mansing Statue Detail 1"
+                },
+                {
+                    "src": "/Heritage-1.jpg",
+                    "alt": "Raja Mansing Statue Detail 2"
+                },
+                {
+                    "src": "/Heritage-1.jpg",
+                    "alt": "Raja Mansing Statue Main View"
+                },
+                {
+                    "src": "/Heritage-1.jpg",
+                    "alt": "Raja Mansing Statue Detail 1"
+                },
+                {
+                    "src": "/Heritage-1.jpg",
+                    "alt": "Raja Mansing Statue Detail 2"
+                }
+            ],
+            "location": "Jaipur, Rajasthan",
+            "yearBuilt": "2012",
+            "architect": "Folk Art Academy",
+            "detailedDescription": "The Gair Nritya sculptures represent one of Rajasthan's most energetic and vibrant folk dances. These bronze figures capture the dynamic movements and martial spirit of the Gair dance, which is performed during the Holi festival. The sculptures show dancers in traditional attire, holding sticks and captured in mid-movement, showcasing the strength and agility required for this dance form. Each figure demonstrates the precise choreography and the tribal rhythm that characterizes the Gair dance. The artwork preserves this important aspect of Rajasthani folk culture and serves as an educational tool for future generations. The sculptures highlight the importance of folk arts in maintaining cultural identity and the role of dance in celebrating festivals and community gatherings.",
+            "historicalSignificance": "Preserves the tradition of Gair dance, a martial folk dance that represents the warrior spirit and cultural heritage of Rajasthan.",
+            "visitingHours": "6:00 AM - 8:00 PM",
+            "entryFee": "Free",
+            "nearbyAttractions": [
+                "Rajasthan Folk Art Museum",
+                "Jawahar Kala Kendra",
+                "Birla Planetarium"
+            ]
+        },
+        {
+            "id": 12,
+            "title": "Kirti Stambh, Kota",
+            "shortDescription": "A majestic Solanki-style tower rising from a sturdy stone base, showcasing Rajasthan's medieval craftsmanship.",
+            "mainImage": "/Heritage-16.jpg",
+            "gallery": [
+                {
+                    "src": "/Heritage-16.jpg",
+                    "alt": "Raja Mansing Statue Main View"
+                },
+                {
+                    "src": "/Heritage-16.jpg",
+                    "alt": "Raja Mansing Statue Detail 1"
+                },
+                {
+                    "src": "/Heritage-16.jpg",
+                    "alt": "Raja Mansing Statue Detail 2"
+                },
+                {
+                    "src": "/Heritage-16.jpg",
+                    "alt": "Raja Mansing Statue Main View"
+                },
+                {
+                    "src": "/Heritage-1.jpg",
+                    "alt": "Raja Mansing Statue Detail 1"
+                },
+                {
+                    "src": "/Heritage-1.jpg",
+                    "alt": "Raja Mansing Statue Detail 2"
+                }
+            ],
+            "location": "Kota, Rajasthan",
+            "yearBuilt": "12th Century",
+            "architect": "Solanki Dynasty",
+            "detailedDescription": "The Kirti Stambh in Kota is a magnificent example of medieval Indian architecture, representing the glory of the Solanki dynasty. This towering structure showcases the exceptional craftsmanship of 12th-century artisans with its intricate stone carvings and architectural details. The tower rises majestically from a sturdy stone base, featuring multiple levels of decorative elements that tell stories of the era's cultural and religious significance. The Solanki-style architecture is evident in the geometric patterns, floral motifs, and sculptural elements that adorn the structure. The Kirti Stambh serves as a testament to the advanced architectural knowledge and artistic skills of medieval Indian craftsmen. The tower has withstood the test of time and continues to inspire visitors with its grandeur and historical significance.",
+            "historicalSignificance": "Represents the architectural achievements of the Solanki dynasty and showcases the advanced craftsmanship of medieval India.",
+            "visitingHours": "6:00 AM - 6:00 PM",
+            "entryFee": "₹10 for Indians, ₹50 for foreigners",
+            "nearbyAttractions": [
+                "City Palace Kota",
+                "Jagmandir Palace",
+                "Kota Garh"
+            ]
+        },
+        {
+            "id": 13,
+            "title": "Kalbelia Nritya, Jaipur",
+            "shortDescription": "The Dance of the Desert.",
+            "mainImage": "/Kalbelia.jpg",
+            "gallery": [
+                {
+                    "src": "/Heritage-16.jpg",
+                    "alt": "Raja Mansing Statue Main View"
+                },
+                {
+                    "src": "/Heritage-16.jpg",
+                    "alt": "Raja Mansing Statue Detail 1"
+                },
+                {
+                    "src": "/Heritage-16.jpg",
+                    "alt": "Raja Mansing Statue Detail 2"
+                },
+                {
+                    "src": "/Heritage-16.jpg",
+                    "alt": "Raja Mansing Statue Main View"
+                },
+                {
+                    "src": "/Heritage-1.jpg",
+                    "alt": "Raja Mansing Statue Detail 1"
+                },
+                {
+                    "src": "/Heritage-1.jpg",
+                    "alt": "Raja Mansing Statue Detail 2"
+                }
+            ],
+            "location": "Kota, Rajasthan",
+            "yearBuilt": "12th Century",
+            "architect": "Solanki Dynasty",
+            "detailedDescription": "The Kirti Stambh in Kota is a magnificent example of medieval Indian architecture, representing the glory of the Solanki dynasty. This towering structure showcases the exceptional craftsmanship of 12th-century artisans with its intricate stone carvings and architectural details. The tower rises majestically from a sturdy stone base, featuring multiple levels of decorative elements that tell stories of the era's cultural and religious significance. The Solanki-style architecture is evident in the geometric patterns, floral motifs, and sculptural elements that adorn the structure. The Kirti Stambh serves as a testament to the advanced architectural knowledge and artistic skills of medieval Indian craftsmen. The tower has withstood the test of time and continues to inspire visitors with its grandeur and historical significance.",
+            "historicalSignificance": "Represents the architectural achievements of the Solanki dynasty and showcases the advanced craftsmanship of medieval India.",
+            "visitingHours": "6:00 AM - 6:00 PM",
+            "entryFee": "₹10 for Indians, ₹50 for foreigners",
+            "nearbyAttractions": [
+                "City Palace Kota",
+                "Jagmandir Palace",
+                "Kota Garh"
+            ]
+        },
+        {
+            "id": 14,
+            "title": "Swarn Mahal, Kota",
+            "shortDescription": "A Symbol of Royal Grandeur and Timeless Heritage",
+            "mainImage": "/SwarnMahal.jpg",
+            "gallery": [
+                {
+                    "src": "/Heritage-16.jpg",
+                    "alt": "Raja Mansing Statue Main View"
+                },
+                {
+                    "src": "/Heritage-16.jpg",
+                    "alt": "Raja Mansing Statue Detail 1"
+                },
+                {
+                    "src": "/Heritage-16.jpg",
+                    "alt": "Raja Mansing Statue Detail 2"
+                },
+                {
+                    "src": "/Heritage-16.jpg",
+                    "alt": "Raja Mansing Statue Main View"
+                },
+                {
+                    "src": "/Heritage-1.jpg",
+                    "alt": "Raja Mansing Statue Detail 1"
+                },
+                {
+                    "src": "/Heritage-1.jpg",
+                    "alt": "Raja Mansing Statue Detail 2"
+                }
+            ],
+            "location": "Kota, Rajasthan",
+            "yearBuilt": "12th Century",
+            "architect": "Solanki Dynasty",
+            "detailedDescription": "The Kirti Stambh in Kota is a magnificent example of medieval Indian architecture, representing the glory of the Solanki dynasty. This towering structure showcases the exceptional craftsmanship of 12th-century artisans with its intricate stone carvings and architectural details. The tower rises majestically from a sturdy stone base, featuring multiple levels of decorative elements that tell stories of the era's cultural and religious significance. The Solanki-style architecture is evident in the geometric patterns, floral motifs, and sculptural elements that adorn the structure. The Kirti Stambh serves as a testament to the advanced architectural knowledge and artistic skills of medieval Indian craftsmen. The tower has withstood the test of time and continues to inspire visitors with its grandeur and historical significance.",
+            "historicalSignificance": "Represents the architectural achievements of the Solanki dynasty and showcases the advanced craftsmanship of medieval India.",
+            "visitingHours": "6:00 AM - 6:00 PM",
+            "entryFee": "₹10 for Indians, ₹50 for foreigners",
+            "nearbyAttractions": [
+                "City Palace Kota",
+                "Jagmandir Palace",
+                "Kota Garh"
+            ]
+        },
+        {
+            "id": 15,
+            "title": "Ghatotkach Statue, Kota",
+            "shortDescription": "A Symbol of Strength, Sacrifice, and Valor",
+            "mainImage": "/0001_(786).jpeg",
+            "gallery": [
+                {
+                    "src": "/Heritage-16.jpg",
+                    "alt": "Raja Mansing Statue Main View"
+                },
+                {
+                    "src": "/Heritage-16.jpg",
+                    "alt": "Raja Mansing Statue Detail 1"
+                },
+                {
+                    "src": "/Heritage-16.jpg",
+                    "alt": "Raja Mansing Statue Detail 2"
+                },
+                {
+                    "src": "/Heritage-16.jpg",
+                    "alt": "Raja Mansing Statue Main View"
+                },
+                {
+                    "src": "/Heritage-1.jpg",
+                    "alt": "Raja Mansing Statue Detail 1"
+                },
+                {
+                    "src": "/Heritage-1.jpg",
+                    "alt": "Raja Mansing Statue Detail 2"
+                }
+            ],
+            "location": "Kota, Rajasthan",
+            "yearBuilt": "12th Century",
+            "architect": "Solanki Dynasty",
+            "detailedDescription": "The Kirti Stambh in Kota is a magnificent example of medieval Indian architecture, representing the glory of the Solanki dynasty. This towering structure showcases the exceptional craftsmanship of 12th-century artisans with its intricate stone carvings and architectural details. The tower rises majestically from a sturdy stone base, featuring multiple levels of decorative elements that tell stories of the era's cultural and religious significance. The Solanki-style architecture is evident in the geometric patterns, floral motifs, and sculptural elements that adorn the structure. The Kirti Stambh serves as a testament to the advanced architectural knowledge and artistic skills of medieval Indian craftsmen. The tower has withstood the test of time and continues to inspire visitors with its grandeur and historical significance.",
+            "historicalSignificance": "Represents the architectural achievements of the Solanki dynasty and showcases the advanced craftsmanship of medieval India.",
+            "visitingHours": "6:00 AM - 6:00 PM",
+            "entryFee": "₹10 for Indians, ₹50 for foreigners",
+            "nearbyAttractions": [
+                "City Palace Kota",
+                "Jagmandir Palace",
+                "Kota Garh"
+            ]
+        },
+        {
+            "id": 16,
+            "title": "Gair Nritya Sculptures, Jaipur",
+            "shortDescription": "Each figure carved mid-dance, celebrating the tribal rhythm, martial grace, and unyielding spirit of Rajasthan’s vibrant folk heritage",
+            "mainImage": "/JalMahalBaratMonument.jpg",
+            "gallery": [
+                {
+                    "src": "/Heritage-16.jpg",
+                    "alt": "Raja Mansing Statue Main View"
+                },
+                {
+                    "src": "/Heritage-16.jpg",
+                    "alt": "Raja Mansing Statue Detail 1"
+                },
+                {
+                    "src": "/Heritage-16.jpg",
+                    "alt": "Raja Mansing Statue Detail 2"
+                },
+                {
+                    "src": "/Heritage-16.jpg",
+                    "alt": "Raja Mansing Statue Main View"
+                },
+                {
+                    "src": "/Heritage-1.jpg",
+                    "alt": "Raja Mansing Statue Detail 1"
+                },
+                {
+                    "src": "/Heritage-1.jpg",
+                    "alt": "Raja Mansing Statue Detail 2"
+                }
+            ],
+            "location": "Kota, Rajasthan",
+            "yearBuilt": "12th Century",
+            "architect": "Solanki Dynasty",
+            "detailedDescription": "The Kirti Stambh in Kota is a magnificent example of medieval Indian architecture, representing the glory of the Solanki dynasty. This towering structure showcases the exceptional craftsmanship of 12th-century artisans with its intricate stone carvings and architectural details. The tower rises majestically from a sturdy stone base, featuring multiple levels of decorative elements that tell stories of the era's cultural and religious significance. The Solanki-style architecture is evident in the geometric patterns, floral motifs, and sculptural elements that adorn the structure. The Kirti Stambh serves as a testament to the advanced architectural knowledge and artistic skills of medieval Indian craftsmen. The tower has withstood the test of time and continues to inspire visitors with its grandeur and historical significance.",
+            "historicalSignificance": "Represents the architectural achievements of the Solanki dynasty and showcases the advanced craftsmanship of medieval India.",
+            "visitingHours": "6:00 AM - 6:00 PM",
+            "entryFee": "₹10 for Indians, ₹50 for foreigners",
+            "nearbyAttractions": [
+                "City Palace Kota",
+                "Jagmandir Palace",
+                "Kota Garh"
+            ]
+        }
+    ]
+}

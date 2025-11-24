@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.heroContainer {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #fbfcea;
+}
+
+.bannerImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.8);
+}
+
+.imageOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, #00000099, transparent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.overlayContent {
+    color: white;
+    max-width: 800px;
+}
+
+.overlayTitle {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 8px #00000099;
+}
+
+.overlaySubtitle {
+    font-size: 1.5rem;
+    opacity: 0.9;
+    letter-spacing: 1px;
+}
+
+.pageContainer {
+    width: 100%;
+    margin: 0 auto;
+    padding: 60px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+    background-color: #fbfcea;
+}
+
+.textBlock {
+    margin-bottom: 2rem;
+}
+
+.subtitleText {
+    font-size: 20px;
+    color: #4b4b4b;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.mainTitleText {
+    font-size: 2.4rem;
+    font-weight: 600;
+    line-height: 1.3;
+    color: #333;
+}
+
+.descriptionText {
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: 1.7;
+    color: #000000cc;
+}
+
+.descriptionText.text-dark {
+    color: #555;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.buttonGroup {
+    display: flex;
+    gap: 15px;
+    margin-top: 1.5rem;
+}
+
+.btnSecondary,
+.btnPrimary {
+    border: none;
+    padding: 0.8rem 1.8rem;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btnSecondary {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.btnSecondary:hover {
+    background-color: #e0e0e0;
+    transform: translateY(-2px);
+}
+
+.btnPrimary {
+    background-color: #f59e8b;
+    color: #333;
+}
+
+.btnPrimary:hover {
+    background-color: #f28b74;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px #f59e8b66;
+}
+
+.imageCard {
+    overflow: hidden;
+}
+
+.cardImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.imageCard:hover .cardImage {
+    transform: scale(1.05);
+}
+
+.contentSectionTop {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+    align-items: start;
+}
+
+.imageShowcase {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.smallImageGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.imageCardSmall {
+    height: 585px;
+}
+
+.imageCardLarge {
+    height: 600px;
+}
+
+
+.contentSectionMiddle {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    box-shadow: #0000003d 0px 3px 8px;
+    background-color: #fffffff8;
+    color: #000000;
+    padding: 50px;
+}
+
+.contentSectionMiddle .mainTitleText {
+    letter-spacing: 1px;
+    color: #000000;
+}
+
+.contentSectionMiddle .textBlock {
+    flex: 1;
+}
+
+.imageCardMedium {
+    flex-basis: 60%;
+    height: 600px;
+}
+
+/* === BOTTOM SECTION LAYOUT === */
+.contentSectionBottom {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.brandTitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.iconGroup {
+    display: flex;
+    gap: 8px;
+    color: #000000;
+    font-size: 0.8rem;
+    margin: 1.5rem 0;
+}
+
+.bottomRightColumn {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+.imageCardExtraLarge {
+    height: 600px;
+}
+
+@media (max-width: 1024px) {
+
+    .contentSectionTop,
+    .contentSectionBottom {
+        grid-template-columns: 1fr;
+    }
+
+    .contentSectionMiddle {
+        flex-direction: column;
+        padding: 10px;
+    }
+}
+
+/* Para Móviles */
+@media (max-width: 768px) {
+    .pageContainer {
+        padding: 40px 20px;
+        gap: 60px;
+    }
+
+    .overlayTitle {
+        font-size: 2.5rem;
+    }
+
+    .mainTitleText {
+        font-size: 1.8rem;
+    }
+
+    .smallImageGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .imageCardSmall {
+        height: 450px;
+    }
+
+    .bottomRightColumn {
+        grid-template-columns: 1fr;
+    }
+
+    .imageCardExtraLarge {
+        height: 350px;
+    }
+}

@@ -1,0 +1,89 @@
+.Upcoming-Project-Image img {
+    width: 100%;
+    border-radius: 4px;
+    padding-left: 10px;
+}
+
+.WorkGrid_container {
+    padding: 0;
+}
+
+.Upcoming-Project-Heading {
+    font-size: 40px;
+    font-weight: 700;
+    color: #1a202c;
+    background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.Upcoming-Project-Content {
+    padding: 0px 10px;
+}
+
+.About-section-content_title {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    color: #1a202c;
+    padding: 40px 0px;
+    line-height: 46px;
+    background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.Upcoming-container {
+    padding-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+#WorkGrid_main-container {
+    padding: 40px 20px;
+}
+
+.Upcoming-Project-description {
+    font-size: 20px;
+    padding: 20px 0px;
+    color: black;
+}
+
+.Upcoming-Project-btn button {
+    padding: 10px 20px;
+    border: none;
+    font-size: 19px;
+    color: white;
+    border-radius: 5px;
+    background-color: #2aabe1;
+}
+
+.service-content-btn {
+    margin-top: 20px;
+}
+
+.service-content-btn button {
+    padding: 8px 20px;
+    border: none;
+    font-size: 18px;
+    color: white;
+    border-radius: 5px;
+    background-color: #2aabe1;
+}
+
+
+@media screen and (max-width: 476px) {
+    .About-section-content_title  {
+        font-size: 32px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .About-section-content_title  {
+        font-size: 32px;
+    }
+}

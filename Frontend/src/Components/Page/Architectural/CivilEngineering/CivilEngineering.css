@@ -1,0 +1,269 @@
+.completed-projects-container {
+    margin: 0 auto;
+    padding: 80px 50px;
+}
+
+.Civi-Engineering-Container {
+    background-color: #fbfcea;
+}
+
+.projects-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.completed-projects-container-des {
+    width: 100%;
+    padding: 20px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.completed-projects-container-des p {
+    width: 40%;
+    text-align: center;
+}
+
+.sub-heading {
+    color: #2aabe1;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.main-heading {
+    font-size: 42px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.highlight {
+    color: #2aabe1;
+}
+
+.projects-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.Civi-Engineering-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    min-height: 400px;
+}
+
+.Civi-Engineering-card.right-layout {
+    direction: rtl;
+}
+
+.Civi-Engineering-card.right-layout .project-content {
+    direction: ltr;
+}
+
+.project-image {
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.Civi-Engineering-card:hover .project-image img {
+    transform: scale(1.05);
+}
+
+.project-tags {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.category-tag {
+    background: #ffffffe6;
+    backdrop-filter: blur(10px);
+    padding: 8px 16px;
+    border-radius: 25px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #333;
+}
+
+.category-tag {
+    background-color: #2aabe1;
+    padding: 12px 20px;
+    color: white;
+    font-size: 16px;
+}
+
+.project-content {
+    padding: 20px 0;
+}
+
+.overlay_content button {
+    padding: 10px 20px;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+.Civi-Engineering-project-title {
+    font-size: 36px;
+    font-weight: 500;
+    color: #252525;
+    margin: 0 0 15px 0;
+    line-height: 1.2;
+}
+
+.Civi-Engineering-project-description {
+    color: #353535;
+    font-size: 18px;
+    line-height: 1.6;
+    font-weight: 300;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+.project-details {
+    margin-bottom: 30px;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    color: #555;
+}
+
+.detail-text {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.learn-more-btn {
+    background: transparent;
+    border: 2px solid #2aabe1;
+    color: #000000;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.learn-more-btn:hover {
+    background: #2aabe1;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px #1313134d;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .completed-projects-container {
+        padding: 60px 15px;
+    }
+
+    .main-heading {
+        font-size: 32px;
+    }
+
+    .Civi-Engineering-card {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .Civi-Engineering-card.right-layout {
+        direction: ltr;
+    }
+
+    .project-image {
+        height: 300px;
+    }
+
+    .project-title {
+        font-size: 24px;
+    }
+
+    .projects-grid {
+        gap: 60px;
+    }
+
+    .completed-projects-container-des p {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-heading {
+        font-size: 28px;
+    }
+
+    .project-title {
+        font-size: 22px;
+    }
+
+    .project-image {
+        height: 250px;
+    }
+
+    .Civi-Engineering-card {
+        gap: 20px;
+    }
+
+    .projects-grid {
+        gap: 40px;
+    }
+}
+
+.Civi-Engineering-card {
+    opacity: 0;
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.Civi-Engineering-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.Civi-Engineering-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.Civi-Engineering-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.Civi-Engineering-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

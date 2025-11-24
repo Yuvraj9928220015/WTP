@@ -1,0 +1,158 @@
+.Main-container {
+    position: relative;
+    height: 100vh;
+    background-image: url(/public/4_copy.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.Main-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom,
+            #efdbdb00 0%,
+            #0000001a 20%,
+            #00000066 64%,
+            #f7f4b3b0 80%,
+            #f7f6c7b0 100%);
+    z-index: 1;
+}
+
+.Main-container .container-fluid {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+}
+
+.Main-container .row {
+    height: 100%;
+    margin: 0;
+}
+
+.Main-container .col-12 {
+    height: 100%;
+    padding: 0;
+    display: flex;
+    align-items: flex-end;
+}
+
+/* --- CORRECTED SECTION --- */
+.Main-content {
+    width: 100%;
+    padding: 60px 150px;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.Main-content>div:first-child {
+    flex: 1;
+    min-width: 300px;
+}
+
+.Main-content>div:first-child>div:first-child {
+    font-size: 50px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 42px;
+    color: #2aabe1;
+    font-weight: normal;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+
+.Main-content>div:first-child>p {
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin: 0;
+    opacity: 0.9;
+    letter-spacing: 0.5px;
+    text-shadow: 1px 1px 2px #0000004d;
+}
+
+.Main-content>div:last-child {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-weight: 300;
+    opacity: 0.95;
+    font-size: 19px;
+    line-height: 1.5;
+    color: #2F2F2F;
+    margin-bottom: 12px;
+    text-align: justify;
+    letter-spacing: 1px;
+}
+
+/* Responsive Design (This will now work correctly) */
+@media (max-width: 768px) {
+    .Main-content {
+        padding: 40px 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .Main-content>div:first-child>div:first-child {
+        font-size: 2.5rem;
+    }
+
+    .Main-content>div:last-child {
+        text-align: left;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .Main-content {
+        padding: 30px 15px;
+    }
+
+    .Main-content>div:first-child>div:first-child {
+        font-size: 2rem;
+    }
+
+    .Main-content>div:first-child>p {
+        font-size: 1rem;
+    }
+
+    .Main-content>div:last-child {
+        font-size: 1rem;
+    }
+}
+
+/* Animation Effects */
+.Main-content>div:first-child>div:first-child {
+    animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+.Main-content>div:first-child>p {
+    animation: fadeInUp 1s ease-out 0.6s both;
+}
+
+.Main-content>div:last-child {
+    animation: fadeInUp 1s ease-out 0.9s both;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
