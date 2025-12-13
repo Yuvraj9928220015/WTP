@@ -88,7 +88,7 @@ const Navbar = () => {
               <div id='Navbar_Main_list-1' className="col-2">
                 <div className="Navbar_logo">
                   <div className="logo-text">
-                    <a href="/"><img src="./public/logo.png" alt="Logo" /></a>
+                    <a href="/"><img src="/logo.png" alt="Logo" /></a>
                   </div>
                 </div>
               </div>

@@ -5,7 +5,7 @@ export default function LandscapeArchitecture() {
         {
             id: 1,
             image: "/LandscapeArchitecture-8.jpg",
-            title: "Jawahar Circle, Jaipur",
+            title: "Riverfront, Kota",
             description: "A transformative project along the Chambal River that revitalizes the waterfront into a vibrant promenade for walking, leisure, and community gatherings—bringing life back to the river's edge.",
         },
         {

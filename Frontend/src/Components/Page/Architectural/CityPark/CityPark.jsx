@@ -61,7 +61,6 @@ export default function CityPark() {
 
             {/*  */}
 
-
             <section className="wonders-section">
                 <div className="container-fluid">
                     <div className="section-header">

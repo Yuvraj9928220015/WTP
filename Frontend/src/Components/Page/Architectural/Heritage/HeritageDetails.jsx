@@ -23,7 +23,7 @@ export default function HeritageDetails() {
         );
     }
 
-    const nextImage = () => {
+    const nextImage = () => {     c                    
         setCurrentImageIndex(prevIndex => (prevIndex + 1) % heritageItem.gallery.length);
     };
 

@@ -9,11 +9,11 @@ export default function Header() {
 
     const slides = [
         {
-            image: '/DSC_5087.jpg',
+            image: '/DSC_5087.webp',
             title: 'Chambal River Front'
         },
         {
-            image: '/Sustainability-City-Park-Kota.jpg',
+            image: '/Sustainability-City-Park-Kota.webp',
             title: ' City Park, Kota ',
         },
         // {
@@ -21,16 +21,16 @@ export default function Header() {
         //     title: 'Arches at Chambal River Front',
         // },
         {
-            image: '/IMG-20250820-WA0004.jpg',
+            image: '/IMG-20250820-WA0004.webp',
             title: 'World Trade Park',
         },
         {
-            image: '/WhatsAppImage-1.jpg',
+            image: '/WhatsAppImage-1.webp',
             subtitle: 'Heritage Architecture',
             title: 'Patrika Gate, Jaipur',
         },
         {
-            image: '/torandwar.jpg',
+            image: '/torandwar.webp',
             title: 'Toran Dwar, Jaipur  ',
         },
         {

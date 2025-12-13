@@ -55,13 +55,14 @@
     letter-spacing: 1px;
 }
 
-/* Awesome Section */
+/* Awesome Section - Updated Design */
 .awesome-section {
     display: flex;
     align-items: center;
     padding: 80px 50px;
     gap: 60px;
     min-height: 500px;
+    /* background: linear-gradient(135deg, #f5f7fa 0%, #ffffff 100%); */
 }
 
 .awesome-left {
@@ -70,58 +71,91 @@
 }
 
 .awesome-title {
-    font-size: 48px;
-    font-weight: 700;
-    color: #333;
-    margin-bottom: 40px;
-    line-height: 1.1;
+    font-size: 72px;
+    font-weight: 300;
+    color: #d3d3d3;
+    margin-bottom: 50px;
+    line-height: 0.9;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 5px;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.title-word-1 {
+    display: block;
+    font-weight: 600;
+    color: #4e4e4e;
+    letter-spacing: 12px;
+    text-align: left;
+}
+
+.title-word-2 {
+    display: block;
+    font-weight: 600;
+    color: #4e4e4e;
+    letter-spacing: 12px;
+    margin-top: 5px;
+    text-align: right;
 }
 
 .awesome-stats {
     display: flex;
-    gap: 50px;
-    margin-bottom: 40px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    margin-bottom: 50px;
+    /* padding-left: 10px; */
 }
 
 .stat-item {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .stat-number {
-    font-size: 36px;
-    font-weight: bold;
-    color: #333;
+    font-size: 42px;
+    font-weight: 700;
+    color: #2c3e50;
     margin-bottom: 8px;
     display: block;
+    letter-spacing: 1px;
 }
 
 .stat-label {
-    font-size: 16px;
-    color: #666;
+    font-size: 18px;
+    color: #7f8c8d;
     letter-spacing: 1px;
-    text-transform: uppercase;
+    text-transform: lowercase;
     font-weight: 600;
 }
 
 .awesome-section-button {
-    padding: 12px 35px;
-    background: #007bff;
-    color: white;
-    border: none;
+    padding: 14px 40px;
+    background: transparent;
+    color: #2c3e50;
+    border: 2px solid #424242;
     border-radius: 4px;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-left: auto;
+    display: block;
 }
 
 .awesome-section-button:hover {
-    background: #0056b3;
+    background: #2c3e50;
+    color: white;
+    border-color: #2c3e50;
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px #007bff4d;
 }
 
 .awesome-right {
@@ -134,13 +168,7 @@
 .awesome-image {
     flex: 1;
     overflow: hidden;
-    box-shadow: 0 10px 30px #00000026;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.awesome-image:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px #00000033;
 }
 
 .awesome-image img {
@@ -148,10 +176,6 @@
     height: 100%;
     object-fit: cover;
     transition: transform 0.4s ease;
-}
-
-.awesome-image:hover img {
-    transform: scale(1.05);
 }
 
 .awesome-image:nth-child(1) {
@@ -521,7 +545,10 @@
         padding: 60px 40px;
     }
 
-    .awesome-title,
+    .awesome-title {
+        font-size: 60px;
+    }
+
     .discover-title,
     .slider-title,
     .gallery-section-title {
@@ -586,6 +613,17 @@
         text-align: center;
     }
 
+    .awesome-title {
+        font-size: 48px;
+        letter-spacing: 6px;
+        align-items: center;
+    }
+
+    .title-word-1,
+    .title-word-2 {
+        letter-spacing: 8px;
+    }
+
     .awesome-stats {
         justify-content: center;
         flex-wrap: wrap;
@@ -624,7 +662,6 @@
         height: 400px;
     }
 
-    .awesome-title,
     .discover-title,
     .slider-title,
     .gallery-section-title {
@@ -685,7 +722,17 @@
         padding: 40px 20px;
     }
 
-    .awesome-title,
+    .awesome-title {
+        font-size: 36px;
+        margin-bottom: 40px;
+        letter-spacing: 4px;
+    }
+
+    .title-word-1,
+    .title-word-2 {
+        letter-spacing: 6px;
+    }
+
     .discover-title,
     .slider-title,
     .gallery-section-title {
@@ -694,11 +741,11 @@
     }
 
     .stat-number {
-        font-size: 28px;
+        font-size: 32px;
     }
 
     .stat-label {
-        font-size: 13px;
+        font-size: 12px;
     }
 
     .awesome-stats {
@@ -706,8 +753,8 @@
     }
 
     .awesome-section-button {
-        padding: 10px 25px;
-        font-size: 14px;
+        padding: 12px 30px;
+        font-size: 13px;
     }
 
     .awesome-image:nth-child(1),
@@ -774,7 +821,6 @@
     .popular-tour-overlay p {
         font-size: 13px;
     }
-
 }
 
 @media (max-width: 360px) {
@@ -786,7 +832,16 @@
         font-size: 18px;
     }
 
-    .awesome-title,
+    .awesome-title {
+        font-size: 28px;
+        letter-spacing: 3px;
+    }
+
+    .title-word-1,
+    .title-word-2 {
+        letter-spacing: 4px;
+    }
+
     .discover-title,
     .slider-title,
     .gallery-section-title {
@@ -794,7 +849,7 @@
     }
 
     .stat-number {
-        font-size: 24px;
+        font-size: 28px;
     }
 
     .awesome-image:nth-child(1),
@@ -814,5 +869,4 @@
     .popular-Tours {
         height: 200px;
     }
-
 }

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import "./UrbanTransformation.css"
+import './UrbanTransformation.css';
+
 export default function UrbanTransformation() {
     const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -128,7 +129,10 @@ export default function UrbanTransformation() {
                 {/* Awesome Projects Section */}
                 <section className="awesome-section">
                     <div className="awesome-left">
-                        <h2 className="awesome-title">AWESOME<br />COUNTRY</h2>
+                        <h2 className="awesome-title">
+                            <span className="title-word-1">AWESOME</span>
+                            <span className="title-word-2">COUNTRY</span>
+                        </h2>
                         <div className="awesome-stats">
                             <div className="stat-item">
                                 <span className="stat-number">10+</span>
@@ -143,7 +147,7 @@ export default function UrbanTransformation() {
                                 <span className="stat-label">Acres Reimagined</span>
                             </div>
                         </div>
-                        <button className='awesome-section-button'>READ MORE</button>
+                        <button className='awesome-section-button'>READ MORE →</button>
                     </div>
                     <div className="awesome-right">
                         <div className="awesome-image">
@@ -165,7 +169,7 @@ export default function UrbanTransformation() {
                             <img src="/66X48-Night10.jpg" alt="Discover Project" />
                             <div className="play-button">
                                 <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
-                                    <circle cx="30" cy="30" r="30" fill="rgba(255,255,255,0.3)" />
+                                    <circle cx="30" cy="30" r="30" fill="#ffffff4d" />
                                     <path d="M25 20L40 30L25 40V20Z" fill="white" />
                                 </svg>
                             </div>
