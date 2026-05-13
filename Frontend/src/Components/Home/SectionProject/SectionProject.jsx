@@ -84,9 +84,8 @@ export default function SectionProject() {
                         </div>
                     </div>
                     <div className="Typing-Animation-line"></div>
-
+                    <div className="SectionProject-category"> Designing landmarks that celebrate India's spirit.</div>
                     <div data-aos="fade-right" className="Urban-prag">
-                        Designing landmarks that celebrate India's spirit.
                         From cultural icons to transformative public institutions, our work contributes to the
                         nation's identity with architecture that honors tradition while embraces progress.
                     </div>
@@ -96,9 +95,9 @@ export default function SectionProject() {
                     {/* Section 1: Projects */}
                     <div className="row project-row">
                         <div data-aos="fade-right" className="col-lg-6 col-md-12 order-lg-1 order-2">
-                            <div className="project-card" onClick={() => handleImageClick('/Banner-10.JPG')}>
+                            <div className="project-card" onClick={() => handleImageClick('/New-5.png')}>
                                 <div id='Section-image-container' className="image-container">
-                                    <img src="/Banner-10.JPG" alt="Kota Project" loading="lazy" />
+                                    <img src="/New-5.png" alt="Kota Project" loading="lazy" />
                                     <div className="overlay">
                                         <div className="overlay-content">
                                             <h3> Constitutional Park, Jaipur</h3>
@@ -119,9 +118,9 @@ export default function SectionProject() {
                         <div data-aos="fade-left" className="col-lg-6 col-md-12 order-lg-2 order-1 mt-">
                             <div className="row g-2 h-100">
                                 <div className="col-12">
-                                    <div className="project-card" onClick={() => handleImageClick('/0001_ (244).JPG')}>
+                                    <div className="project-card" onClick={() => handleImageClick('/New-6.png')}>
                                         <div id='Section-image-container' className="image-container">
-                                            <img src="/0001_ (244).JPG" alt='Jaipur Project' loading="lazy" />
+                                            <img src="/New-6.png" alt='Jaipur Project' loading="lazy" />
                                             <div className="overlay">
                                                 <div className="overlay-content">
                                                     <h3>Mahatma Gandhi Statue </h3>
@@ -138,9 +137,9 @@ export default function SectionProject() {
                                     </div>
                                 </div>
                                 <div data-aos="zoom-out-left" className="col-12">
-                                    <div className="project-card" onClick={() => handleImageClick('/untitled-3115.jpg')}>
+                                    <div className="project-card" onClick={() => handleImageClick('/New-7.png')}>
                                         <div id='Section-image-container' className="image-container">
-                                            <img src="/untitled-3115.jpg" alt="RAAS Chhatrasagar" loading="lazy" />
+                                            <img src="/New-7.png" alt="RAAS Chhatrasagar" loading="lazy" />
                                             <div className="overlay">
                                                 <div className="overlay-content">
                                                     <h3>Arjuna Pratima, SMS Stadium Jaipur</h3>
@@ -167,6 +166,7 @@ export default function SectionProject() {
                                 </div>
                             </div>
                             <div className="Typing-Animation-line"></div>
+                            <div className="SectionProject-category"> Designing landmarks that celebrate India's spirit.</div>
                             <div data-aos="fade-right" className="Urban-prag">
                                 Building cities with purpose, shaping lives with design.
                                 We design urban spaces that are inclusive, efficient, and culturally rooted—fostering
@@ -174,16 +174,15 @@ export default function SectionProject() {
                             </div>
                         </div>
                         <div data-aos="fade-right" className="col-lg-6 col-md-12">
-                            <div className="project-card" onClick={() => handleImageClick('/Urban-Development-1.jpg')}>
+                            <div className="project-card" onClick={() => handleImageClick('/Amirtsar.jpg')}>
                                 <div id='Section-image-container' className="image-container">
-                                    <img src="/Urban-Development-1.jpg" alt="Commercial Project" loading="lazy" />
+                                    <img src="/Amirtsar.jpg" alt="Commercial Project" loading="lazy" />
                                     <div className="overlay">
                                         <div className="overlay-content">
-                                            <h3> Patrika Gate, Jaipur</h3>
+                                            <h3>Amritsar City Development</h3>
                                             {/* <p className="category"> cultural gateway</p> */}
                                             <p className="description">
-                                                An iconic cultural gateway at Jawahar Circle, adorned with vibrant Rajasthani art and
-                                                architecture, serving as a symbolic entrance to Pink City.
+                                                A transformative urban revitalization project near the Golden Temple, recreating the charm of old Amritsar through restored facades and pedestrian pathways
                                             </p>
                                             <button className="btn-view" onClick={(e) => e.stopPropagation()}>
                                                 <a href="#">View Details</a>
@@ -197,9 +196,9 @@ export default function SectionProject() {
                         <div data-aos="fade-left" className="col-lg-6 col-md-12">
                             <div data-aos="zoom-out-left" className="row h-100">
                                 <div className="col-12">
-                                    <div className="project-card" onClick={() => handleImageClick('/Urban-Development-2.JPG')}>
+                                    <div className="project-card" onClick={() => handleImageClick('/New-9.png')}>
                                         <div id='Section-image-container' className="image-container">
-                                            <img src="/Urban-Development-2.JPG" alt="WTP Project" loading="lazy" />
+                                            <img src="/New-9.png" alt="WTP Project" loading="lazy" />
                                             <div className="overlay">
                                                 <div className="overlay-content">
                                                     <h3>Kota City Transformation</h3>
@@ -214,15 +213,16 @@ export default function SectionProject() {
                                     </div>
                                 </div>
                                 <div data-aos="zoom-out-left" className="col-lg-12 col-md-12 col-sm-12">
-                                    <div className="project-card" onClick={() => handleImageClick('/0001_ (672).jpg')}>
+                                    <div className="project-card" onClick={() => handleImageClick('/LandscapeArchitecture-4.jpg')}>
                                         <div id='Section-image-container' className="image-container">
-                                            <img src="/0001_ (672).jpg" alt="Omex Chok" loading="lazy" />
+                                            <img src="/LandscapeArchitecture-4.jpg" alt="Omex Chok" loading="lazy" />
                                             <div className="overlay">
                                                 <div className="overlay-content">
-                                                    <h3> Amritsar City Development </h3>
+                                                    <h3>Peacock Garden, Jaipur</h3>
                                                     {/* <p className="category"> urban revitalization project</p> */}
-                                                    <p className="description">A transformative urban revitalization project near the Golden Temple, recreating the
-                                                        charm of old Amritsar through restored facades and pedestrian pathways</p>
+                                                    <p className="description">
+                                                        A serene heritage-themed garden inspired by peacock motifs, offering a vibrant blend of traditional Rajasthani landscape and design elements.
+                                                    </p>
                                                     <button className="btn-view" onClick={(e) => e.stopPropagation()}>
                                                         <a href="#">View Details</a>
                                                     </button>
@@ -244,6 +244,7 @@ export default function SectionProject() {
                                 </div>
                             </div>
                             <div className="Typing-Animation-line"></div>
+                            <div className="SectionProject-category"> Designing landmarks that celebrate India's spirit.</div>
                             <div data-aos="fade-right" className="Urban-prag">
                                 Crafting experiences through spaces of elegance and comfort.
                                 From luxury resorts to urban retreats, our designs blend hospitality with heritage,
@@ -253,9 +254,9 @@ export default function SectionProject() {
                         <div className="col-lg-12 mt-4 col-md-12">
                             <div className="row g-5 h-100">
                                 <div className="col-12">
-                                    <div className="project-card" onClick={() => handleImageClick('/ShivVilas039.jpg')}>
+                                    <div className="project-card" onClick={() => handleImageClick('/New-11.png')}>
                                         <div id='Shiv_Vilas' className="">
-                                            <img src="/ShivVilas039.jpg" alt="Riverfront Development" loading="lazy" />
+                                            <img src="/New-11.png" alt="Riverfront Development" loading="lazy" />
                                             <div className="overlay">
                                                 <div className="overlay-content">
                                                     <h3>Hotel Shiv Vilas</h3>
@@ -287,9 +288,9 @@ export default function SectionProject() {
                                     </div>
                                 </div>
                                 <div data-aos="fade-left" className="col-lg-6 col-md-6 col-sm-12">
-                                    <div className="project-card" onClick={() => handleImageClick('/IMG_7709.jpg')}>
+                                    <div className="project-card" onClick={() => handleImageClick('/Shakun-hotel.jpg')}>
                                         <div id='Section-image-container' className="image-container">
-                                            <img src="/IMG_7709.jpg" alt="Eco-Resort Masterplan" loading="lazy" />
+                                            <img src="/Shakun-hotel.jpg" alt="Eco-Resort Masterplan" loading="lazy" />
                                             <div className="overlay">
                                                 <div className="overlay-content">
                                                     <h3>Shakun Hotel</h3>

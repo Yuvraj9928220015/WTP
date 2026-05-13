@@ -49,7 +49,6 @@
 
 .overlay_content h2 {
     font-size: clamp(2rem, 5vw, 4rem);
-    font-weight: 700;
     margin: 0 0 15px 0;
     letter-spacing: 2px;
     background: linear-gradient(135deg, #ffffff, #e2e8f0);
@@ -60,7 +59,7 @@
 
 .overlay_content p {
     margin: 0;
-    letter-spacing: 1px;
+    /* letter-spacing: 1px; */
     opacity: 0.9;
 }
 
@@ -145,7 +144,7 @@
 
 .contact-title {
     font-size: 29px;
-    font-weight: 600;
+    font-weight: 300;
     color: #bb9168;
     margin-bottom: 15px;
     letter-spacing: 1px;
@@ -166,9 +165,10 @@
 
 .contact-description {
     color: #6b7280;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1.6;
     margin-bottom: 20px;
+    letter-spacing: 1px;
 }
 
 .contact-info {
@@ -209,14 +209,14 @@
 
 .form-header h2 {
     font-size: 2.5rem;
-    font-weight: 700;
+    font-weight: 300;
     margin-bottom: 15px;
 }
 
 .form-header p {
     font-size: 1.2rem;
     opacity: 0.9;
-    font-weight: 600;
+    font-weight: 300;
 }
 
 .form-content {
@@ -249,8 +249,8 @@
 }
 
 .form-label {
-    font-size: 14px;
-    font-weight: 600;
+    font-size: 18px;
+    font-weight: 400;
     color: #374151;
     margin-bottom: 8px;
 }

@@ -8,7 +8,7 @@ export default function Conservation() {
                     {/* Hero Section */}
                     <div className='About_container_image'>
                         <img
-                            src="/Untitled-2.jpg"
+                            src="/New-39.jpeg"
                             alt="Modern Architecture Interior Design"
                             loading="lazy"
                         />
@@ -29,7 +29,7 @@ export default function Conservation() {
                                 <div className="conservation-col-left">
                                     <div className="conservation-image-container">
                                         <img
-                                            src="/Conservation-1.jpg"
+                                            src="/New-42.jpeg"
                                             alt="Conservation Project"
                                         />
                                         <div className="conservation-overlay-card">
@@ -59,7 +59,6 @@ export default function Conservation() {
 
                         {/*  */}
 
-
                         <div className="conservation-container">
                             <div className="conservation-row">
                                 <div className="conservation-col-right">
@@ -69,7 +68,7 @@ export default function Conservation() {
                                             Inspired by the traditional gates of Jaipur such as Soorajpole and Chandpole, we
                                             designed and constructed a series of monumental <b>entry gates across Kota city.</b> These
                                             gateways do more than mark an entrance—they <b>symbolize pride, heritage, and
-                                                identity,</b> crafted using traditional Rajasthani architectural elements and modern
+                                            identity,</b> crafted using traditional Rajasthani architectural elements and modern
                                             materials to ensure both legacy and longevity.
                                         </p>
                                     </div>
@@ -78,7 +77,7 @@ export default function Conservation() {
                                 <div className="conservation-col-left">
                                     <div className="conservation-image-container">
                                         <img
-                                            src="/Conservation-2.webp"
+                                            src="/New-40.jpeg"
                                             alt="Conservation Project"
                                         />
                                     </div>
@@ -128,7 +127,7 @@ export default function Conservation() {
                                 <div className="slider-track">
                                     <div className="conservation-slider-item">
                                         <div className="conservation-slider-image">
-                                            <img src="/Conservation-1.jpg" alt="Modern House" />
+                                            <img src="/New-42.jpeg" alt="Modern House" />
                                         </div>
                                         <div className="conservation-slider-content">
                                             <h3>Authenticity in Restoration</h3>
@@ -151,7 +150,7 @@ export default function Conservation() {
                                     </div>
                                     <div className="conservation-slider-item">
                                         <div className="conservation-slider-image">
-                                            <img src="/conservation-6.webp" alt="Sustainable Architecture" />
+                                            <img src="/New-41.jpeg" alt="Sustainable Architecture" />
                                         </div>
                                         <div className="conservation-slider-content">
                                             <h3>Attention to Detail </h3>

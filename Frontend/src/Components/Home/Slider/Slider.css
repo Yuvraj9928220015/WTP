@@ -5,6 +5,18 @@
     box-sizing: border-box;
 }
 
+/* =============================================
+   CSS VARIABLES — ek jagah se sab control karo
+   ============================================= */
+:root {
+    --slide-inactive-height: 360px;
+    /* left / right image height */
+    --slide-active-height: 480px;
+    /* center (active) image height */
+    --slide-transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* === TITLE SECTION === */
 .slider-container-title {
     width: 100%;
     text-align: center;
@@ -17,6 +29,7 @@
     font-size: clamp(28px, 4vw, 36px);
 }
 
+/* === MAIN WRAPPER === */
 .slider-container {
     width: 100%;
     max-width: 100vw;
@@ -44,6 +57,7 @@
     text-align: center;
 }
 
+/* === SPLIDE SLIDER BASE === */
 .modern-slider {
     visibility: hidden;
     opacity: 0;
@@ -58,8 +72,9 @@
     opacity: 1;
 }
 
+/* === TRACK: overflow visible so center slide can "pop out" === */
 .splide__track {
-    padding: 30px 0;
+    padding: 60px 0 !important;
     overflow: visible !important;
 }
 
@@ -75,23 +90,20 @@
     justify-content: center;
 }
 
+/* === INACTIVE SLIDE === */
 .modern-slide {
-    transform: scale(0.85);
-    opacity: 0.6;
-    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: var(--slide-transition);
     cursor: pointer;
-}
-
-.modern-slide.is-active {
-    transform: scale(1.1);
     opacity: 1;
-    z-index: 2;
 }
 
-.modern-slide.is-visible {
-    opacity: 0.75;
+/* === ACTIVE (CENTER) SLIDE === */
+.modern-slide.is-active {
+    z-index: 10;
+    opacity: 1;
 }
 
+/* === SLIDE INNER CONTENT === */
 .slide-content {
     height: 100%;
     width: 100%;
@@ -101,62 +113,81 @@
     padding: 0;
 }
 
-.image-wrapper {
+/* === IMAGE WRAPPER ===
+   FIX: Height yahan set karo, img pe nahi
+   Wrapper ki height change hogi, img usse fill karegi
+   ================================================= */
+.Slide-image-wrapper {
     width: 100%;
-    max-width: 100%;
-    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    /* DEFAULT: inactive height */
+    height: var(--slide-inactive-height);
+    transition: var(--slide-transition);
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     overflow: hidden;
-    border-radius: 4px;
+    border-radius: 6px;
+    /* Subtle shadow for depth */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
-.image-wrapper img {
-    width: 100%;
-    height: 380px;
+/* ACTIVE SLIDE ka wrapper — badi height */
+.modern-slide.is-active .Slide-image-wrapper {
+    height: var(--slide-active-height);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+}
+
+/* === IMAGE — wrapper ko 100% fill karo === */
+.Slide-image-wrapper a {
     display: block;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.Slide-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    /* wrapper ki height follow karo */
+    display: block;
     object-fit: cover;
+    object-position: center;
     transition: transform 0.4s ease;
-    border-radius: 4px;
+    border-radius: 6px;
 }
 
-
-.modern-slide.is-active .image-wrapper img {
-    height: 360px;
-}
-
-.image-wrapper:hover img {
+/* Hover zoom on image */
+.Slide-image-wrapper:hover img {
     transform: scale(1.05);
 }
 
-.image-overlay {
+/* Bottom gradient overlay */
+.Slide-image-wrapper::before {
+    content: '';
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    transition: background-color 0.3s ease;
-    border-radius: 8px;
+    height: 55%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, transparent 100%);
     pointer-events: none;
+    z-index: 1;
+    border-radius: 6px;
 }
 
-
+/* === TEXT OVERLAY === */
 .text-content {
     position: absolute;
+    bottom: 0;
+    left: 0;
     width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
     padding: 20px;
     pointer-events: none;
-    z-index: 1;
+    z-index: 2;
 }
 
 .top-text {
@@ -165,8 +196,9 @@
     color: #ffffff;
     font-size: clamp(18px, 2.5vw, 25px);
     letter-spacing: 1px;
-    /* margin-bottom: 5px; */
-    font-weight: 600;
+    font-weight: 500;
+    margin-bottom: 6px;
+    text-shadow: 2px 2px 10px #000000e6;
 }
 
 .bottom-text {
@@ -174,11 +206,14 @@
     padding-bottom: 10px;
     border-bottom: 1px solid #ffffffe6;
     color: #ffffffe6;
+    font-weight: 500;
     text-align: center;
-    font-size: clamp(16px, 2vw, 21px);
+    font-size: clamp(14px, 2vw, 18px);
     letter-spacing: 1px;
+    text-shadow: 2px 2px 10px #000000e6;
 }
 
+/* === ARROWS === */
 .splide__arrow {
     background: #fffffff2;
     width: 60px;
@@ -189,17 +224,19 @@
     border: 1px solid #ffffff33;
     text-align: center;
     z-index: 10;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .splide__arrow:hover {
     background: #ffffff;
+    transform: translateY(-50%) scale(1.08);
 }
 
 .splide__arrow svg {
     fill: #1f1f1fe8;
     width: 1.6em;
     height: 1.6em;
-    font-weight: 200;
 }
 
 .splide__arrow--prev {
@@ -207,9 +244,11 @@
 }
 
 .splide__arrow--next {
+    right: 30px;
     left: auto;
 }
 
+/* === MISC === */
 .custom-separator {
     text-align: center;
     margin-top: 1px;
@@ -228,40 +267,43 @@
     top: -2px;
 }
 
-/* Large Screens (1400px and above) */
+/* =============================================
+   RESPONSIVE BREAKPOINTS
+   ============================================= */
+
+/* Large Screens (1400px+) */
 @media (min-width: 1400px) {
+    :root {
+        --slide-inactive-height: 380px;
+        --slide-active-height: 500px;
+    }
+
     .slider-container {
-        padding: 40px 20px;
+        padding: 40px 40px;
     }
 }
 
-/* Desktop (1200px to 1399px) */
+/* Desktop (1200–1399px) */
 @media (max-width: 1399px) {
+    :root {
+        --slide-inactive-height: 360px;
+        --slide-active-height: 480px;
+    }
+
     .slider-container {
         padding: 35px 60px;
     }
-
-    .image-wrapper img {
-        height: 380px;
-    }
-
-    .modern-slide.is-active .image-wrapper img {
-        height: 430px;
-    }
 }
 
-/* Tablet Large (992px to 1199px) */
+/* Tablet Large (992–1199px) */
 @media (max-width: 1199px) {
+    :root {
+        --slide-inactive-height: 320px;
+        --slide-active-height: 430px;
+    }
+
     .slider-container {
         padding: 30px 40px;
-    }
-
-    .image-wrapper img {
-        height: 350px;
-    }
-
-    .modern-slide.is-active .image-wrapper img {
-        height: 400px;
     }
 
     .splide__arrow {
@@ -270,18 +312,15 @@
     }
 }
 
-/* Tablet (768px to 991px) */
+/* Tablet (768–991px) */
 @media (max-width: 991px) {
+    :root {
+        --slide-inactive-height: 280px;
+        --slide-active-height: 380px;
+    }
+
     .slider-container {
         padding: 30px 20px;
-    }
-
-    .image-wrapper img {
-        height: 320px;
-    }
-
-    .modern-slide.is-active .image-wrapper img {
-        height: 370px;
     }
 
     .splide__arrow {
@@ -296,18 +335,15 @@
     .splide__arrow--next {
         right: 10px;
     }
-
-    .modern-slide {
-        transform: scale(0.9);
-    }
-
-    .modern-slide.is-active {
-        transform: scale(1.05);
-    }
 }
 
-/* Mobile Large (576px to 767px) */
+/* Mobile Large (576–767px) */
 @media (max-width: 767px) {
+    :root {
+        --slide-inactive-height: 260px;
+        --slide-active-height: 300px;
+    }
+
     .slider-container {
         padding: 25px 15px;
     }
@@ -317,32 +353,9 @@
         margin-bottom: 10px;
     }
 
-    .image-wrapper img {
-        height: 300px;
-    }
-
+    /* Mobile pe active effect minimal rakho */
     .modern-slide {
-        transform: scale(1);
         opacity: 1;
-    }
-
-    .modern-slide.is-active {
-        transform: scale(1);
-        opacity: 1;
-    }
-
-    .modern-slide.is-active .image-wrapper img {
-        height: 300px;
-    }
-
-    .top-text {
-        font-size: clamp(16px, 4vw, 20px);
-        margin-bottom: 3px;
-    }
-
-    .bottom-text {
-        font-size: clamp(14px, 3.5vw, 18px);
-        padding-bottom: 8px;
     }
 
     .splide__arrow {
@@ -366,16 +379,17 @@
 
 /* Mobile (below 576px) */
 @media (max-width: 576px) {
+    :root {
+        --slide-inactive-height: 240px;
+        --slide-active-height: 270px;
+    }
+
     .slider-container {
         padding: 20px 10px;
     }
 
     .slider-container-title {
         font-size: clamp(20px, 6vw, 28px);
-    }
-
-    .image-wrapper img {
-        height: 280px;
     }
 
     .text-content {
@@ -408,25 +422,17 @@
     .splide__arrow--next {
         right: 3px;
     }
-
-    .custom-separator {
-        font-size: 18px;
-        letter-spacing: 12px;
-    }
-
-    .custom-separator .star {
-        font-size: 28px;
-    }
 }
 
-/* Extra Small Mobile (below 400px) */
+/* Extra Small (below 400px) */
 @media (max-width: 400px) {
-    .slider-container {
-        padding: 15px 8px;
+    :root {
+        --slide-inactive-height: 200px;
+        --slide-active-height: 240px;
     }
 
-    .image-wrapper img {
-        height: 260px;
+    .slider-container {
+        padding: 15px 8px;
     }
 
     .splide__arrow {

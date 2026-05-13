@@ -65,19 +65,17 @@ const Navbar = () => {
   }, []);
 
   const servicesItems = [
-    { text: 'Urban Transformation', path: '/UrbanTransformation' },
-    { text: 'Heritage Architecture', path: '/Heritage' },
-    { text: 'Modern Architecture', path: '/ModernArchitecture' },
-    { text: 'Landscape Architecture', path: '/LandscapeArchitecture' },
-    { text: 'Interior Designing', path: '/InteriorDesigning' },
-    // { text: 'Civil & Structural Engineering', path: '/CivilEngineering' },
-    { text: 'Illumination & MEP', path: '/Lllumination' },
-    { text: 'Conservation Architecture', path: '/Conservation' },
-    { text: 'Monuments', path: '/Monuments' },
-    { text: 'Sculptures', path: '/Sculptures' },
-    { text: 'Hospitals', path: '/Hospitals' },
-    { text: 'Hotels & Resorts', path: '/Hotels' },
-    // { text: 'Upcoming', path: '/Upcoming' }
+    { text: 'urban transformation', path: '/urban-transformation' },
+    { text: 'heritage architecture', path: '/heritage' },
+    { text: 'modern architecture', path: '/modern-architecture' },
+    { text: 'landscape architecture', path: '/landscape-architecture' },
+    { text: 'interior designing', path: '/interior-designing' },
+    { text: 'illumination & mep', path: '/lllumination' },
+    { text: 'conservation architecture', path: '/conservation' },
+    { text: 'monuments', path: '/monuments' },
+    { text: 'sculptures', path: '/sculptures' },
+    { text: 'medical infrastructure', path: '/medical-infrastructure' },
+    { text: 'hotels & resorts', path: '/hotels' }
   ];
   return (
     <>
@@ -88,7 +86,7 @@ const Navbar = () => {
               <div id='Navbar_Main_list-1' className="col-2">
                 <div className="Navbar_logo">
                   <div className="logo-text">
-                    <a href="/"><img src="/logo.png" alt="Logo" /></a>
+                    <a href="/"><img src="/logo-1.png" alt="Logo" /></a>
                   </div>
                 </div>
               </div>
@@ -113,19 +111,16 @@ const Navbar = () => {
                       </div>
                     </li>
                     <li>
-                      <a href="/Awards">Awards & Achievements</a>
+                      <a href="/awards">Awards & Achievements</a>
                     </li>
                     <li>
-                      <a href="/Sustainability">Sustainability</a>
+                      <a href="/sustainability">Sustainability</a>
                     </li>
                     <li>
-                      <a href="/News">News</a>
+                      <a href="/news">News</a>
                     </li>
                     <li>
-                      <a href="/Team">Team</a>
-                    </li>
-                    <li>
-                      <a href="/About">About</a>
+                      <a href="/about">About</a>
                     </li>
                   </ul>
                 </div>
@@ -168,19 +163,16 @@ const Navbar = () => {
                   </div>
                 </li>
                 <li>
-                  <a href="/Awards">Awards & Achievements</a>
+                  <a href="/awards">Awards & Achievements</a>
                 </li>
                 <li>
-                  <a href="/Sustainability">Sustainability</a>
+                  <a href="/sustainability">Sustainability</a>
                 </li>
                 <li>
-                  <a href="/News">News</a>
+                  <a href="/news">News</a>
                 </li>
                 <li>
-                  <a href="/Team">Team</a>
-                </li>
-                <li>
-                  <a href="/About">About</a>
+                  <a href="/about">About</a>
                 </li>
               </ul>
             </div>

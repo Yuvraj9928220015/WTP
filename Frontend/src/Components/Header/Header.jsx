@@ -1,158 +1,120 @@
-import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-import Main from '../Main/main';
+import React, { useState, useEffect } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+import Main from "../Main/main";
 import "./Header.css";
-// import Banner from '../Banner/Banner';
 
 export default function Header() {
-    const [currentSlide, setCurrentSlide] = useState(0);
+  const navigate = useNavigate();
 
-    const slides = [
-        {
-            image: '/DSC_5087.webp',
-            title: 'Chambal River Front'
-        },
-        {
-            image: '/Sustainability-City-Park-Kota.webp',
-            title: ' City Park, Kota ',
-        },
-        // {
-        //     image: '/IMG-20250820-WA0002.jpg',
-        //     title: 'Arches at Chambal River Front',
-        // },
-        {
-            image: '/IMG-20250820-WA0004.webp',
-            title: 'World Trade Park',
-        },
-        {
-            image: '/WhatsAppImage-1.webp',
-            subtitle: 'Heritage Architecture',
-            title: 'Patrika Gate, Jaipur',
-        },
-        {
-            image: '/torandwar.webp',
-            title: 'Toran Dwar, Jaipur  ',
-        },
-        {
-            image: '/7(b).jpg',
-            title: 'Heritage Street, Amritsar  ',
-        },
-        {
-            image: '/Facade.jpg',
-            title: 'Shiv Vilas Hotel, Jaipur ',
-        },
-        {
-            image: '/IMG-20250820-WA0003.jpg',
-            title: 'Vigyan Lodha Residence, Jaipur',
-        },
-        // {
-        //     image: '/Banner-10.JPG',
-        //     title: 'Constitution Park, Jaipur ',
-        // },
-        {
-            image: '/IMG-20250820-WA0001.jpg',
-            title: 'Amar Jwan Jyoti Memorial, Jaipur'
-        },
-    ];
+  const slides = [
+    { image: "/Chambal-River-Front-Banner.jpeg", title: "Chambal River Front", link: "/chambal-riverFront" },
+    { image: "/Sustainability-City-Park-Kota.jpg", title: "City Park, Kota", link: "/CityPark" },
+    { image: "/New-17.png", title: "World Trade Park", link: "/WorldTradePark" },
+    { image: "/Patrika-Gate-Banner.jpeg", title: "Patrika Gate, Jaipur", link: "/PatrikaGate  " },
+    { image: "/torandwar.webp", title: "Toran Dwar, Jaipur", link: "/" },
+    { image: "/Heritage-banner.jpg", title: "Heritage Street, Amritsar", link: "/heritage" },
+    { image: "/Facade.jpg", title: "Shiv Vilas Hotel, Jaipur", link: "/" },
+    { image: "/IMG-20250820-WA0001.jpg", title: "Amar Jawan Jyoti Memorial", link: "/" },
+  ];
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrentSlide((prev) => (prev + 1) % slides.length);
-        }, 10000);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
-        return () => clearInterval(interval);
-    }, [slides.length]);
+  /* ==== AUTO SLIDE ==== */
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
+    }, 8000);
+    return () => clearInterval(interval);
+  }, [slides.length]);
 
-    const nextSlide = () => {
-        setCurrentSlide((prev) => (prev + 1) % slides.length);
-    };
+  /* ==== NAVIGATION ==== */
+  const nextSlide = (e) => {
+    e.stopPropagation();
+    setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
+  };
 
-    const prevSlide = () => {
-        setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-    };
+  const prevSlide = (e) => {
+    e.stopPropagation();
+    setCurrentSlide((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
+  };
 
-    const goToSlide = (index) => {
-        setCurrentSlide(index);
-    };
+  const goToSlide = (index) => setCurrentSlide(index);
 
-    const activeSlideData = slides[currentSlide];
+  const handleSlideClick = () => {
+    navigate(slides[currentSlide].link);
+  };
 
-    return (
-        <>
-            <div data-aos="fade-up" className="Header-slider-container">
-                <div className="Header-slider-wrapper">
-                    {slides.map((slide, index) => (
-                        <div
-                            key={index}
-                            className={`Header-slide ${index === currentSlide ? 'active' : ''}`}
-                        >
-                            <img
-                                src={slide.image}
-                                alt={`Slide ${index + 1}`}
-                                className="Header-slide-image"
-                                onError={(e) => {
-                                    e.target.style.display = 'none';
-                                    e.target.nextElementSibling.style.display = 'flex';
-                                }}
-                            />
+  return (
+    <>
+      <div className="Header-slider-container">
 
-                            <div className="Header-slide-fallback">
-                                Slide {index + 1}
-                            </div>
-
-                            <div className="Header-slide-overlay"></div>
-                        </div>
-                    ))}
-                </div>
-
-                <button
-                    onClick={prevSlide}
-                    className="nav-arrow nav-arrow-left"
-                    aria-label="Previous slide"
-                >
-                    <ChevronLeft size={24} />
-                </button>
-
-                <button
-                    onClick={nextSlide}
-                    className="nav-arrow nav-arrow-right"
-                    aria-label="Next slide"
-                >
-                    <ChevronRight size={24} />
-                </button>
-
-                <div className="dot-indicators">
-                    {slides.map((_, index) => (
-                        <button
-                            key={index}
-                            onClick={() => goToSlide(index)}
-                            className={`dot ${index === currentSlide ? 'dot-active' : ''}`}
-                            aria-label={`Go to slide ${index + 1}`}
-                        />
-                    ))}
-                </div>
-
-                <div className="Header-content-container">
-                    <div className="Header-content-wrapper">
-                        <div className="Header-content-grid">
-                            <div className="Header-content-section">
-                                <div className="Header-text-content">
-                                    <h1 className="Header-about-title">
-                                        {activeSlideData.title}
-                                    </h1>
-                               
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="Header-slide-counter">
-                    {currentSlide + 1} / {slides.length}
-                </div>
+        {/* ==== SLIDES ==== */}
+        <div className="Header-slider-wrapper">
+          {slides.map((slide, index) => (
+            <div
+              key={index}
+              className={`Header-slide ${index === currentSlide ? "active" : ""}`}
+              onClick={index === currentSlide ? handleSlideClick : undefined}
+              style={{ cursor: index === currentSlide ? "pointer" : "default" }}
+            >
+              <img
+                src={slide.image}
+                alt={slide.title}
+                className="Header-slide-image"
+              />
+              <div className="Header-slide-overlay"></div>
             </div>
-            {/* <Banner/> */}
-            <Main />
-        </>
-    );
+          ))}
+        </div>
+
+        {/* ==== PREV BUTTON ==== */}
+        <button className="nav-arrow nav-arrow-left" onClick={prevSlide}>
+          <ChevronLeft size={28} />
+        </button>
+
+        {/* ==== NEXT BUTTON ==== */}
+        <button className="nav-arrow nav-arrow-right" onClick={nextSlide}>
+          <ChevronRight size={28} />
+        </button>
+
+        {/* ==== DOT INDICATORS ==== */}
+        <div className="dot-indicators">
+          {slides.map((_, index) => (
+            <button
+              key={index}
+              className={`dot ${index === currentSlide ? "dot-active" : ""}`}
+              onClick={(e) => {
+                e.stopPropagation();
+                goToSlide(index);
+              }}
+            />
+          ))}
+        </div>
+
+        {/* ==== SLIDE COUNTER ==== */}
+        <div className="Header-slide-counter">
+          {currentSlide + 1} / {slides.length}
+        </div>
+
+        {/* ==== TITLE ==== */}
+        <div className="Header-content-container">
+          <div className="Header-content-wrapper">
+            <div className="Header-text-content">
+              <h1
+                className="Header-about-title"
+                onClick={handleSlideClick}
+                style={{ cursor: "pointer" }}
+              >
+                {slides[currentSlide].title}
+              </h1>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <Main />
+    </>
+  );
 }

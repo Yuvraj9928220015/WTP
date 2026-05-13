@@ -6,7 +6,7 @@
     --color-text: #EAEAEA;
     --color-text-muted: #c7c7c7;
     --color-headings: #1f2937;
-    --color-prag: #4b5563;
+    --color-prag: #3e434dea;
     --radius-large: 16px;
     --transition-timing: cubic-bezier(0.25, 0.46, 0.45, 0.94);
     --transition-duration: 0.5s;
@@ -44,19 +44,19 @@
     /* color: #2aabe1; */
     color: #a07e5d;
     font-size: clamp(28px, 4vw, 36px);
-    font-weight: 700;
+    font-weight: 500;
     line-height: 1.2;
 }
 
 .Urban-prag {
+    font-weight: 400;
     text-align: center;
     color: var(--color-prag);
-    /* color: white; */
-    font-size: 20px;
+    font-size: 19px;
+    line-height: 1.5;
+    padding-bottom: 20px;
     letter-spacing: 1px;
-    padding-top: 20px;
-    line-height: 1.6;
-    max-width: 50%;
+    max-width: 70%;
 }
 
 .section-header-list ul {
@@ -102,16 +102,18 @@
     cursor: pointer;
     width: 100%;
     flex-grow: 1;
-    min-height: 650px;
+    min-height: 800px;
 }
 
 #Shiv_Vilas {
     width: 100%;
+    height: 100%;
 }
 
 #Shiv_Vilas img {
     border-radius: 8px;
     width: 100%;
+     height: 100%;
 }
 
 .project-card:hover {
@@ -158,7 +160,7 @@
     flex-direction: column;
     justify-content: flex-end;
     padding: clamp(20px, 4vw, 40px);
-    background: #00000054;
+    /* background: #00000054; */
     opacity: 0;
     transition: opacity var(--transition-duration) var(--transition-timing);
 }
@@ -168,7 +170,7 @@
 }
 
 .image-container:hover img {
-    filter: blur(2px) brightness(0.7);
+    /* filter: blur(2px) brightness(0.7); */
     transform: scale(1.05);
 }
 
@@ -201,15 +203,22 @@
 }
 
 .overlay-content h3 {
-    font-size: 40px;
-    font-weight: 600;
+    font-size: 36px;
+    font-weight: 400;
     margin-bottom: 8px;
     line-height: 1.2;
 }
 
+.SectionProject-category {
+    padding: 10px 0px;
+    font-size: 25px;
+    font-weight: 400;
+    color: #202020d4;
+}
+
 .overlay-content .category {
-    font-size: 20px;
-    margin-bottom: 16px;
+    font-size: 26px;
+    /* margin-bottom: 16px; */
     color: var(--color-text-muted);
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -218,9 +227,9 @@
 
 .overlay-content .description {
     letter-spacing: 2px;
-    font-size: 21px;
-    font-weight: 600;
-    line-height: 1.3;
+    font-size: 19px;
+    font-weight: 300;
+    line-height: 1.5;
     margin-bottom: 24px;
     color: var(--color-text);
 }
@@ -232,7 +241,6 @@
     border: 1px solid #ffffff4d;
     color: var(--color-text);
     border-radius: 8px;
-    font-weight: 600;
     cursor: pointer;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -353,7 +361,7 @@
         cursor: pointer;
         width: 100%;
         flex-grow: 1;
-        min-height: 500px;
+        /* min-height: 500px; */
     }
 
 
@@ -380,6 +388,7 @@
         flex-direction: column;
         gap: 10px;
     }
+
     .project-card {
         overflow: hidden;
         position: relative;
@@ -389,7 +398,7 @@
         cursor: pointer;
         width: 100%;
         flex-grow: 1;
-        min-height: 380px;
+        /* min-height: 380px; */
     }
 }
 
@@ -431,6 +440,7 @@
         padding: 10px 20px;
         font-size: 12px;
     }
+
     .project-card {
         overflow: hidden;
         position: relative;
@@ -440,7 +450,7 @@
         cursor: pointer;
         width: 100%;
         flex-grow: 1;
-        min-height: 300px;
+        /* min-height: 300px; */
     }
 }
 
@@ -454,7 +464,7 @@
         cursor: pointer;
         width: 100%;
         flex-grow: 1;
-        min-height: 180px;
+        /* min-height: 180px; */
     }
 }
 
@@ -492,12 +502,13 @@
 /* Typing Animation styling */
 .Typing-Animation {
     color: #2aabe1;
-    font-size: 50px;
-    font-weight: 700;
+    font-size: 43px;
+    font-weight: 500;
     line-height: 1.2;
     padding-right: 0;
     border-right: none;
     border: none;
+    font-family: 'Cinzel', serif;
 }
 
 .Typing-Animation.animate {

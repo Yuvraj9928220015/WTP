@@ -4,7 +4,9 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Gruppo", sans-serif;
-  font-weight: 600;
- 
+  /* font-family: "Gruppo", sans-serif; */
+  /* font-family: "Merriweather", serif; */
+  font-family: "Quicksand", sans-serif;
+  font-weight: 200;
+
 }

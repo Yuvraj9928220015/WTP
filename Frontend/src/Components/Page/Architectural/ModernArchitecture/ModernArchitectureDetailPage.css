@@ -22,7 +22,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: #00000080;
+    /* background: #00000080; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -32,7 +32,7 @@
 
 .overlay_content h1 {
     font-size: 3rem;
-    font-weight: 700;
+    /* font-weight: 700; */
 }
 
 .detail-content-container {

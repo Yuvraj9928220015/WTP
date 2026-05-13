@@ -10,7 +10,7 @@ import Contact from "./Components/Contact/Contact";
 import About from "./Components/About/About";
 // import WorkGrid from "./Components/Work/WorkGrid";
 import Awards from "./Components/Awards/Awards";
-import Team from "./Components/Page/Team/Team";
+// import Team from "./Components/Page/Team/Team";
 import ModernArchitecture from "./Components/Page/Architectural/ModernArchitecture/ModernArchitecture";
 import LandscapeArchitecture from "./Components/Page/Architectural/LandscapeArchitecture/LandscapeArchitecture";
 import InteriorDesigning from "./Components/Page/Architectural/InteriorDesigning/InteriorDesigning";
@@ -34,6 +34,12 @@ import Home from './Components/Home/Home';
 import ViewPage1 from './Components/Home/SectionProject/ViewPage1/ViewPage1';
 import Hospitals from './Components/Page/Architectural/Hospitals/Hospitals';
 import Hotels from './Components/Page/Architectural/Hotels/Hotels';
+import KotaCityTransformation from './Components/Page/Architectural/KotaCityTransformation/KotaCityTransformation';
+import UrbanCityTransformation from './Components/Page/Architectural/UrbanCityTransformation/UrbanCityTransformation';
+import PatrikaGate from './Components/Page/Architectural/PatrikaGate/PatrikaGate';
+import WorldTradePark from './Components/Page/Architectural/WorldTradePark/WorldTradePark';
+import JaipurCity from './Components/Page/Architectural/JaipurCity/JaipurCity';
+import ToranDwar from './Components/Page/Architectural/ToranDwar/ToranDwar';
 
 export default function App() {
   useEffect(() => {
@@ -49,34 +55,40 @@ export default function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/Clients" element={<Clients />} />
+          <Route path="/clients" element={<Clients />} />
           {/* <Route path="/Work" element={<Work />} /> */}
-          <Route path="/Contact" element={<Contact />} />
-          <Route path="/About" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/about" element={<About />} />
           {/* <Route path="/WorkGrid" element={<WorkGrid />} /> */}
-          <Route path="/Awards" element={<Awards />} />
-          <Route path="/Team" element={<Team />} />
-          <Route path="/ModernArchitecture" element={<ModernArchitecture />} />
-          <Route path="/LandscapeArchitecture" element={<LandscapeArchitecture />} />
-          <Route path="/InteriorDesigning" element={<InteriorDesigning />} />
-          <Route path="/CivilEngineering" element={<CivilEngineering />} />
-          <Route path="/Upcoming" element={<Upcoming />} />
-          <Route path="/Sculptures" element={<Sculptures />} />
-          <Route path="/Monuments" element={<Monuments />} />
-          <Route path="/Conservation" element={<Conservation />} />
-          <Route path="/Lllumination" element={<Lllumination />} />
-          <Route path="/Heritage" element={<Heritage />} />
-          <Route path="/Sustainability" element={<Sustainability />} />
-          <Route path="/News" element={<News />} />
+          <Route path="/awards" element={<Awards />} />
+          {/* <Route path="/Team" element={<Team />} /> */}
+          <Route path="/modern-architecture" element={<ModernArchitecture />} />
+          <Route path="/landscape-architecture" element={<LandscapeArchitecture />} />
+          <Route path="/interior-designing" element={<InteriorDesigning />} />
+          <Route path="/civil-engineering" element={<CivilEngineering />} />
+          <Route path="/upcoming" element={<Upcoming />} />
+          <Route path="/sculptures" element={<Sculptures />} />
+          <Route path="/monuments" element={<Monuments />} />
+          <Route path="/conservation" element={<Conservation />} />
+          <Route path="/lllumination" element={<Lllumination />} />
+          <Route path="/heritage" element={<Heritage />} />
+          <Route path="/sustainability" element={<Sustainability />} />
+          <Route path="/news" element={<News />} />
           <Route path="/heritage/:id" element={<HeritageDetails />} />
           <Route path="/collections/:collectionId" element={<ModernArchitectureDetailPage />} />
           <Route path="/design/:id" element={<DesignDetailPage />} />
-          <Route path="/UrbanTransformation" element={<UrbanTransformation />} />
-          <Route path="/ChambalRiverFront" element={< ChambalRiverFront />} />
-          <Route path="/CityPark" element={< CityPark />} />
+          <Route path="/urban-transformation" element={<UrbanTransformation />} />
+          <Route path="/chambal-riverFront" element={< ChambalRiverFront />} />
+          <Route path="/cityPark" element={< CityPark />} />
           <Route path="/ViewPage1" element={< ViewPage1 />} />
-          <Route path="/Hospitals" element={< Hospitals />} />
-          <Route path="/Hotels" element={< Hotels />} />
+          <Route path="/medical-infrastructure" element={< Hospitals />} />
+          <Route path="/hotels" element={< Hotels />} />
+          <Route path="/kota-city-transformation" element={< KotaCityTransformation />} />
+          <Route path="/urban-city-transformation" element={< UrbanCityTransformation />} />
+          <Route path="/PatrikaGate" element={< PatrikaGate />} />
+          <Route path="/WorldTradePark" element={< WorldTradePark />} />
+          <Route path="/JaipurCity" element={< JaipurCity />} />
+          <Route path="/ToranDwar" element={< ToranDwar />} />
         </Routes>
         <Footer />
       </BrowserRouter>

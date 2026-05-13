@@ -6,54 +6,265 @@ export default function About() {
         {
             icon: <Award size={32} />,
             title: "EXPERIENCED TEAM",
-            description: "Three decades of architectural excellence"
+            description: "Our team brings decades of combined experience in architecture and design innovation."
         },
         {
             icon: <Users size={32} />,
             title: "PROFESSIONAL",
-            description: "Vision led by Dr. Anoop Bartaria."
+            description: "We maintain the highest standards of professionalism in every project we undertake."
         },
         {
             icon: <Target size={32} />,
             title: "EXPERT STAFF",
-            description: "1000+ landmark projects across India."
+            description: "Each team member is a specialist in their field, ensuring quality outcomes."
         },
         {
             icon: <TrendingUp size={32} />,
             title: "FAST RESPONSE",
-            description: "Icons that redefine city skylines."
+            description: "Quick turnaround times without compromising on quality or attention to detail."
         },
         {
             icon: <Lightbulb size={32} />,
             title: "INNOVATIVE IDEAS",
-            description: "End-to-end design and execution expertise."
+            description: "We bring fresh perspectives and creative solutions to every challenge."
         },
         {
             icon: <Clock size={32} />,
             title: "ON TIME DELIVERY",
-            description: "Award-winning and globally recognized firm"
-        },
-        {
-            icon: <TrendingUp size={32} />,
-            title: "INNOVATIVE IDEAS",
-            description: "Trusted consultant to State Governments."
-        },
-        {
-            icon: <Target size={32} />,
-            title: "ON TIME DELIVERY",
-            description: "Innovation and perfection in every detail."
-        },
-        {
-            icon: <Award size={32} />,
-            title: "EXPERIENCED TEAM",
-            description: "Sustainable and future-ready designs."
-        },
-        {
-            icon: <Users size={32} />,
-            title: "PROFESSIONAL",
-            description: "Creating timeless spaces that inspire."
+            description: "Committed to delivering projects on schedule, every time."
         },
     ];
+
+    const teamMembers = [
+        // Management
+        {
+            id: 1,
+            name: "Mrs. Ruchi Bartaria",
+            image: "/Ruchi-Bartaria.png",
+            category: "Board of Directors",
+            description: "Vice Chairperson - Sincere Group of Companies",
+        },
+        {
+            id: 2,
+            name: "Ms. Ashmita Bartaria",
+            image: "/Ashmita-Bartaria.png",
+            category: "Board of Directors",
+            description: "Director - Sincere Group of Companies",
+        },
+        {
+            id: 3,
+            name: "Mr. Kamal Sharma",
+            image: "/Ar-Kamal-Sharma.jpeg",
+            category: "Board of Directors",
+            description: "Director - Sincere Group of Companies",
+        },
+
+        // Administration
+        {
+            id: 4,
+            name: "Mr. Ram Chaudhary",
+            image: "/Ram-Chaudhary.jpg",
+            category: "Administration Team",
+            description: "General Manager",
+        },
+        {
+            id: 5,
+            name: "Ms. Reena Jangid",
+            image: "/Reena.jpg",
+            category: "Administration Team",
+            description: "Manager - Admin & Marketing",
+        },
+        {
+            id: 6,
+            name: "Mr. Arvind Sharma",
+            image: "/Arvind-Kumar.jpg",
+            category: "Administration Team",
+            description: "HR & IT Manager",
+        },
+
+        // Architecture Team
+        {
+            id: 7,
+            name: "Mr. Shashank Jain",
+            image: "/shashank-Jain.jpg",
+            category: "Sincere Architect Team",
+            description: "Head of Department",
+        },
+        // {
+        //     id: 8,
+        //     name: "Mr. Jaswant Singh",
+        //     image: "/Jaswant-Singh.jpg",
+        //     category: "Sincere Architect Team",
+        //     description: "Senior Architect",
+        // },
+        {
+            id: 9,
+            name: "Mr. Shreyash Mehrotra",
+            image: "/Shreyash-Mehrotra.jpg",
+            category: "Sincere Architect Team",
+            description: "Senior Architect",
+        },
+        // {
+        //     id: 10,
+        //     name: "Ms. Smita Vaidya",
+        //     image: "/Smita-Vaidya.jpg",
+        //     category: "Sincere Architect Team",
+        //     description: "Senior Architect",
+        // },
+        {
+            id: 11,
+            name: "Ms. Simran Walia",
+            image: "/Simran-Walia.png",
+            category: "Sincere Architect Team",
+            description: "Senior Architect",
+        },
+        // {
+        //     id: 12,
+        //     name: "Mr. Daya Ram Prajapat",
+        //     image: "/Daya-Ram-Prajapat.jpg",
+        //     category: "Sincere Architect Team",
+        //     description: "Interior Designer",
+        // },
+        {
+            id: 13,
+            name: "Mr. Anoop Sharma",
+            image: "/Anoop-Sharma.jpg",
+            category: "Sincere Architect Team",
+            description: "Graphics Designer",
+        },
+        // {
+        //     id: 14,
+        //     name: "Ms. Gulpsa Bano",
+        //     image: "/Gulpsa-Bano.jpg",
+        //     category: "Sincere Architect Team",
+        //     description: "Architect",
+        // },
+        {
+            id: 15,
+            name: "Ms. Amisha Tak",
+            image: "/Amisha-Talk.png",
+            category: "Sincere Architect Team",
+            description: "Architect",
+        },
+        {
+            id: 16,
+            name: "Mr. Gaurav Kumar Suthar",
+            image: "/Gaurav-Suthar.jpg",
+            category: "Sincere Architect Team",
+            description: "Architect",
+        },
+        {
+            id: 17,
+            name: "Mr. Ankit Asiwal",
+            image: "/ANKIT-ASIWAL.jpg",
+            category: "Sincere Architect Team",
+            description: "Architect",
+        },
+        {
+            id: 18,
+            name: "Ms. Harshita Jain",
+            image: "/Harshita-Jain.jpg",
+            category: "Sincere Architect Team",
+            description: "Architect",
+        },
+
+        // Civil Engineering Department
+        {
+            id: 19,
+            name: "Mr. Babu Lal Nayak",
+            image: "/BabuLal-Nayak.jpeg",
+            category: "Engineering Department",
+            description: "Senior Structural Engineer",
+        },
+        {
+            id: 22,
+            name: "Mr. Mukesh Mathur",
+            image: "/Mukesh-Mathur.jpg",
+            category: "Engineering Department",
+            description: "Senior Civil Engineer",
+        },
+        {
+            id: 20,
+            name: "Mr. Ajay Singh Choudhary",
+            image: "/Ajay-Chaudhary.jpg",
+            category: "Engineering Department",
+            description: "Structural Engineer",
+        },
+        {
+            id: 21,
+            name: "Mr. Aditya Mathur",
+            image: "/Aditya-Mathur.jpg",
+            category: "Engineering Department",
+            description: "Civil Engineer",
+        },
+        // {
+        //     id: 25,
+        //     name: "Mr. Rajesh Gupta",
+        //     image: "/Rajesh-Gupta.jpg",
+        //     category: "Engineering Department",
+        //     description: "Senior Electrical Engineer",
+        // },
+        {
+            id: 26,
+            name: "Mr. Ravi Mahle",
+            image: "/Ravi-Mahla.jpg",
+            category: "Engineering Department",
+            description: "Senior MEP Engineer",
+        },
+        {
+            id: 27,
+            name: "Mr. Y.V.R. Murthy",
+            image: "/YVR-Murthy.jpg",
+            category: "Engineering Department",
+            description: "Senior MEP Engineer",
+        },
+        {
+            id: 28,
+            name: "Mr. Rahul Saini",
+            image: "/Rahul-Saini.jpg",
+            category: "Engineering Department",
+            description: "Electrical Engineer",
+        },
+        // Accounts Department
+        {
+            id: 29,
+            name: "Amit Sharma",
+            image: "/Accounts-1.jpg",
+            category: "Accounts Department",
+            description: "Senior MEP Engineer",
+        },
+        {
+            id: 30,
+            name: "Gulapsha Khan",
+            image: "/Accounts-2.jpg",
+            category: "Accounts Department",
+            description: "Electrical Engineer",
+        },
+        {
+            id: 31,
+            name: "Karan Ahuja",
+            image: "/Accounts-5.jpg",
+            category: "Accounts Department",
+            description: "Senior MEP Engineer",
+        },
+        {
+            id: 32,
+            name: "Kshitiz Raj Vaishnav",
+            image: "/Accounts-6.jpg",
+            category: "Accounts Department",
+            description: "Electrical Engineer",
+        },
+
+
+    ];
+
+    const categories = ["Board of Directors", "Administration Team", "Sincere Architect Team", "Accounts Department", "Engineering Department"];
+
+    const groupedMembers = categories.map(category => ({
+        category,
+        members: teamMembers.filter(member => member.category === category)
+    })).filter(group => group.members.length > 0);
+
     return (
         <>
             <div className="team-wrapper">
@@ -66,7 +277,7 @@ export default function About() {
                     />
                     <div className="banner-overlay">
                         <div className="banner-content">
-                            <h1 className="overlayTitle">ABOUT US</h1>
+                            <h1 className="overlayTitle">Our Team</h1>
                         </div>
                     </div>
                 </div>
@@ -109,7 +320,7 @@ export default function About() {
 
                         <div className="umbra-image-wrapper">
                             <img
-                                src="/About-main-image.JPG"
+                                src="/Boss.jpg"
                                 alt="ANOOP BARTARIA"
                                 className="umbra-ceo-image"
                             />
@@ -117,7 +328,8 @@ export default function About() {
                     </div>
                 </div>
 
-                {/* Why Choose Us Section */}
+                {/* why-choose-section */}
+
                 <div className="why-choose-section">
                     <div className="why-choose-container">
                         <div className="why-choose-left">
@@ -136,7 +348,7 @@ export default function About() {
                         </div>
 
                         <div className="why-choose-right">
-                            <h2 className="why-choose-title">WHY CHOOSE US</h2>
+                            <h2 className="why-choose-title">Our Expertise</h2>
                             <div className="why-choose-underline"></div>
                             <p className="why-choose-description">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
@@ -156,6 +368,40 @@ export default function About() {
                                 ))}
                             </div>
                         </div>
+                    </div>
+                </div>
+
+                {/* Meet Our Team Section */}
+                <div className="meet-team-section">
+                    <div className="meet-team-container">
+                        <div className="meet-team-header">
+                            <h2 className="meet-team-title">MEET OUR TEAM</h2>
+                            <div className="meet-team-underline"></div>
+                        </div>
+
+                        {groupedMembers.map((group, groupIndex) => (
+                            <div key={groupIndex} className="team-category-section">
+                                <h3 className="team-category-title">{group.category}</h3>
+
+                                <div className="team-members-grid">
+                                    {group.members.map((member) => (
+                                        <div key={member.id} className="team-member-card">
+                                            <div className="team-member-image-wrapper">
+                                                <img
+                                                    src={member.image}
+                                                    alt={member.name}
+                                                    className="team-member-image"
+                                                />
+                                            </div>
+                                            <div className="team-member-info">
+                                                <h3 className="team-member-name">{member.name}</h3>
+                                                <p className="team-member-role">{member.description}</p>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>

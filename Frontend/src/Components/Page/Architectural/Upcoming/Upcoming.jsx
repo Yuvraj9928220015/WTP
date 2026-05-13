@@ -64,7 +64,6 @@ export default function Upcoming() {
                     </div>
                 </div>
 
-
                 <div id='WorkGrid_main-container' className="container-fluid">
                     <div className='About-section-content'>
                         <p>The architecture studio</p>

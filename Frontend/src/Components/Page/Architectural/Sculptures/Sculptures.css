@@ -39,7 +39,6 @@
 
 .Urban-title {
     font-size: 32px;
-    font-weight: 700;
     margin-bottom: 12px;
     line-height: 1.2;
 }
@@ -47,7 +46,6 @@
 .Urban-prag {
     text-align: center;
     color: #ffffffc7;
-    line-height: 1.6;
 }
 
 .project-row {
@@ -122,7 +120,7 @@
 }
 
 .image-container:hover img {
-    filter: blur(2px) brightness(0.7);
+    /* filter: blur(2px) brightness(0.7); */
     transform: scale(1.05);
     border-radius: 8px;
 }
@@ -177,7 +175,6 @@
     border: 1px solid #ffffff4d;
     color: var(--color-text);
     border-radius: 8px;
-    font-weight: 600;
     cursor: pointer;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);

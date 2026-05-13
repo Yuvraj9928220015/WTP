@@ -24,11 +24,11 @@
 
 .About-section-content_title {
     text-align: center;
-    font-size: 40px;
-    font-weight: 700;
+    font-size: 37px;
+    font-weight: 400;
     color: #1a202c;
     padding: 40px 0px;
-    line-height: 46px;
+    line-height: 48px;
     background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

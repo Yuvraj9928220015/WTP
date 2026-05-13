@@ -2,8 +2,8 @@
     padding: 0;
     background-color: transparent;
     position: fixed;
-    box-shadow: 0 4px 20px #0000002a;
-    backdrop-filter: blur(5px);
+    /* box-shadow: 0 4px 20px #0000002a; */
+    backdrop-filter: blur(1px);
     width: 100%;
     top: 0;
     z-index: 9999;
@@ -25,7 +25,7 @@
     justify-content: space-between;
     position: relative;
     backdrop-filter: blur(20px);
-    border-bottom: 1px solid #ffffff1a;
+    /* border-bottom: 1px solid #ffffff1a; */
     z-index: 9999;
     transition: all 0.3s ease;
 }
@@ -141,8 +141,9 @@
 .nav-horizontal li {
     list-style: none;
     color: #ffffff;
+    letter-spacing: 2px;
     font-size: 15px;
-    font-weight: 600;
+    font-weight: 300;
     cursor: pointer;
     transition: all 0.3s ease;
     letter-spacing: 1px;
@@ -156,7 +157,7 @@
 
 .Navbar.scrolled .nav-horizontal li {
     color: #a07e5d;
-    font-weight: 600;
+    font-weight: 300;
 }
 
 a {
@@ -238,8 +239,8 @@ a {
 .dropdown-item {
     padding: 12px 20px;
     color: #cbd5e1;
-    font-size: 14px;
-    font-weight: 600;
+    font-size: 15px;
+    font-weight: 400;
     cursor: pointer;
     transition: all 0.3s ease;
     letter-spacing: 1px;

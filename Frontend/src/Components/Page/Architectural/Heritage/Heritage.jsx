@@ -17,6 +17,17 @@ export default function Heritage() {
             <div className="heritage-main-container">
                 <div className="heritage">
                     <div className="heritage-container">
+                        {/* First Banner with Content */}
+                        <div className="heritage-banner-container">
+                            <div className="heritage-banner-wrapper">
+                                <img
+                                    src={"/virasat.png"}
+                                    alt={"Heritage Banner"}
+                                    className="heritage-banner-image"
+                                />
+                            </div>
+                        </div>
+
                         <div className="heritage-main-content">
                             <div className="heritage-overline-container">
                                 <div className="heritage-overline"></div>
@@ -25,25 +36,6 @@ export default function Heritage() {
                             </div>
                             <div className="heritage-content">
                                 An enduring legacy of art, culture, and tradition
-                            </div>
-                        </div>
-
-                        {/* First Banner with Content */}
-                        <div className="heritage-banner-container">
-                            <div className="heritage-banner-wrapper">
-                                <img
-                                    src={"/0001_(2407).jpg"}
-                                    alt={"Heritage Banner"}
-                                    className="heritage-banner-image"
-                                />
-                                <div className="heritage-banner-overlay">
-                                    <div className="heritage-banner-content">
-                                        <h2 className="heritage-banner-title"> Chambal River Front</h2>
-                                        <p className="heritage-banner-description">
-                                            Discover the rich architectural heritage and cultural landmarks that define our history
-                                        </p>
-                                    </div>
-                                </div>
                             </div>
                         </div>
 
@@ -76,7 +68,7 @@ export default function Heritage() {
                             <div className="heritage-banner-container heritage-banner-secondary">
                                 <div className="heritage-banner-wrapper heritage-banner-wrapper-2">
                                     <img
-                                        src={"/Heritage-banner.jpg"}
+                                        src={"/New-33.jpeg"}
                                         alt={"Heritage Banner 2"}
                                         className="heritage-banner-image"
                                     />

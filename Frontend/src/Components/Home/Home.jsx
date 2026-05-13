@@ -113,7 +113,7 @@ export default function Home() {
     return (
         <>
             <div className="home-wrapper">
-                <canvas ref={canvasRef} className="particle-canvas" />
+                {/* <canvas ref={canvasRef} className="particle-canvas" /> */}
                 <div className="content-wrapper">
                     {/* <Banner /> */}
                     <Header/>

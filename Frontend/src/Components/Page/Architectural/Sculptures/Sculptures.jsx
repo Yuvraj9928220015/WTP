@@ -16,13 +16,12 @@ export default function Sculptures() {
         e.stopPropagation();
     };
 
-
     return (
         <>
             <div className="Sculptures">
                 <div className='About_container_image'>
                     <img
-                        src="Sculptures-Banner.jpg"
+                        src="New-54.png"
                         alt="Modern Architecture Interior Design"
                         loading="lazy"
                     />
@@ -40,7 +39,7 @@ export default function Sculptures() {
                             <div className="Urban-title">Sculptures Architecture</div>
                             <div className="Urban-prag">
                                 Designing landmarks that celebrate India's spirit.
-                                From cultural icons to transformative public institutions, our work contributes to the <br />
+                                From cultural icons to transformative public institutions, our work contributes to the
                                 nation's identitywith architecture that honors tradition while embracing progress.
                             </div>
                         </div>
@@ -54,8 +53,10 @@ export default function Sculptures() {
                                         <div className="overlay">
                                             <div className="overlay-content">
                                                 <h3>Sports Pedestal Sculpture</h3>
-                                                <p className="description">A dynamic installation honoring athletic excellence, capturing the energy and
-                                                    diversity of sports through symbolic human forms.</p>
+                                                <p className="description">
+                                                    A dynamic installation honoring athletic excellence, capturing the energy and
+                                                    diversity of sports through symbolic human forms.
+                                                </p>
                                                 <button className="btn-view" onClick={(e) => e.stopPropagation()}>
                                                     <a href="#">View Details</a>
                                                 </button>
@@ -87,7 +88,7 @@ export default function Sculptures() {
                                     <div className="col-12">
                                         <div className="Sculptures-project-card">
                                             <div className="image-container">
-                                                <img src="/Sculptures-1.JPG" alt="RAAS Chhatrasagar" loading="lazy" />
+                                                <img src="/New-45.jpeg" alt="RAAS Chhatrasagar" loading="lazy" />
                                                 <div className="overlay">
                                                     <div className="overlay-content">
                                                         <h3>Arjuna Statue, SMS Stadium, Jaipur </h3>
@@ -107,13 +108,12 @@ export default function Sculptures() {
 
                         {/* Section 2: Urban Development  */}
                         <div data-aos="fade-up" className="row project-row">
-
                             <div className="col-lg-7 col-md-12">
                                 <div className="row h-100">
                                     <div className="col-12">
                                         <div className="Sculptures-project-card">
                                             <div className="image-container">
-                                                <img src="/Sculptures-7.jpg" alt="WTP Project" loading="lazy" />
+                                                <img src="/New-53.jpeg" alt="WTP Project" loading="lazy" />
                                                 <div className="overlay">
                                                     <div className="overlay-content">
                                                         <h3>Freedom Fighters Sculpture, Laxmi Mandir, Jaipur </h3>
@@ -175,7 +175,7 @@ export default function Sculptures() {
                                     <div className="col-12">
                                         <div className="Sculptures-project-card">
                                             <div className="image-container">
-                                                <img src="/Sculptures-8.jpg" alt="Riverfront Development" loading="lazy" />
+                                                <img src="/New-50.jpeg" alt="Riverfront Development" loading="lazy" />
                                                 <div className="overlay">
                                                     <div className="overlay-content">
                                                         <h3>Chambal Mata – Largest Marble Statue, Chambal River Front, Kota </h3>
@@ -192,7 +192,7 @@ export default function Sculptures() {
                                     <div className="col-lg-12 col-md-12 col-sm-12">
                                         <div className="Sculptures-project-card">
                                             <div className="image-container">
-                                                <img src="/Sculptures-9.JPG" alt="Gold Palace, Jaipur" loading="lazy" />
+                                                <img src="/New-47.jpeg" alt="Gold Palace, Jaipur" loading="lazy" />
                                                 <div className="overlay">
                                                     <div className="overlay-content">
                                                         <h3>Lions at Chambal River Front </h3>
@@ -213,7 +213,7 @@ export default function Sculptures() {
                             <div className="col-lg-4 col-md-12">
                                 <div id='Sculptures-container-Project-card' className="Sculptures-project-card">
                                     <div className="image-container">
-                                        <img src="/Sculptures-10.jpg" alt="Greenfield Township" loading="lazy" />
+                                        <img src="/New-49.jpeg" alt="Greenfield Township" loading="lazy" />
                                         <div className="overlay">
                                             <div className="overlay-content">
                                                 <h3> Kirti Stambh, Kota</h3>
@@ -235,7 +235,7 @@ export default function Sculptures() {
                     <div className="Crocodile">
                         <div className="Sculptures-project-card">
                             <div className="image-container">
-                                <img src="/Sculptures-11.jpg" alt="Greenfield Township" loading="lazy" />
+                                <img src="/New-46.jpeg" alt="Greenfield Township" loading="lazy" />
                                 <div className="overlay">
                                     <div className="overlay-content">
                                         <h3> Crocu- The mascot of Chambal River Front</h3>

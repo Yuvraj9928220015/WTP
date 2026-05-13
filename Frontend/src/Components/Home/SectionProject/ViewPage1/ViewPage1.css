@@ -24,7 +24,6 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #00000066;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -34,7 +33,6 @@
 
 .banner-title {
     font-size: 3rem;
-    font-weight: bold;
     margin-bottom: 1rem;
     text-align: center;
     text-shadow: 2px 2px 4px #00000080;

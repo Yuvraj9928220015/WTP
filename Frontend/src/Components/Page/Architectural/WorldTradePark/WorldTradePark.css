@@ -1,0 +1,791 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cinzel+Decorative:wght@400;700&family=Lato:ital,wght@0,300;0,400;0,700;1,300&display=swap');
+
+/* ══════════════════════════════
+   RESET
+══════════════════════════════ */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ══════════════════════════════
+   ANIMATIONS
+══════════════════════════════ */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(28px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% center;
+    }
+
+    100% {
+        background-position: 200% center;
+    }
+}
+
+@keyframes borderGlow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 18px #c9a227aa;
+    }
+
+    50% {
+        box-shadow: 0 0 40px #f5c842cc, inset 0 0 14px #f5c84222;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* ===== HERO WRAPPER ===== */
+.wtp-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+}
+
+/* ===== BACKGROUND IMAGE ===== */
+.wtp-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+}
+
+/* ===== TEXT CONTENT ===== */
+.wtp-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 0 1rem;
+    animation: fadeUp 1.2s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== "— The Marvel of —" ===== */
+.wtp-top-text {
+    font-family: 'Cinzel', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(0.85rem, 2vw, 1.6rem);
+    color: #1d1d1d;
+    letter-spacing: 0.25em;
+    margin: 0 0 40px 0;
+    text-shadow: 0 2px 8px #00000099;
+}
+
+/* ===== MAIN TITLE ===== */
+.wtp-title {
+    font-family: 'Cinzel Decorative', serif;
+    font-weight: 700;
+    font-size: clamp(2rem, 6vw, 5rem);
+    color: #f5c842;
+    letter-spacing: 0.08em;
+    line-height: 1.05;
+    margin: 0 0 20px 0;
+    text-shadow:
+        0 0 30px #f5c84280,
+        0 4px 16px #000000b3,
+        2px 2px 0px #b4780066;
+}
+
+.global-cards-Box {
+    width: 100%;
+    height: 500px;
+    box-shadow: 0 8px 28px #00000055;
+}
+
+.global-cards-Box img {
+    width: 100%;
+    height: 100%;
+}
+
+/* ===== SUBTITLE "Jaipur" ===== */
+.wtp-subtitle {
+    font-family: 'Cinzel', serif;
+    font-weight: 400;
+    font-size: clamp(1rem, 3vw, 1.9rem);
+    color: #ffffff;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    margin: 0 0 20px 0;
+    text-shadow: 0 2px 10px #00000099;
+}
+
+/* ===== DECORATIVE DIVIDER ===== */
+.wtp-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.wtp-line {
+    display: block;
+    width: clamp(60px, 12vw, 140px);
+    height: 1.5px;
+    background: linear-gradient(to right, transparent, #d69d0b, transparent);
+}
+
+.wtp-diamond {
+    font-size: 0.7rem;
+    color: #f0d080;
+}
+
+/* ===== HERO TAGLINE ===== */
+.wtp-tagline {
+    font-family: 'Lato', sans-serif;
+    font-size: clamp(0.75rem, 1.8vw, 1.3rem);
+    color: #222222;
+    letter-spacing: 0.14em;
+    font-weight: 500;
+    margin: 0;
+    text-shadow: 0 2px 8px #00000066;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* ══════════════════════════════════════════════════
+   ░░  GLOBAL THEMED INTERIORS  ░░
+══════════════════════════════════════════════════ */
+
+.global-section {
+    background: linear-gradient(180deg, #f0e0b0 0%, #f9f0d8 40%, #f0e0b0 100%);
+    padding: 60px clamp(16px, 5vw, 56px) 68px;
+    position: relative;
+    overflow: visible;
+    border-top: 2px solid #c9a22788;
+    border-bottom: 2px solid #c9a22788;
+}
+
+/* ── Floating side thumbnails ── */
+.global-thumb {
+    position: absolute;
+    top: 38px;
+    width: clamp(130px, 15vw, 200px);
+    background: #fff;
+    border: 1.5px solid #c9a22799;
+    border-radius: 6px;
+    box-shadow: 0 4px 20px #00000033;
+    overflow: hidden;
+    z-index: 5;
+}
+
+.global-thumb.left {
+    left: clamp(10px, 2.5vw, 40px);
+}
+
+.global-thumb.right {
+    right: clamp(10px, 2.5vw, 40px);
+    top: 30px;
+}
+
+.global-thumb-tip {
+    /* font-family: 'Lato', sans-serif; */
+    font-weight: 500;
+    font-size: clamp(0.58rem, 0.9vw, 0.92rem);
+    color: #2a1a00;
+    letter-spacing: 0.04em;
+    line-height: 1.45;
+    padding: 8px 10px 6px;
+    border-bottom: 1px solid #c9a22733;
+}
+
+.global-thumb img {
+    width: 100%;
+    height: clamp(78px, 10vw, 165px);
+    object-fit: cover;
+    display: block;
+}
+
+.global-thumb-label {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(0.58rem, 0.95vw, 0.7rem);
+    font-weight: 600;
+    color: #c9a227;
+    letter-spacing: 0.12em;
+    text-align: center;
+    padding: 6px 8px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.global-thumb-label::before,
+.global-thumb-label::after {
+    content: "✦";
+    font-size: 0.55em;
+    opacity: 0.8;
+}
+
+/* ── Section header ── */
+.global-header {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    padding: 0 clamp(155px, 20vw, 240px);
+    margin-bottom: 40px;
+}
+
+.global-title {
+    font-family: 'Cinzel Decorative', serif;
+    font-weight: 700;
+    font-size: clamp(1.4rem, 3.5vw, 2.5rem);
+    color: #1a1200;
+    letter-spacing: 0.04em;
+    margin: 0 0 6px;
+}
+
+.global-ornament {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.global-orn-line {
+    flex: 1;
+    max-width: 70px;
+    height: 1px;
+}
+
+.global-orn-line.l {
+    background: linear-gradient(to right, transparent, #c9a227);
+}
+
+.global-orn-line.r {
+    background: linear-gradient(to left, transparent, #c9a227);
+}
+
+.global-orn-stars {
+    color: #c9a227;
+    font-size: 0.52rem;
+    letter-spacing: 4px;
+}
+
+.global-subtitle {
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    font-size: clamp(0.7rem, 1.4vw, 1.2rem);
+    color: #3a2800;
+    letter-spacing: 0.18em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 0;
+}
+
+.global-subtitle::before {
+    content: "→";
+    color: #c9a227;
+}
+
+.global-subtitle::after {
+    content: "←";
+    color: #c9a227;
+}
+
+/* ── Cards grid ── */
+.global-cards-grid {
+    margin-top: 130px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(12px, 2vw, 22px);
+    position: relative;
+    z-index: 2;
+}
+
+.WorldTradePark-content {
+    text-align: center;
+    padding: 20px 0px;
+    background: linear-gradient(180deg, #f9f0d8 0%, #f0e0b0 100%);
+    box-shadow: 0 8px 28px #00000055;
+}
+
+
+/* ── Single street card ── */
+.street-card {
+    overflow: hidden;
+    box-shadow: 0 8px 28px #00000055;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    cursor: pointer;
+}
+
+.street-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 42px #00000077;
+}
+
+.street-card-img-wrap {
+    height: clamp(155px, 21vw, 380px);
+    overflow: hidden;
+}
+
+.street-card-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.65s ease;
+}
+
+.street-card:hover .street-card-img-wrap img {
+    transform: scale(1.08);
+}
+
+.street-card-body {
+    padding: 15px 14px 18px;
+    background: linear-gradient(180deg, #f9f0d8 0%, #f0e0b0 100%);
+    text-align: center;
+}
+
+.street-card-title-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 8px;
+}
+
+.stc-line {
+    flex: 1;
+    height: 0.8px;
+}
+
+.stc-line.l {
+    background: linear-gradient(to right, transparent, #c9a227);
+}
+
+.stc-line.r {
+    background: linear-gradient(to left, transparent, #c9a227);
+}
+
+.street-card-title {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: clamp(0.78rem, 1.5vw, 1.6rem);
+    color: #3a3a3a;
+    letter-spacing: 0.1em;
+    white-space: nowrap;
+    margin: 0;
+}
+
+.street-card-desc {
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    font-size: clamp(0.62rem, 1.1vw, 16px);
+    color: #3a2800e1;
+    letter-spacing: 1px;
+    line-height: 1.55;
+    margin: 0;
+}
+
+
+/* ══════════════════════════════════════════════════
+   ░░  LUXURIOUS SPACES  ░░
+══════════════════════════════════════════════════ */
+
+.lux-section {
+    background: linear-gradient(180deg, #0d1b2a 0%, #091522 100%);
+    padding: 60px clamp(16px, 5vw, 56px);
+    border-top: 2px solid #c9a22766;
+}
+
+/* ── Tag pills row ── */
+.lux-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.lux-tag {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(0.62rem, 1.2vw, 1rem);
+    font-weight: 600;
+    color: #c9a227;
+    border: 1px solid #c9a22788;
+    background: #ffffff0a;
+    padding: 8px 18px;
+    border-radius: 30px;
+    letter-spacing: 0.12em;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    cursor: default;
+    transition: background 0.3s, color 0.3s;
+}
+
+.lux-tag:hover {
+    background: #c9a227;
+    color: #1a1200;
+}
+
+.lux-tag .t-gem {
+    font-size: 0.6em;
+    opacity: 0.8;
+}
+
+/* ── Lux cards grid ── */
+.lux-cards-grid {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    gap: clamp(12px, 2vw, 22px);
+}
+
+.lux-card {
+    overflow: hidden;
+    position: relative;
+    background: #050e18;
+    border: 1.5px solid #c9a22755;
+    box-shadow: 0 10px 38px #00000088;
+    cursor: pointer;
+    transition: transform 0.35s, box-shadow 0.35s;
+}
+
+.lux-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 50px #000000aa;
+}
+
+.lux-card-img-wrap {
+    height: clamp(170px, 24vw, 500px);
+    overflow: hidden;
+}
+
+.lux-card-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.65s ease;
+}
+
+.lux-card:hover .lux-card-img-wrap img {
+    transform: scale(1.07);
+}
+
+.lux-card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, #000000ee 0%, #00000066 40%, transparent 100%);
+    pointer-events: none;
+}
+
+.lux-card-body {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px 18px 20px;
+    text-align: center;
+}
+
+.lux-card-title-row {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    justify-content: center;
+    margin-bottom: 8px;
+}
+
+.lux-line {
+    flex: 1;
+    height: 0.7px;
+}
+
+.lux-line.l {
+    background: linear-gradient(to right, transparent, #c9a227);
+}
+
+.lux-line.r {
+    background: linear-gradient(to left, transparent, #c9a227);
+}
+
+.lux-card-title {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: clamp(0.78rem, 1.4vw, 1.4rem);
+    color: #f5c842;
+    letter-spacing: 0.12em;
+    white-space: nowrap;
+    margin: 0;
+}
+
+.lux-card-desc {
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    font-size: clamp(0.62rem, 1.05vw, 1rem);
+    color: #ccc;
+    letter-spacing: 1.3px;
+    line-height: 1.55;
+    margin: 0;
+}
+
+
+/* ══════════════════════════════════════════════════
+   ░░  HERITAGE FOOTER  ░░
+══════════════════════════════════════════════════ */
+
+.heritage-section {
+    background: linear-gradient(135deg, #f0e0b0 0%, #e8d090 50%, #f0e0b0 100%);
+    padding: 52px clamp(20px, 8vw, 120px);
+    text-align: center;
+    border-top: 2px solid #c9a22788;
+}
+
+.WorldTradePark-title {
+    font-family: 'Cinzel Decorative', serif;
+    font-weight: 700;
+    font-size: clamp(1.2rem, 3.5vw, 2.2rem);
+    color: #1a1200;
+    letter-spacing: 0.05em;
+    margin: 14px 0 8px;
+}
+
+.heritage-desc {
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: clamp(0.78rem, 1.8vw, 1.04rem);
+    color: #3a2800;
+    max-width: 680px;
+    margin: 16px auto 0;
+    line-height: 1.85;
+    letter-spacing: 0.04em;
+}
+
+.heritage-desc em {
+    color: #080808;
+    font-weight: 600;
+}
+
+.heritage-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 38px;
+}
+
+.hb-line {
+    flex: 1;
+    max-width: 200px;
+    height: 1.5px;
+}
+
+.hb-line.l {
+    background: linear-gradient(to right, transparent, #c9a227);
+}
+
+.hb-line.r {
+    background: linear-gradient(to left, transparent, #c9a227);
+}
+
+.hb-text {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(0.58rem, 1.1vw, 1.5rem);
+    color: #ddad0e;
+    letter-spacing: 0.18em;
+}
+
+.hb-gem {
+    color: #c9a227;
+    font-size: 1.1rem;
+}
+
+
+/* ══════════════════════════════════════════════════
+   ░░  SECTION SHARED HEADER  ░░
+══════════════════════════════════════════════════ */
+
+.sec-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.sec-header-title-dark {
+    font-family: 'Cinzel Decorative', serif;
+    font-weight: 700;
+    font-size: clamp(1.4rem, 3.5vw, 2.5rem);
+    color: #f5c842;
+    letter-spacing: 0.06em;
+    margin: 0 0 6px;
+    text-shadow: 0 0 22px #c9a22744;
+}
+
+.sec-header-sub-dark {
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    font-size: clamp(0.7rem, 1.5vw, 1.1rem);
+    color: #d4b87a;
+    letter-spacing: 0.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.sec-header-sub-dark .arr {
+    color: #c9a227;
+    opacity: 0.8;
+    font-size: 0.8em;
+}
+
+.sec-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin: 8px 0;
+}
+
+.sd-line {
+    flex: 1;
+    max-width: 120px;
+    height: 1px;
+}
+
+.sd-line.l {
+    background: linear-gradient(to right, transparent, #c9a227);
+}
+
+.sd-line.r {
+    background: linear-gradient(to left, transparent, #c9a227);
+}
+
+.sd-gem {
+    color: #c9a227;
+    font-size: 0.55rem;
+    letter-spacing: 3px;
+}
+
+
+/* ══════════════════════════════════════════════════
+   ░░  RESPONSIVE  ░░
+══════════════════════════════════════════════════ */
+
+@media (max-width: 900px) {
+    .lux-cards-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .lux-card:last-child {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 680px) {
+    .global-cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .lux-cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .lux-card:last-child {
+        grid-column: auto;
+    }
+
+    .global-thumb {
+        display: none;
+    }
+
+    .global-header {
+        padding: 0 10px;
+    }
+}
+
+
+
+/* World-Class-Box */
+.World-Class-Box {
+    width: 100%;
+    height: 570px;
+    background-color: #050e18;
+    position: relative;
+}
+
+.World-Class-Heading {
+    padding: 30px 0px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.World-Class-Box-container {
+    width: 100%;
+    position: absolute;
+    top: 90%;
+}
+
+.World-Class-tag {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(0.62rem, 1.2vw, 1rem);
+    font-weight: 600;
+    color: #c9a227;
+    border: 1px solid #c9a22788;
+    background: #ffffff0a;
+    padding: 8px 18px;
+    border-radius: 30px;
+    letter-spacing: 0.12em;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    cursor: default;
+    transition: background 0.3s, color 0.3s;
+}
+
+.World-Class-Box img {
+    width: 100%;
+    height: 100%;
+}

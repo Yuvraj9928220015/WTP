@@ -6,45 +6,52 @@ import './Slider.css';
 
 const slides = [
     {
+        src: '/Chambal-River-Front.png',
+        alt: 'Chambal River Front Project',
+        topText: 'Chambal River Front',
+        bottomText: 'Indias grandest riverfront development',
+        link: '/chambal-riverFront'
+    },
+    {
+        src: '/New-13.png',
+        alt: 'World Trade Park, Jaipur Project',
+        topText: 'World Trade Park, Jaipur',
+        bottomText: 'Indias most iconic retail landmark.',
+        link: '/WorldTradePark'
+    },
+    {
+        src: '/New-2.png',
+        alt: 'City Development, Kota Project',
+        topText: 'City Development, Kota',
+        bottomText: 'A Visionary Urban Transformation',
+        link: '/CityPark'
+    },
+    {
+        src: '/New-3.jpeg',
+        alt: 'Lodha Residence, Jaipur Project',
+        topText: 'Lodha Residence, Jaipur',
+        bottomText: 'An Epitome of Luxury Living',
+        link: ''
+    },
+    {
+        src: '/Picture2.png',
+        alt: 'Amar Jawan Jyoti Memorial, Jaipur Project',
+        topText: 'Amar Jawan Jyoti Memorial, Jaipur',
+        bottomText: 'A Tribute Cast in Stone',
+        link: ''
+    },
+    {
         src: '/V02.jpg',
         alt: 'IPD Tower, SMS Hospital Project',
         topText: 'IPD Tower, SMS Hospital',
-        bottomText: 'India’s Tallest Hospital'
+        bottomText: 'Indias Tallest Hospital',
+        link: ''
     },
-    {
-        src: '/Our-Project-2.jpg',
-        alt: 'World Trade Park, Jaipur Project',
-        topText: 'World Trade Park, Jaipur',
-        bottomText: 'India’s most iconic retail landmark.'
-    },
-    {
-        src: '/Our-Project-3.jpg',
-        alt: 'Chambal River Front Project',
-        topText: 'Chambal River Front',
-        bottomText: 'India’s grandest riverfront development'
-    },
-    {
-        src: '/Our-Project-4.jpg',
-        alt: 'City Development, Kota Project',
-        topText: 'City Development, Kota',
-        bottomText: 'A Visionary Urban Transformation'
-    },
-    {
-        src: '/Our-Project-5.JPG',
-        alt: 'Lodha Residence, Jaipur Project',
-        topText: 'Lodha Residence, Jaipur',
-        bottomText: 'An Epitome of Luxury Living'
-    },
-    {
-        src: '/Our-Project-6.JPG',
-        alt: 'Amar Jawan Jyoti Memorial, Jaipur Project',
-        topText: 'Amar Jawan Jyoti Memorial, Jaipur',
-        bottomText: 'A Tribute Cast in Stone'
-    }
 ];
 
 export default function Slider() {
     const splideRef = useRef(null);
+    const [activeIndex, setActiveIndex] = useState(0);
 
     useEffect(() => {
         let splide = null;
@@ -55,7 +62,7 @@ export default function Slider() {
                 type: 'loop',
                 arrows: true,
                 pagination: false,
-                gap: '1rem',
+                gap: '1.2rem',
                 autoplay: true,
                 interval: 3000,
                 pauseOnHover: true,
@@ -71,6 +78,10 @@ export default function Slider() {
                         gap: '0.5rem',
                     },
                 },
+            });
+
+            splide.on('moved', (newIndex) => {
+                setActiveIndex(newIndex);
             });
 
             splide.mount();
@@ -131,6 +142,7 @@ export default function Slider() {
     return (
         <>
             <div className="slider-container">
+
                 <div
                     ref={typingSectionRef}
                     data-section="section1"
@@ -144,7 +156,7 @@ export default function Slider() {
                     <div className="Typing-Animation-line"></div>
                 </div>
                 <section
-                    
+
                     ref={splideRef}
                     className="splide modern-slider"
                     aria-label="Image gallery carousel"
@@ -154,13 +166,21 @@ export default function Slider() {
                             {slides.map((slide, index) => (
                                 <li key={index} className="splide__slide modern-slide">
                                     <div className="slide-content">
-                                        <div className="image-wrapper">
+                                        <div
+                                            className="Slide-image-wrapper"
+                                            onClick={() => {
+                                                if (slide.link) {
+                                                    window.location.href = slide.link;
+                                                }
+                                            }}
+                                            style={{ cursor: slide.link ? 'pointer' : 'default' }}
+                                        >
+
                                             <img
                                                 src={slide.src}
                                                 alt={slide.alt}
                                                 loading="lazy"
                                             />
-                                            <div className="image-overlay"></div>
                                             <div className="text-content">
                                                 <div className="top-text">{slide.topText}</div>
                                                 <div className="bottom-text">{slide.bottomText}</div>

@@ -30,10 +30,6 @@
     transition: transform 0.8s ease-out;
 }
 
-.hero-section:hover .hero-image {
-    transform: scale(1.05);
-}
-
 .hero-overlay {
     position: absolute;
     top: 0;
@@ -58,12 +54,12 @@
 
 .hero-title {
     font-size: 10px;
-    font-weight: 700;
     margin-bottom: 1rem;
     line-height: 1.1;
-    background: linear-gradient(45deg, #fff, #e8eaf6);
+    background: linear-gradient(45deg, #fff, #ffffff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-family: 'Cinzel', serif;
     background-clip: text;
 }
 
@@ -86,22 +82,17 @@
     transition: transform 0.3s ease, background 0.3s ease;
 }
 
-.stat-item:hover {
-    transform: translateY(-5px);
-    background: #ffffff26;
-}
-
-.stat-number {
+.awards-stat-number {
     font-size: 2rem;
-    font-weight: 700;
-    color: #fff;
+    font-weight: 300;
+    color: #202020;
     margin-bottom: 0.5rem;
 }
 
 .stat-label {
     font-size: 1rem;
     color: #ffffffe6;
-    font-weight: 600;
+    font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -119,9 +110,9 @@
     padding: 0 2rem;
 }
 
-.section-title {
-    font-size: clamp(2.5rem, 5vw, 3.5rem);
-    font-weight: 600;
+.awards-section-title {
+    font-size: clamp(2.5rem, 5vw, 3.3rem);
+    font-weight: 400;
     color: #2c3e50;
     /* margin-bottom: 1rem; */
     position: relative;
@@ -139,7 +130,7 @@
     gap: 4rem;
     align-items: start;
     background: #ffffff;
-    padding: 3rem;
+    padding: 1rem;
     position: relative;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -188,17 +179,6 @@
     z-index: 2;
 }
 
-.category-badge {
-    background-color: #2aabe1;
-    color: white;
-    padding: 0.5rem 1.2rem;
-    border-radius: 25px;
-    font-size: 0.9rem;
-    font-weight: 500;
-    backdrop-filter: blur(10px);
-    border: 1px solid #ffffff33;
-}
-
 .thumbnail-gallery {
     display: flex;
     gap: 0.8rem;
@@ -229,11 +209,6 @@
     object-fit: cover;
 }
 
-/* Award Details */
-.award-details {
-    padding-left: 2rem;
-}
-
 .award-section.reverse .award-details {
     padding-left: 0;
     padding-right: 2rem;
@@ -249,9 +224,8 @@
 }
 
 .details-title {
-    font-family: 'Playfair Display', serif;
     font-size: 2rem;
-    font-weight: 600;
+    font-weight: 400;
     color: #2c3e50;
     margin: 0;
 }
@@ -334,11 +308,17 @@
 }
 
 .achievement-text {
-    font-size: 1.1rem;
+    font-size: 19px;
     line-height: 1.6;
     margin: 0;
     color: #495057;
-    font-weight: 600;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.awards-section-description {
+    font-size: 22px;
+    letter-spacing: 1px;
 }
 
 /* Animations */

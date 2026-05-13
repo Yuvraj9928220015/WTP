@@ -33,6 +33,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center center;
     display: block;
 }
 
@@ -164,7 +165,7 @@
 
 .Header-about-title {
     color: white;
-    font-weight: 700;
+    font-weight: 300;
     font-size: 2.1rem;
     line-height: 1.2;
 }
@@ -284,4 +285,34 @@
         font-size: 0.75rem;
         padding: 0.4rem 0.8rem;
     }
+}
+
+
+.nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 50;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 14px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nav-arrow:hover {
+    background: #000000cc;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.nav-arrow-left {
+    opacity: 1;
+    left: 20px;
+}
+
+.nav-arrow-right {
+    opacity: 1;
+    right: 20px;
 }

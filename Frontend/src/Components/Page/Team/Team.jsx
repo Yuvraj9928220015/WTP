@@ -148,7 +148,7 @@ export default function Team() {
         },
         {
             id: 16,
-            name: "Mr. Gaurav Kumar Sutha",
+            name: "Mr. Gaurav Kumar Suthar",
             image: "/Gaurav-Suthar.jpg",
             category: "Sincere Architect Team",
             description: "Architect",
@@ -197,53 +197,37 @@ export default function Team() {
             category: "Civil Engineering Department",
             description: "Civil Engineer",
         },
-        // {
-        //     id: 23,
-        //     name: "Mr. Ravi Mahala",
-        //     image: "/Ravi-Mahala.jpg",
-        //     category: "Civil Engineering",
-        //     description: "Civil Engineer",
-        // },
-        // {
-        //     id: 24,
-        //     name: "Mr. Sudarshan Morodia",
-        //     image: "/Sudarshan-Morodia.jpg",
-        //     category: "Civil Engineering",
-        //     description: "Civil Engineer",
-        // },
-
-        // MEP Team
         {
             id: 25,
             name: "Mr. Rajesh Gupta",
             image: "/Rajesh-Gupta.jpg",
-            category: "MEP Team",
+            category: "Civil Engineering Department",
             description: "Senior Electrical Engineer",
         },
         {
             id: 26,
             name: "Mr. Vivek Sharma",
             image: "/Vivek-Sharma.jpg",
-            category: "MEP Team",
+            category: "Civil Engineering Department",
             description: "Senior MEP Engineer",
         },
         {
             id: 27,
             name: "Mr. Y.V.R. Murthy",
             image: "/YVR-Murthy.jpg",
-            category: "MEP Team",
+            category: "Civil Engineering Department",
             description: "Senior MEP Engineer",
         },
         {
             id: 28,
             name: "Mr. Rahul Saini",
             image: "/Rahul-Saini.jpg",
-            category: "MEP Team",
+            category: "Civil Engineering Department",
             description: "Electrical Engineer",
         },
     ];
 
-    const categories = ["Management Team", "Administration Team", "Sincere Architect Team", "Civil Engineering Department", "MEP Team"];
+    const categories = ["Management Team", "Administration Team", "Sincere Architect Team", "Civil Engineering Department"];
 
     const groupedMembers = categories.map(category => ({
         category,
@@ -313,6 +297,49 @@ export default function Team() {
                     </div>
                 </div>
 
+                {/* why-choose-section */}
+
+                 <div className="why-choose-section">
+                    <div className="why-choose-container">
+                        <div className="why-choose-left">
+                            <div className="why-choose-images">
+                                <img
+                                    src="/About-image.png"
+                                    alt="Team working together"
+                                    className="why-choose-main-image"
+                                />
+                                <img
+                                    src="/About-image-1.png"
+                                    alt="Architecture project"
+                                    className="why-choose-overlay-image"
+                                />
+                            </div>
+                        </div>
+
+                        <div className="why-choose-right">
+                            <h2 className="why-choose-title">WHY CHOOSE US</h2>
+                            <div className="why-choose-underline"></div>
+                            <p className="why-choose-description">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                            </p>
+
+                            <div className="why-choose-features">
+                                {whyChooseUs.map((item, index) => (
+                                    <div key={index} className="why-choose-feature">
+                                        <div className="why-choose-feature-icon">
+                                            {item.icon}
+                                        </div>
+                                        <div className="why-choose-feature-content">
+                                            <p className="why-choose-feature-text">{item.description}</p>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 {/* Meet Our Team Section */}
                 <div className="meet-team-section">
                     <div className="meet-team-container">
@@ -334,19 +361,6 @@ export default function Team() {
                                                     alt={member.name}
                                                     className="team-member-image"
                                                 />
-                                                <div className="team-member-overlay">
-                                                    <div className="team-social-icons">
-                                                        <a href="#" className="team-social-icon">
-                                                            <Facebook size={18} />
-                                                        </a>
-                                                        <a href="#" className="team-social-icon">
-                                                            <Twitter size={18} />
-                                                        </a>
-                                                        <a href="#" className="team-social-icon">
-                                                            <Linkedin size={18} />
-                                                        </a>
-                                                    </div>
-                                                </div>
                                             </div>
                                             <div className="team-member-info">
                                                 <h3 className="team-member-name">{member.name}</h3>

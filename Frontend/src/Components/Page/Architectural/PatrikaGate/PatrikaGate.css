@@ -1,0 +1,635 @@
+/* =============================================
+   Google Fonts Import
+   ============================================= */
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap");
+
+/* =============================================
+   CSS Variables — Rajasthani Palette
+   ============================================= */
+:root {
+    --pg-gold: #c9963a;
+    --pg-gold-light: #f0c96e;
+    --pg-gold-pale: #fdf3dc;
+    --pg-terracotta: #b5573a;
+    --pg-deep-maroon: #7b2228;
+    --pg-cream: #faf3e8;
+    --pg-ink: #2c1810;
+    --pg-sand: #e8d5b0;
+    --pg-rose-sand: #d4a89a;
+    --pg-arch-bg: #f5e6c8;
+    --pg-shadow: rgba(44, 24, 16, 0.25);
+    --pg-font-display: "Cinzel Decorative", Georgia, serif;
+    --pg-font-heading: "Cinzel", Georgia, serif;
+    --pg-font-body: "Cormorant Garamond", Georgia, serif;
+    --pg-transition: 0.3s ease;
+    --pg-radius: 4px;
+}
+
+/* =============================================
+   Reset
+   ============================================= */
+.PatrikaGate *,
+.PatrikaGate *::before,
+.PatrikaGate *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* =============================================
+   Page Wrapper
+   ============================================= */
+.PatrikaGate {
+    background: var(--pg-cream);
+    color: var(--pg-ink);
+    font-family: var(--pg-font-body);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.PatrikaGate-wrap {
+    margin: 0 auto;
+    background: var(--pg-cream);
+    box-shadow: 0 0 60px #0000002e;
+}
+
+/* =============================================
+   Outer Border Frame
+   ============================================= */
+.PatrikaGate-frame {
+    position: relative;
+}
+
+/* =============================================
+   Corner Ornaments
+   ============================================= */
+.PatrikaGate-corner {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.PatrikaGate-corner--tl {
+    top: -2px;
+    left: -2px;
+}
+
+.PatrikaGate-corner--tr {
+    top: -2px;
+    right: -2px;
+    transform: scaleX(-1);
+}
+
+.PatrikaGate-corner--bl {
+    bottom: -2px;
+    left: -2px;
+    transform: scaleY(-1);
+}
+
+.PatrikaGate-corner--br {
+    bottom: -2px;
+    right: -2px;
+    transform: scale(-1);
+}
+
+.PatrikaGate-corner svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* =============================================
+   Ornament Line — Gold Divider
+   ============================================= */
+.PatrikaGate-ornament-line {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    margin: 8px 0;
+}
+
+.PatrikaGate-ornament-line::before,
+.PatrikaGate-ornament-line::after {
+    content: "";
+    flex: 1;
+    max-width: 120px;
+    height: 1.5px;
+    background: linear-gradient(90deg, transparent, var(--pg-gold), transparent);
+}
+
+.PatrikaGate-ornament-diamond {
+    width: 8px;
+    height: 8px;
+    background: var(--pg-gold);
+    transform: rotate(45deg);
+    flex-shrink: 0;
+}
+
+/* =============================================
+   Header Section
+   ============================================= */
+.PatrikaGate-header {
+    text-align: center;
+    padding: 30px 20px 16px;
+    background: linear-gradient(180deg, #fdf6e6 0%, var(--pg-cream) 100%);
+    position: relative;
+    z-index: 1;
+}
+
+.PatrikaGate-header-eyebrow {
+    font-family: var(--pg-font-heading);
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: var(--pg-gold);
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.PatrikaGate-header-eyebrow span {
+    font-size: 14px;
+}
+
+.PatrikaGate-title-the {
+    font-family: var(--pg-font-heading);
+    font-size: clamp(13px, 2.5vw, 17px);
+    font-weight: 600;
+    color: var(--pg-terracotta);
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.PatrikaGate-title-main {
+    font-family: var(--pg-font-display);
+    font-size: clamp(26px, 5.5vw, 46px);
+    font-weight: 700;
+    color: var(--pg-deep-maroon);
+    line-height: 1.1;
+    text-shadow: 2px 2px 0 #c9963a2e;
+    margin: 4px 0 12px;
+}
+
+.PatrikaGate-title-main em {
+    color: var(--pg-terracotta);
+    font-family: var(--pg-font-display);
+}
+
+.PatrikaGate-subtitle-band {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--pg-terracotta) 0%, var(--pg-deep-maroon) 100%);
+    color: var(--pg-gold-pale);
+    font-family: var(--pg-font-heading);
+    font-size: clamp(9px, 1.4vw, 12px);
+    letter-spacing: 1.5px;
+    padding: 7px 28px;
+    border-radius: 2px;
+}
+
+/* =============================================
+   Hero Zone
+   ============================================= */
+.PatrikaGate-hero-zone {
+    position: relative;
+    z-index: 1;
+}
+
+/* =============================================
+   Full-Width Banner
+   ============================================= */
+.PatrikaGate-banner-wrap {
+    position: relative;
+    border-radius: var(--pg-radius);
+    overflow: hidden;
+    box-shadow: 0 8px 40px var(--pg-shadow), inset 0 0 0 1px #ffffff4d;
+}
+
+.PatrikaGate-banner-wrap img {
+    width: 100%;
+    display: block;
+    /* height: 100vh; */
+    object-fit: cover;
+    object-position: center top;
+    filter: sepia(10%) saturate(1.1);
+    transition: transform 0.6s ease, filter 0.4s ease;
+}
+
+
+.PatrikaGate-hero-overlay {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(180deg,
+            #c9963a0f 0%,
+            transparent 30%,
+            transparent 70%,
+            #2c18101a 100%);
+}
+
+/* =============================================
+   Section Divider
+   ============================================= */
+
+.PatrikaGate-divider-container {
+    padding-top: 60px;
+}
+
+.PatrikaGate-divider {
+    text-align: center;
+    padding: 10px 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.PatrikaGate-divider-inner {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    justify-content: center;
+}
+
+.PatrikaGate-divider-line {
+    flex: 1;
+    height: 1.5px;
+    max-width: 220px;
+    background: linear-gradient(90deg,
+            transparent,
+            var(--pg-gold) 40%,
+            var(--pg-gold) 60%,
+            transparent);
+}
+
+.PatrikaGate-divider-motif {
+    font-family: var(--pg-font-display);
+    font-size: 18px;
+    color: var(--pg-gold);
+    letter-spacing: 3px;
+    white-space: nowrap;
+}
+
+.PatrikaGate-gallery-card-img img {
+    width: 100%;
+    height: 100%;
+}
+
+/* =============================================
+   Gallery Section
+   ============================================= */
+.PatrikaGate-gallery {
+    padding: 0 34px 14px;
+    position: relative;
+    z-index: 1;
+}
+
+.PatrikaGate-gallery-label {
+    text-align: center;
+    margin-bottom: 34px;
+}
+
+.PatrikaGate-gallery-label h3 {
+    font-family: var(--pg-font-heading);
+    font-size: clamp(13px, 2.2vw, 40px);
+    color: var(--pg-deep-maroon);
+    letter-spacing: 2px;
+}
+
+/* ── Gallery Grid ── */
+.PatrikaGate-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* ── Gallery Card ── */
+.PatrikaGate-gallery-card {
+    border-radius: var(--pg-radius);
+    overflow: hidden;
+    border: 2px solid var(--pg-sand);
+    background: var(--pg-arch-bg);
+    box-shadow: 0 4px 16px var(--pg-shadow);
+    transition: transform var(--pg-transition),
+        box-shadow var(--pg-transition),
+        border-color var(--pg-transition);
+    cursor: pointer;
+    position: relative;
+}
+
+.PatrikaGate-gallery-Box-1 {
+    width: 100%;
+    height: 800px;
+    padding: 40px;
+}
+
+.PatrikaGate-gallery-Box-2 {
+    width: 100%;
+    height: 800px;
+    padding: 40px;
+}
+
+.PatrikaGate-gallery-Box-section {
+    padding: 20px 10px;
+    background-color: #f5e6c8;
+}
+
+.PatrikaGate-gallery-Box-1 img {
+    width: 100%;
+    height: 100%;
+}
+
+.PatrikaGate-gallery-Box-2 img {
+    width: 100%;
+    height: 100%;
+}
+
+.PatrikaGate-gallery-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 12px 32px #2c18104d;
+    border-color: var(--pg-gold);
+}
+
+/* Card Image */
+.PatrikaGate-gallery-card-img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    display: block;
+    filter: sepia(8%) saturate(1.05);
+    transition: filter var(--pg-transition);
+}
+
+.PatrikaGate-gallery-card:hover .PatrikaGate-gallery-card-img {
+    filter: sepia(0%) saturate(1.2);
+}
+
+/* Card Body */
+.PatrikaGate-gallery-card-body {
+    padding: 8px 9px 11px;
+}
+
+.PatrikaGate-gallery-card-title {
+    font-family: var(--pg-font-heading);
+    font-size: clamp(9px, 1.1vw, 24px);
+    font-weight: 600;
+    color: var(--pg-deep-maroon);
+    margin-bottom: 6px;
+    line-height: 1.3;
+}
+
+.PatrikaGate-gallery-card-desc {
+    font-size: clamp(9px, 1vw, 16px);
+    color: #6b4535;
+    line-height: 1.5;
+}
+
+/* Card Badge */
+.PatrikaGate-gallery-card-badge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--pg-gold);
+    color: var(--pg-ink);
+    font-family: var(--pg-font-heading);
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 2px 7px;
+    border-bottom-right-radius: var(--pg-radius);
+}
+
+/* ── Featured Card ── */
+.PatrikaGate-gallery-card--featured {
+    border-color: var(--pg-gold);
+    background: linear-gradient(160deg, var(--pg-deep-maroon), #4a1820);
+    color: var(--pg-gold-pale);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 18px 10px;
+    box-shadow: 0 6px 24px #2c181066;
+}
+
+.PatrikaGate-gallery-card--featured:hover {
+    border-color: var(--pg-gold-light);
+}
+
+.PatrikaGate-featured-icon {
+    font-size: 30px;
+    margin-bottom: 6px;
+    line-height: 1;
+}
+
+.PatrikaGate-featured-title {
+    font-family: var(--pg-font-display);
+    font-size: clamp(11px, 1.8vw, 19px);
+    font-weight: 700;
+    color: var(--pg-gold-light);
+    line-height: 1.25;
+    margin-bottom: 6px;
+}
+
+.PatrikaGate-featured-deco {
+    width: 40px;
+    height: 1px;
+    background: var(--pg-gold);
+    margin: 7px auto;
+}
+
+.PatrikaGate-featured-subtitle {
+    font-family: var(--pg-font-heading);
+    font-size: clamp(9px, 1.2vw, 18px);
+    color: var(--pg-gold);
+    letter-spacing: 1px;
+    margin-bottom: 7px;
+}
+
+.PatrikaGate-featured-desc {
+    font-size: clamp(9px, 1.1vw, 16px);
+    color: var(--pg-rose-sand);
+    line-height: 1.55;
+}
+
+/* =============================================
+   Footer Section
+   ============================================= */
+.PatrikaGate-footer-footer-section {
+    margin-top: 100px;
+}
+
+.PatrikaGate-gallery-Box-title {
+    font-size: 23px;
+}
+
+.PatrikaGate-footer {
+    position: relative;
+    z-index: 1;
+    margin: 0 14px 14px;
+    background: linear-gradient(135deg, var(--pg-deep-maroon) 0%, #4a1820 50%, var(--pg-deep-maroon) 100%);
+    border: 2px solid var(--pg-gold);
+    border-radius: var(--pg-radius);
+    padding: 50px 30px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.PatrikaGate-footer::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        radial-gradient(circle at 15% 50%, #c9963a14 0%, transparent 60%),
+        radial-gradient(circle at 85% 50%, #c9963a14 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.PatrikaGate-footer-eyebrow {
+    font-family: var(--pg-font-heading);
+    font-size: clamp(9px, 1.3vw, 18px);
+    letter-spacing: 4px;
+    color: var(--pg-gold);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+
+.PatrikaGate-footer-heading {
+    font-family: var(--pg-font-display);
+    font-size: clamp(18px, 3.5vw, 40px);
+    color: var(--pg-gold-light);
+    margin-bottom: 12px;
+    text-shadow: 0 2px 12px #00000066;
+}
+
+.PatrikaGate-footer-divider {
+    width: 80px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--pg-gold), transparent);
+    margin: 0 auto 14px;
+}
+
+.PatrikaGate-footer-text {
+    color: var(--pg-rose-sand);
+    font-size: clamp(12px, 1.7vw, 18px);
+    line-height: 1.85;
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.PatrikaGate-footer-text strong {
+    color: var(--pg-gold-light);
+    font-style: normal;
+    font-weight: 600;
+}
+
+.PatrikaGate-footer-tags {
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+}
+
+.PatrikaGate-footer-tag {
+    font-family: var(--pg-font-heading);
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    color: var(--pg-gold);
+    opacity: 0.75;
+    text-transform: uppercase;
+}
+
+.PatrikaGate-footer-tag-sep {
+    color: var(--pg-gold);
+    opacity: 0.35;
+}
+
+/* =============================================
+   RESPONSIVE — Tablet (max-width: 768px)
+   ============================================= */
+@media (max-width: 768px) {
+    .PatrikaGate-banner-wrap img {
+        height: clamp(220px, 38vw, 380px);
+    }
+
+    .PatrikaGate-gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Featured card goes full width on tablet */
+    .PatrikaGate-gallery-card--featured {
+        grid-column: 1 / -1;
+        flex-direction: row;
+        text-align: left;
+        padding: 14px 20px;
+        gap: 18px;
+    }
+
+    .PatrikaGate-featured-icon {
+        font-size: 38px;
+        margin: 0;
+    }
+
+    .PatrikaGate-featured-deco {
+        margin: 6px 0;
+    }
+}
+
+/* =============================================
+   RESPONSIVE — Mobile (max-width: 560px)
+   ============================================= */
+@media (max-width: 560px) {
+    .PatrikaGate-header {
+        padding: 18px 12px 12px;
+    }
+
+    .PatrikaGate-banner-wrap img {
+        height: 220px;
+    }
+
+    /* 2-column gallery on mobile */
+    .PatrikaGate-gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .PatrikaGate-gallery-card--featured {
+        grid-column: 1 / -1;
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 16px;
+    }
+
+    .PatrikaGate-featured-icon {
+        font-size: 32px;
+        margin-bottom: 6px;
+    }
+
+    .PatrikaGate-featured-deco {
+        margin: 8px auto;
+    }
+
+    .PatrikaGate-footer {
+        padding: 18px 16px;
+        margin: 0 8px 8px;
+    }
+}
+
+/* =============================================
+   RESPONSIVE — Small Mobile (max-width: 380px)
+   ============================================= */
+@media (max-width: 380px) {
+    .PatrikaGate-gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .PatrikaGate-gallery-card--featured {
+        grid-column: 1;
+    }
+}

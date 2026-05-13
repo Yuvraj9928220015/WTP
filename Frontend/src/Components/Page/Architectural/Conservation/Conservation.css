@@ -55,7 +55,6 @@
 
 .stat-number {
     font-size: 2.5rem;
-    font-weight: 700;
     color: #4db9e4;
     margin-bottom: 8px;
     line-height: 1;
@@ -87,8 +86,8 @@
 }
 
 .conservation-title {
-    font-size: 34px;
-    font-weight: 700;
+    font-size: 37px;
+    font-weight: 500;
     color: #1a202c;
     margin-bottom: 20px;
     line-height: 1.2;
@@ -222,7 +221,7 @@
 
 .conservation-slider-title {
     font-size: 2.5rem;
-    font-weight: 700;
+    font-weight: 500;
     color: #1a202c;
     margin-bottom: 15px;
     background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
@@ -296,16 +295,16 @@
 
 .conservation-slider-content h3 {
     font-size: 25px;
-    font-weight: 600;
+    font-weight: 500;
     color: #1a202c;
     margin-bottom: 10px;
 }
 
 .conservation-slider-content p {
-    color: #4a5568;
+    color: #393f49;
     letter-spacing: 1px;
     line-height: 1.6;
-    font-size: 20px;
+    font-size: 19px;
 }
 
 @media screen and (max-width: 1200px) {

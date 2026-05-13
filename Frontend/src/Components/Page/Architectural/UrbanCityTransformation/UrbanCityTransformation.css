@@ -1,0 +1,1157 @@
+/* =============================================
+   UrbanCityCityTransformation.css
+   Dark Navy Blue Theme — Fully Responsive
+   ============================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Outfit:wght@300;400;500;600&display=swap');
+
+/* ---- Root Variables ---- */
+:root {
+    --UrbanCity-navy: #0a1628;
+    --UrbanCity-navy-mid: #0d1f3c;
+    --UrbanCity-navy-light: #122244;
+    --UrbanCity-gold: #c9a84c;
+    --UrbanCity-gold-light: #e8c97a;
+    --UrbanCity-accent-old: #e05c5c;
+    --UrbanCity-accent-new: #3ab8a0;
+    --UrbanCity-white: #f0f4ff;
+    --UrbanCity-muted: #8a9abb;
+    --UrbanCity-border: #c9a84c40;
+    --UrbanCity-radius: 4px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* =============================================
+   SLIDE ANIMATIONS
+   ============================================= */
+@keyframes slideInNext {
+    from {
+        opacity: 0;
+        transform: translateX(28px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInPrev {
+    from {
+        opacity: 0;
+        transform: translateX(-28px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.slide-anim-next {
+    animation: slideInNext 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.slide-anim-prev {
+    animation: slideInPrev 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+/* =============================================
+   BANNER
+   ============================================= */
+.UrbanCity-Banner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.UrbanCity-Banner>img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    display: block;
+}
+
+.UrbanCity-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.UrbanCity-image img {
+    position: absolute;
+    top: -24%;
+    width: min(75%);
+    object-fit: contain;
+}
+
+@media (max-width: 768px) {
+    .UrbanCity-Banner>img {
+        height: 56vw;
+        min-height: 220px;
+    }
+
+    .UrbanCity-image img {
+        width: min(80%, 320px);
+    }
+}
+
+@media (max-width: 480px) {
+    .UrbanCity-Banner>img {
+        height: 62vw;
+        min-height: 200px;
+    }
+}
+
+/* =============================================
+   SHARED HEADING
+   ============================================= */
+.UrbanCity-heading-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 28px;
+    position: relative;
+    z-index: 1;
+    padding: 0 12px;
+}
+
+.UrbanCity-heading-line {
+    flex: 1;
+    /* max-width: 140px; */
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--UrbanCity-gold));
+    flex-shrink: 1;
+}
+
+.UrbanCity-heading-wrapper .UrbanCity-heading-line:last-child {
+    background: linear-gradient(90deg, var(--UrbanCity-gold), transparent);
+}
+
+.UrbanCity-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.1rem, 3vw, 2.2rem);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    white-space: normal;
+    text-align: center;
+    background: linear-gradient(135deg, var(--UrbanCity-white) 40%, var(--UrbanCity-gold-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    flex-shrink: 0;
+    max-width: 80%;
+}
+
+@media (max-width: 480px) {
+    .UrbanCity-heading-wrapper {
+        gap: 10px;
+    }
+/* 
+    .UrbanCity-heading-line {
+        max-width: 40px;
+    } */
+
+    .UrbanCity-heading {
+        max-width: 90%;
+        font-size: clamp(1rem, 4.5vw, 1.4rem);
+    }
+}
+
+/* =============================================
+   THEN & NOW SECTION
+   ============================================= */
+.UrbanCity-section-2 {
+    position: relative;
+    background-image: url(/public/Kota-image-8.jpeg);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: 'Outfit', sans-serif;
+    padding: 60px 20px 50px;
+    overflow: hidden;
+}
+
+/* Glow Blobs */
+.UrbanCity-bg-glow {
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    filter: blur(120px);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.UrbanCity-bg-glow--left {
+    background: radial-gradient(circle, #3ab8a01f, transparent 70%);
+    top: -100px;
+    left: -150px;
+}
+
+.UrbanCity-bg-glow--right {
+    background: radial-gradient(circle, #e05c5c1a, transparent 70%);
+    bottom: -100px;
+    right: -150px;
+}
+
+/* ---- Slider Box ---- */
+.UrbanCity-slider {
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    border-radius: 14px 14px 0 0;
+    overflow: hidden;
+    max-width: 1100px;
+    margin: 0 auto;
+    height: clamp(200px, 36vw, 420px);
+    border: 1px solid var(--UrbanCity-border);
+    box-shadow: 0 30px 80px #00000099, 0 0 0 1px #ffffff0a;
+    z-index: 1;
+}
+
+.UrbanCity-slide-panel {
+    position: relative;
+    flex: 1;
+    overflow: hidden;
+}
+
+.UrbanCity-slide-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 6s ease;
+}
+
+.UrbanCity-slider:hover .UrbanCity-slide-img {
+    transform: scale(1.04);
+}
+
+.UrbanCity-img-overlay {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.UrbanCity-img-overlay--old {
+    background: linear-gradient(90deg, #0a0f1e8c 0%, transparent 60%),
+        linear-gradient(0deg, #0a0f1e66 0%, transparent 40%);
+}
+
+.UrbanCity-img-overlay--new {
+    background: linear-gradient(270deg, #0a0f1e80 0%, transparent 60%),
+        linear-gradient(0deg, #0a0f1e59 0%, transparent 40%);
+}
+
+.UrbanCity-panel-label {
+    position: absolute;
+    top: 12px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 30px;
+    z-index: 2;
+    backdrop-filter: blur(8px);
+}
+
+.UrbanCity-panel-label--old {
+    left: 12px;
+    background: #e05c5c40;
+    border: 1px solid #e05c5c80;
+    color: #ffa0a0;
+}
+
+.UrbanCity-panel-label--new {
+    right: 12px;
+    background: #3ab8a033;
+    border: 1px solid #3ab8a080;
+    color: #7eeedd;
+}
+
+/* Center Badge */
+.UrbanCity-badge {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    background: var(--UrbanCity-navy-mid);
+    border: 2px solid var(--UrbanCity-gold);
+    border-radius: 50%;
+    width: 68px;
+    height: 68px;
+    justify-content: center;
+    box-shadow: 0 0 28px #c9a84c59, 0 0 0 5px #c9a84c14;
+}
+
+.UrbanCity-badge-text {
+    font-size: 0.52rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: var(--UrbanCity-gold);
+    text-transform: uppercase;
+}
+
+.UrbanCity-badge-arrows {
+    display: flex;
+    gap: 2px;
+    align-items: center;
+}
+
+.UrbanCity-arrow {
+    font-size: 0.95rem;
+    color: var(--UrbanCity-gold-light);
+    line-height: 1;
+}
+
+/* ---- Content Block ---- */
+.UrbanCity-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, var(--UrbanCity-navy-mid), var(--UrbanCity-navy-light));
+    border: 1px solid var(--UrbanCity-border);
+    border-top: none;
+    border-radius: 0 0 var(--UrbanCity-radius) var(--UrbanCity-radius);
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.UrbanCity-content-col {
+    flex: 1;
+    padding: 24px 30px;
+}
+
+.UrbanCity-content-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.UrbanCity-content-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+    font-size: clamp(0.85rem, 1.4vw, 1.05rem);
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+.UrbanCity-content-item--old {
+    color: #ffa0a0;
+}
+
+.UrbanCity-content-item--new {
+    color: #7eeedd;
+}
+
+.UrbanCity-content-divider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 22px 10px;
+    flex-shrink: 0;
+}
+
+.UrbanCity-divider-line {
+    width: 1px;
+    flex: 1;
+    background: linear-gradient(180deg, transparent, var(--UrbanCity-border), transparent);
+}
+
+.UrbanCity-divider-icon {
+    font-size: 1.1rem;
+    color: var(--UrbanCity-gold);
+    opacity: 0.7;
+}
+
+/* ---- Controls ---- */
+.UrbanCity-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 26px;
+    position: relative;
+    z-index: 1;
+}
+
+.UrbanCity-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 1px solid var(--UrbanCity-border);
+    background: #ffffff0a;
+    color: var(--UrbanCity-gold);
+    cursor: pointer;
+    transition: all 0.25s ease;
+    backdrop-filter: blur(8px);
+    flex-shrink: 0;
+}
+
+.UrbanCity-btn svg {
+    width: 17px;
+    height: 17px;
+}
+
+.UrbanCity-btn:hover {
+    background: #c9a84c26;
+    border-color: var(--UrbanCity-gold);
+    box-shadow: 0 0 18px #c9a84c33;
+    transform: scale(1.08);
+}
+
+.UrbanCity-dots {
+    display: flex;
+    gap: 9px;
+    align-items: center;
+}
+
+.UrbanCity-dot-btn {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: none;
+    background: #ffffff33;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    padding: 0;
+}
+
+.UrbanCity-dot-btn--active {
+    width: 26px;
+    border-radius: 4px;
+    background: var(--UrbanCity-gold);
+    box-shadow: 0 0 10px #c9a84c80;
+}
+
+/* =============================================
+   TRAFFIC & LIGHT FREE CITY
+   ============================================= */
+.Traffic-Light {
+    padding: 70px 0 60px;
+    width: 100%;
+    background-color: #0c2d5f;
+    font-family: 'Outfit', sans-serif;
+}
+
+.UrbanCity-subheading {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(0.9rem, 1.8vw, 1.2rem);
+    color: rgba(255, 255, 255, 0.75);
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    margin: 0;
+    -webkit-text-fill-color: #ffffffbf;
+    text-align: center;
+}
+
+.Traffic-Light-container {
+    padding: 0 140px;
+    margin-top: 16px;
+}
+
+.traffic-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.Traffic-Light-Box {
+    position: relative;
+    width: 100%;
+    height: clamp(160px, 20vw, 300px);
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.Traffic-Light-Box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.Traffic-Light-Box:hover img {
+    transform: scale(1.05);
+}
+
+.Traffic-Light-Box-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, #050f28d9 0%, #050f284d 40%, transparent 70%);
+    pointer-events: none;
+}
+
+.Traffic-Light-Box-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 12px 14px;
+    font-size: clamp(0.78rem, 1.1vw, 0.95rem);
+    font-weight: 600;
+    color: #ffffff;
+    text-align: center;
+    letter-spacing: 0.03em;
+    z-index: 2;
+}
+
+/* =============================================
+   CHAMBAL RIVERFRONT SECTION
+   ============================================= */
+.chambal-section {
+    background: #0c2d5f;
+    padding: 0px 0px 0px;
+    font-family: 'Outfit', sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+.chambal-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--UrbanCity-gold), transparent);
+}
+
+/* .chambal-block {
+    margin-bottom: 56px;
+} */
+
+#chambal-block-1{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0px 40px;
+    background-image: url(/public/UrbanCity-image-9.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#chambal-block-2 {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0px 40px;
+    background-image: url(/public/UrbanCity-image-8.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#chambal-block-1::before,
+#chambal-block-2::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg,
+            #0a1628b8 0%,
+            #0c2d5f99 50%,
+            #0a1628b8 100%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+#chambal-block-1>*,
+#chambal-block-2>* {
+    position: relative;
+    z-index: 1;
+}
+
+/* =============================================
+   CHAMBAL HEADER
+   ============================================= */
+.chambal-header {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.chambal-tagline {
+    text-align: center;
+    color: var(--UrbanCity-muted);
+    font-size: clamp(0.85rem, 1.3vw, 1.05rem);
+    letter-spacing: 0.06em;
+    margin: -16px 0 26px;
+}
+
+.chambal-stats-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    background: rgba(201, 168, 76, 0.08);
+    border: 1px solid var(--UrbanCity-border);
+    border-radius: 40px;
+    padding: 10px 28px;
+    max-width: 480px;
+    margin: 0 auto 36px;
+}
+
+.chambal-stat {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: var(--UrbanCity-gold-light);
+    font-size: clamp(0.82rem, 1.2vw, 0.95rem);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+}
+
+.chambal-stat-icon {
+    font-size: 1rem;
+}
+
+.chambal-stat-divider {
+    color: var(--UrbanCity-border);
+    font-size: 1.3rem;
+    line-height: 1;
+}
+
+/* =============================================
+   DUAL IMAGE SLIDER
+   ============================================= */
+.dual-slider-wrap {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.dual-slider-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    border-radius: var(--UrbanCity-radius);
+    overflow: hidden;
+}
+
+.dual-slider-card {
+    position: relative;
+    height: clamp(220px, 28vw, 480px);
+    border-radius: var(--UrbanCity-radius);
+    overflow: hidden;
+    border: 1px solid var(--UrbanCity-border);
+    box-shadow: 0 18px 50px #00000080;
+}
+
+.dual-slider-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 6s ease;
+}
+
+.dual-slider-card:hover img {
+    transform: scale(1.05);
+}
+
+.dual-slider-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, #050f28d9 0%, #050f2840 40%, transparent 70%);
+    pointer-events: none;
+}
+
+.dual-slider-label {
+    position: absolute;
+    bottom: 13px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: #fff;
+    font-size: clamp(0.75rem, 1.1vw, 0.92rem);
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    z-index: 2;
+    text-shadow: 0 2px 8px #00000099;
+}
+
+.dual-slider-controls {
+    margin-top: 20px;
+}
+
+/* Section Divider */
+.chambal-section-divider {
+    max-width: 1100px;
+    margin: 0 auto 2px;
+    padding: 0 16px;
+}
+
+/* =============================================
+   TRANSFORMATION HIGHLIGHTS — TIMELINE WRAP
+   ============================================= */
+.chambal-timeline-wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px 80px;
+}
+
+/* =============================================
+   STATIC TIMELINE — NEW CARD STYLE
+   ============================================= */
+
+/* Outer flex row — holds node groups and connectors */
+.static-timeline-track {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    width: 100%;
+}
+
+/* Each "row-group" = card + connector (except last card) */
+.tl-row-group {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    min-width: 0;
+}
+
+/* The node (card) itself takes full flex */
+.timeline-node-group {
+    flex: 1;
+}
+
+/* ── Card ── */
+.tl-card {
+    background: linear-gradient(135deg, var(--UrbanCity-navy-mid), var(--UrbanCity-navy-light));
+    border: 1px solid var(--UrbanCity-border);
+    border-radius: 14px;
+    padding: 22px 20px 20px;
+    width: 100%;
+    text-align: center;
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.5),
+        inset 0 1px 0 rgba(201, 168, 76, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Gold shimmer line at top on hover */
+.tl-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--UrbanCity-gold), transparent);
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+
+.tl-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(201, 168, 76, 0.65);
+    box-shadow:
+        0 20px 56px rgba(0, 0, 0, 0.65),
+        0 0 28px rgba(201, 168, 76, 0.18);
+}
+
+.tl-card:hover::before {
+    opacity: 1;
+}
+
+/* ── Glowing Dot Ring ── */
+.tl-dot-ring {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: 2px solid var(--UrbanCity-gold);
+    background: var(--UrbanCity-navy);
+    box-shadow:
+        0 0 18px rgba(201, 168, 76, 0.45),
+        inset 0 0 10px rgba(201, 168, 76, 0.06);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 14px;
+    position: relative;
+}
+
+/* Inner filled dot */
+.tl-dot-ring::after {
+    content: '';
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: radial-gradient(circle, var(--UrbanCity-gold-light) 0%, var(--UrbanCity-gold) 100%);
+    box-shadow: 0 0 10px rgba(201, 168, 76, 0.8);
+}
+
+/* ── Year text ── */
+.tl-node-year {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.4rem, 2.2vw, 2rem);
+    font-weight: 700;
+    color: var(--UrbanCity-gold-light);
+    letter-spacing: 0.02em;
+    line-height: 1;
+    margin-bottom: 8px;
+    text-shadow: 0 0 20px rgba(232, 201, 122, 0.4);
+}
+
+/* ── Label text ── */
+.tl-node-label {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(0.72rem, 1vw, 0.88rem);
+    color: var(--UrbanCity-muted);
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    line-height: 1.45;
+}
+
+/* ── Connector: line + chevron + line ── */
+.tl-connector {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: clamp(16px, 4vw, 56px);
+    gap: 2px;
+    padding: 0 4px;
+}
+
+.tl-conn-line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg,
+            rgba(201, 168, 76, 0.25),
+            rgba(201, 168, 76, 0.7),
+            rgba(201, 168, 76, 0.25));
+}
+
+.tl-chevron {
+    color: var(--UrbanCity-gold);
+    font-size: clamp(16px, 2.2vw, 24px);
+    line-height: 1;
+    opacity: 0.9;
+    flex-shrink: 0;
+    font-weight: 300;
+}
+
+/* =============================================
+   RESPONSIVE BREAKPOINTS
+   ============================================= */
+
+/* Tablet landscape */
+@media (max-width: 1024px) {
+    .Traffic-Light-container {
+        padding: 0 24px;
+    }
+
+    #chambal-block-1,
+    #chambal-block-2 {
+        padding: 70px 28px;
+        min-height: 80vh;
+    }
+
+    .tl-card {
+        padding: 18px 14px 16px;
+    }
+}
+
+/* Tablet portrait */
+@media (max-width: 900px) {
+    .UrbanCity-section-2 {
+        padding: 50px 16px 40px;
+    }
+
+    .UrbanCity-content-col {
+        padding: 20px 18px;
+    }
+
+    .UrbanCity-badge {
+        width: 56px;
+        height: 56px;
+    }
+
+    .UrbanCity-badge-text {
+        font-size: 0.46rem;
+    }
+
+    .UrbanCity-arrow {
+        font-size: 0.82rem;
+    }
+
+    .traffic-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .Traffic-Light-Box {
+        height: clamp(160px, 26vw, 240px);
+    }
+
+    #chambal-block-1,
+    #chambal-block-2 {
+        padding: 60px 24px;
+        min-height: 75vh;
+    }
+
+    /* Timeline: smaller connector on tablet */
+    .tl-connector {
+        width: clamp(12px, 3vw, 32px);
+        padding: 0 2px;
+    }
+
+    .tl-dot-ring {
+        width: 44px;
+        height: 44px;
+    }
+
+    .tl-dot-ring::after {
+        width: 12px;
+        height: 12px;
+    }
+}
+
+/* Large mobile */
+@media (max-width: 768px) {
+
+    .dual-slider-row {
+        grid-template-columns: 1fr;
+    }
+
+    .dual-slider-card {
+        height: clamp(200px, 48vw, 280px);
+    }
+
+    .Traffic-Light-container {
+        padding: 0 16px;
+    }
+
+    #chambal-block-1,
+    #chambal-block-2 {
+        padding: 50px 16px;
+        min-height: auto;
+        background-attachment: scroll;
+    }
+
+    .dual-slider-wrap {
+        width: 100%;
+    }
+
+    /* ── Timeline: vertical stack on mobile ── */
+    .static-timeline-track {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+
+    .tl-row-group {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 340px;
+        flex: none;
+    }
+
+    .timeline-node-group {
+        width: 100%;
+    }
+
+    .tl-connector {
+        flex-direction: column;
+        width: auto;
+        height: clamp(28px, 5vw, 44px);
+        padding: 4px 0;
+    }
+
+    .tl-conn-line {
+        flex: 1;
+        width: 1px;
+        height: auto;
+        background: linear-gradient(180deg,
+                rgba(201, 168, 76, 0.25),
+                rgba(201, 168, 76, 0.7),
+                rgba(201, 168, 76, 0.25));
+    }
+
+    .tl-chevron {
+        transform: rotate(90deg);
+    }
+
+    .tl-card {
+        padding: 20px 18px 18px;
+    }
+}
+
+/* Small mobile */
+@media (max-width: 640px) {
+    .UrbanCity-section-2 {
+        padding: 44px 14px 36px;
+    }
+
+    .UrbanCity-slider {
+        height: clamp(170px, 50vw, 270px);
+        border-radius: 10px 10px 0 0;
+    }
+
+    .UrbanCity-badge {
+        width: 46px;
+        height: 46px;
+    }
+
+    .UrbanCity-badge-text {
+        font-size: 0.4rem;
+    }
+
+    .UrbanCity-panel-label {
+        font-size: 0.6rem;
+        padding: 3px 9px;
+        top: 8px;
+    }
+
+    .UrbanCity-panel-label--old {
+        left: 8px;
+    }
+
+    .UrbanCity-panel-label--new {
+        right: 8px;
+    }
+
+    .UrbanCity-content {
+        flex-direction: column;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .UrbanCity-content-col {
+        padding: 16px 18px;
+    }
+
+    .UrbanCity-content-col--old {
+        border-bottom: 1px solid var(--UrbanCity-border);
+    }
+
+    .UrbanCity-content-divider {
+        display: none;
+    }
+
+    .traffic-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .Traffic-Light-Box {
+        height: clamp(180px, 52vw, 240px);
+    }
+
+    #chambal-block-1,
+    #chambal-block-2 {
+        padding: 44px 14px 40px;
+    }
+
+    .chambal-stats-bar {
+        padding: 10px 18px;
+        gap: 10px;
+    }
+
+    .chambal-stat-divider {
+        display: none;
+    }
+
+    .tl-row-group {
+        max-width: 300px;
+    }
+
+    .chambal-timeline-wrap {
+        padding: 48px 14px 60px;
+    }
+}
+
+/* Very small mobile */
+@media (max-width: 400px) {
+    .UrbanCity-section-2 {
+        padding: 36px 10px 30px;
+    }
+
+    .UrbanCity-slider {
+        height: 168px;
+    }
+
+    .UrbanCity-btn {
+        width: 38px;
+        height: 38px;
+    }
+
+    .Traffic-Light {
+        padding: 50px 0 44px;
+    }
+
+    #chambal-block-1,
+    #chambal-block-2 {
+        padding: 36px 10px 32px;
+    }
+
+    .UrbanCity-heading {
+        font-size: clamp(0.95rem, 4vw, 1.2rem);
+    }
+
+    .tl-row-group {
+        max-width: 260px;
+    }
+
+    .tl-dot-ring {
+        width: 40px;
+        height: 40px;
+    }
+
+    .tl-dot-ring::after {
+        width: 10px;
+        height: 10px;
+    }
+}

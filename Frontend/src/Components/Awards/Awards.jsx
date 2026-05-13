@@ -178,15 +178,15 @@ export default function Awards() {
                         <p className="hero-subtitle">Celebrating excellence in architectural innovation and design leadership</p>
                         <div className="hero-stats">
                             <div className="stat-item">
-                                <span className="stat-number">25+</span>
+                                <span className="awards-stat-number">25+</span>
                                 <span className="stat-label">Awards Won</span>
                             </div>
                             <div className="stat-item">
-                                <span className="stat-number">15+</span>
+                                <span className="awards-stat-number">15+</span>
                                 <span className="stat-label">Years Experience</span>
                             </div>
                             <div className="stat-item">
-                                <span className="stat-number">100+</span>
+                                <span className="awards-stat-number">100+</span>
                                 <span className="stat-label">Projects</span>
                             </div>
                         </div>
@@ -197,8 +197,8 @@ export default function Awards() {
             {/* Awards Container */}
             <div className='awards-main-container'>
                 <div className="awards-header">
-                    <h2 className="section-title">Awards & Achievements</h2>
-                    <p className="section-description">
+                    <h2 className="awards-section-title">Awards & Achievements</h2>
+                    <p className="awards-section-description">
                         Our commitment to excellence has been recognized by leading institutions and organizations
                     </p>
                 </div>
@@ -215,9 +215,6 @@ export default function Awards() {
                                         alt={`${award.category} main`}
                                         className="featured-image"
                                     />
-                                    <div className="image-overlay-info">
-                                        <span className="category-badge">{award.category}</span>
-                                    </div>
                                 </div>
                                 <div className="thumbnail-gallery">
                                     {award.images.map((imgSrc, imgIndex) => (
@@ -234,13 +231,6 @@ export default function Awards() {
 
                             {/* Achievements Details */}
                             <div className="award-details">
-                                <div className="details-header">
-                                    <h3 className="details-title">{award.category}</h3>
-                                    <div className="achievement-count">
-                                        {award.achievements.length} Awards
-                                    </div>
-                                </div>
-
                                 <div className="achievements-timeline">
                                     {award.achievements.map((item, itemIndex) => (
                                         <div key={itemIndex} className="timeline-item">

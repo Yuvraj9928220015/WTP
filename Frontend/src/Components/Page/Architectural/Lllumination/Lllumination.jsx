@@ -6,7 +6,7 @@ const Illumination = () => {
         {
             id: 1,
             title: "Replica of the Leaning Tower of PISA at Kota",
-            image: "Illuminations-1.jpg",
+            image: "New-38.jpeg",
             // category: "Commercial Architecture",
             // description: "This project brought the banks of the Chambal River to life with soft glows and dramatic spotlights, attracting locals and tourists alike for evening strolls and vibrant cityscapes."
         },
@@ -20,7 +20,7 @@ const Illumination = () => {
         {
             id: 3,
             title: "Panch Batti Choraha, Jaipur",
-            image: "Illuminations-6.jpg",
+            image: "New-37.jpeg",
             // category: "Residential",
             // description: "Streets, intersections, and historic zones across Jaipur have been transformed with ambient and functional lighting, enhancing both safety and the city's rich cultural identity at night."
         },

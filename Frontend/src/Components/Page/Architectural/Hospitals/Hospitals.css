@@ -23,8 +23,8 @@
 }
 
 .main-title {
-    font-size: 3rem;
-    font-weight: 700;
+    font-size: 2.8rem;
+    font-weight: 400;
     color: #1a1a1a;
     line-height: 1.2;
 }
@@ -257,7 +257,7 @@
 
 .about-title {
     font-size: 3rem;
-    font-weight: 700;
+    font-weight: 400;
     margin-bottom: 30px;
     line-height: 1.2;
     color: #ffffff;
@@ -304,7 +304,7 @@
 }
 
 .property-showcase-section {
-    padding: 150px 20px;
+    padding: 80px 20px;
     background-color: #f8f9fa;
     position: relative;
     z-index: 10000;
@@ -325,7 +325,7 @@
 
 .showcase-title {
     font-size: 3rem;
-    font-weight: 700;
+    font-weight: 400;
     color: #a07e5d;
     text-align: center;
     margin-bottom: 40px;
@@ -511,7 +511,7 @@
 
 .slider-location {
     font-size: 1.3rem;
-    font-weight: 700;
+    font-weight: 400;
     color: #1a1a1a;
     margin-bottom: 20px;
 }
@@ -574,9 +574,11 @@
 .dot:hover {
     background-color: #999;
 }
+
 .Sustainability-prag {
     width: 50%;
 }
+
 /* Responsive Design */
 @media (max-width: 1200px) {
     .featured-property .property-image-wrapper {
@@ -699,6 +701,7 @@
         width: 45px;
         height: 45px;
     }
+
     .Sustainability-prag {
         width: 100%;
     }
@@ -708,11 +711,13 @@
     .overlay_content h1 {
         font-size: 2.5rem;
     }
+
     .header-contents {
         width: 100%;
         display: flex;
         flex-direction: column;
     }
+
     .header-description {
         width: 100%;
         font-size: 19px;
@@ -924,7 +929,7 @@
     }
 
     .about-description {
-        font-size: 18px ;
+        font-size: 18px;
         letter-spacing: 1px;
         line-height: 1.6;
         margin-bottom: 15px;

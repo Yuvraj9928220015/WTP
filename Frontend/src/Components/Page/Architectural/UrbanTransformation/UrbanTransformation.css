@@ -1,9 +1,16 @@
+/* ═══════════════════════════════════════════════════════════
+   UrbanTransformation.css  —  FIXED VERSION
+   ═══════════════════════════════════════════════════════════ */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* ══════════════════════════════════════════
+   BASE CONTAINER
+   ══════════════════════════════════════════ */
 .scotland-container {
     width: 100%;
     margin: 0 auto;
@@ -12,10 +19,13 @@
     overflow: hidden;
 }
 
-/* Hero Section */
+/* ══════════════════════════════════════════
+   HERO SECTION
+   ══════════════════════════════════════════ */
 .About_container_image {
     position: relative;
     width: 100%;
+    height: 100vh;
     overflow: hidden;
 }
 
@@ -31,7 +41,6 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: #00000080;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -44,491 +53,421 @@
 }
 
 .overlay_content h1 {
-    font-size: 60px;
-    font-weight: 700;
+    font-size: 63px;
+    text-shadow: 3px 6px 10px #050505;
     margin-bottom: 20px;
     letter-spacing: 3px;
+    font-family: Georgia, 'Times New Roman', serif;
 }
 
 .overlay_content p {
-    font-size: 22px;
-    letter-spacing: 1px;
+    font-size: 23px;
+    letter-spacing: 2px;
+    text-shadow: 1px 2px 6px #000000aa;
 }
 
-/* Awesome Section - Updated Design */
+/* ══════════════════════════════════════════
+   FAN / NEWSPAPER SECTION
+   ══════════════════════════════════════════ */
 .awesome-section {
     display: flex;
     align-items: center;
     padding: 80px 50px;
-    gap: 60px;
-    min-height: 500px;
-    /* background: linear-gradient(135deg, #f5f7fa 0%, #ffffff 100%); */
-}
-
-.awesome-left {
-    flex: 1;
-    padding-right: 40px;
-}
-
-.awesome-title {
-    font-size: 72px;
-    font-weight: 300;
-    color: #d3d3d3;
-    margin-bottom: 50px;
-    line-height: 0.9;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    font-family: 'Arial', sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.title-word-1 {
-    display: block;
-    font-weight: 600;
-    color: #4e4e4e;
-    letter-spacing: 12px;
-    text-align: left;
-}
-
-.title-word-2 {
-    display: block;
-    font-weight: 600;
-    color: #4e4e4e;
-    letter-spacing: 12px;
-    margin-top: 5px;
-    text-align: right;
-}
-
-.awesome-stats {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 60px;
-    margin-bottom: 50px;
-    /* padding-left: 10px; */
-}
-
-.stat-item {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.stat-number {
-    font-size: 42px;
-    font-weight: 700;
-    color: #2c3e50;
-    margin-bottom: 8px;
-    display: block;
-    letter-spacing: 1px;
-}
-
-.stat-label {
-    font-size: 18px;
-    color: #7f8c8d;
-    letter-spacing: 1px;
-    text-transform: lowercase;
-    font-weight: 600;
-}
-
-.awesome-section-button {
-    padding: 14px 40px;
-    background: transparent;
-    color: #2c3e50;
-    border: 2px solid #424242;
-    border-radius: 4px;
-    font-size: 18px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-left: auto;
-    display: block;
-}
-
-.awesome-section-button:hover {
-    background: #2c3e50;
-    color: white;
-    border-color: #2c3e50;
-    transform: translateY(-2px);
+    gap: 40px;
+    min-height: 620px;
+    overflow: visible;
 }
 
 .awesome-right {
-    flex: 1;
+    flex: 0 0 100%;
+    max-width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: visible;
 }
 
-.awesome-image {
-    flex: 1;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.awesome-image img {
+.fan-stage {
+    position: relative;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.4s ease;
-}
-
-.awesome-image:nth-child(1) {
-    height: 550px;
-    min-width: 380px;
-}
-
-.awesome-image:nth-child(2) {
-    height: 450px;
-    min-width: 310px;
-}
-
-.awesome-image:nth-child(3) {
-    height: 350px;
-    min-width: 280px;
-}
-
-/* Discover Section */
-.discover-section {
+    height: 580px;
     display: flex;
     align-items: center;
-    padding: 40px 50px;
-    gap: 60px;
+    justify-content: center;
+    perspective: 1200px;
 }
 
-.discover-left {
-    flex: 1;
-}
-
-.discover-video {
-    position: relative;
-    width: 100%;
-    height: 600px;
-    overflow: hidden;
-}
-
-.discover-video img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.play-button {
+/* ── Fan card base ── */
+.fan-card {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    overflow: hidden;
+    border-radius: 4px;
+    border: 13px solid #ffffff;
+    box-shadow:
+        0 0 0 1px #0000001f,
+        6px 10px 30px #00000047;
+    background: #fff;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    transform-origin: bottom center;
     cursor: pointer;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    opacity: 0.9;
 }
 
-.play-button:hover {
-    transform: translate(-50%, -50%) scale(1.1);
-    opacity: 1;
-}
-
-.play-button svg circle {
-    fill: #ffffff80;
-}
-
-.play-button svg path {
-    fill: white;
-}
-
-.discover-right {
-    flex: 1;
-    padding-left: 50px;
-}
-
-.discover-title {
-    font-size: 48px;
-    font-weight: 700;
-    color: #333;
-    margin-bottom: 30px;
-    line-height: 1.2;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-.discover-text {
-    font-size: 22px;
-    color: #666;
-    line-height: 1.8;
-    margin-bottom: 20px;
-}
-
-/* Before/After Slider Section */
-.slider-section {
-    padding: 80px 50px;
-}
-
-.slider-title {
-    text-align: center;
-    font-size: 42px;
-    font-weight: 700;
-    color: #333;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-.slider-subtitle {
-    text-align: center;
-    font-size: 20px;
-    color: #666;
-    margin-bottom: 60px;
-}
-
-.slider-containers {
-    position: relative;
-    margin: 0 auto;
-}
-
-.slider-wrapper {
-    overflow: hidden;
-    border-radius: 12px;
-}
-
-.slider-content {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.slider-item {
-    min-width: 100%;
-    border-radius: 12px;
-    overflow: hidden;
-}
-
-.comparison-container {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    position: relative;
-}
-
-.comparison-half {
-    flex: 1;
-    position: relative;
-    overflow: hidden;
-}
-
-.comparison-half img {
+.fan-card img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
+    transition: transform 0.4s ease;
 }
 
-.before-half {
-    border-right: 3px solid white;
+.fan-card:hover img {
+    transform: scale(1.04);
 }
 
-.comparison-label {
-    background-color: black;
+.fan-card:hover {
+    box-shadow:
+        0 0 0 1px #00000026,
+        10px 18px 45px #00000052;
+}
+
+/* Shine overlay */
+.fan-shine {
     position: absolute;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 8px 20px;
-    color: white;
-    font-weight: 600;
-    font-size: 14px;
+    top: 0;
+    left: -80%;
+    width: 55%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent 0%, #ffffff33 50%, transparent 100%);
+    pointer-events: none;
+    transition: left 0.55s ease;
+}
+
+.fan-card:hover .fan-shine {
+    left: 130%;
+}
+
+/* Featured badge */
+.fan-badge {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background: #c0392b;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
     letter-spacing: 2px;
-    border-radius: 4px;
+    padding: 5px 12px;
+    border-radius: 3px;
+    text-transform: uppercase;
     z-index: 2;
 }
 
-.slider-info {
-    padding: 30px;
-    text-align: center;
+/* ── Desktop fan positions (flat horizontal) ── */
+.fan-center {
+    width: 27%;
+    height: 633px;
+    transform: rotate(0deg) translateY(4px);
+    z-index: 5;
+    box-shadow:
+        0 0 0 1px #0000001f,
+        0 16px 50px #00000047;
 }
 
-.slider-info h3 {
-    font-size: 28px;
-    font-weight: 700;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.slider-category {
-    display: inline-block;
-    padding: 6px 16px;
-    background: #007bff;
-    color: white;
-    border-radius: 20px;
-    font-size: 14px;
-    font-weight: 600;
-    margin-bottom: 15px;
-}
-
-.slider-info p {
-    font-size: 16px;
-    color: #666;
-    line-height: 1.6;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.slider-nav {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: white;
-    border: none;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    box-shadow: 0 4px 15px #00000026;
-    transition: all 0.3s ease;
+.fan-center:hover {
+    transform: rotate(0deg) translateY(-14px) scale(1.03);
     z-index: 10;
 }
 
-.slider-nav:hover {
-    background: #007bff;
-    color: white;
-    transform: translateY(-50%) scale(1.1);
+.fan-near-left {
+    width: 20%;
+    height: 550px;
+    transform: rotate(0deg) translateX(-383px) translateY(6px);
+    z-index: 3;
 }
 
-.slider-nav.prev {
-    left: -25px;
+.fan-far-left {
+    width: 20%;
+    height: 491px;
+    transform: rotate(0deg) translateX(-632px) translateY(4px);
+    z-index: 1;
 }
 
-.slider-nav.next {
-    right: -25px;
+.fan-near-right {
+    width: 20%;
+    height: 550px;
+    transform: rotate(0deg) translateX(400px) translateY(4px);
+    z-index: 3;
 }
 
-.slider-dots {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    margin-top: 30px;
+.fan-far-right {
+    width: 20%;
+    height: 490px;
+    transform: rotate(0deg) translateX(650px) translateY(9px);
+    z-index: 1;
 }
 
-.dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: #ddd;
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    padding: 0;
+.fan-near-left:hover,
+.fan-near-right:hover,
+.fan-far-left:hover,
+.fan-far-right:hover {
+    z-index: 10;
 }
 
-.dot.active {
-    background: #007bff;
-    width: 30px;
-    border-radius: 6px;
-}
-
-.dot:hover {
-    background: #007bff;
-}
-
-/* Gallery Sections */
+/* ══════════════════════════════════════════
+   GALLERY SECTION WRAPPERS
+   ══════════════════════════════════════════ */
 .gallery-section {
     padding: 60px 50px;
-}
-
-.kota-gallery {
-    background: #f9f9f9;
 }
 
 .gallery-section-title {
     text-align: center;
     font-size: 42px;
-    font-weight: 700;
+    font-weight: 300;
     color: #333;
     margin-bottom: 50px;
     text-transform: uppercase;
     letter-spacing: 2px;
+    font-family: Georgia, 'Times New Roman', serif;
 }
 
-/* Jaipur & Kota Gallery Grid */
-#jaipur-Tours-container,
-#kota-Tours-container {
-    padding: 0;
-}
-
-.container-fluid {
-    width: 100%;
-    padding: 0;
-}
-
-.popular-Tours {
-    width: 100%;
-    height: 700px;
+/* ══════════════════════════════════════════
+   GALLERY SLIDER  (gs-*)
+   KEY FIX: viewport must clip the track
+   ══════════════════════════════════════════ */
+.gs-root {
     position: relative;
+    width: 100%;
+}
+
+.gs-slider-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    /* Ensure row itself doesn't clip */
+    width: 100%;
+}
+
+/* ── Side arrow buttons ── */
+.gs-side-btn {
+    flex-shrink: 0;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    border: 2px solid #c8c4b4;
+    background: #fff;
+    color: #444;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.10);
+    /* Make sure button never shrinks */
+    min-width: 46px;
+    z-index: 2;
+}
+
+.gs-side-btn:hover {
+    background: #2c3e50;
+    border-color: #2c3e50;
+    color: #fff;
+    transform: scale(1.08);
+}
+
+/* ── Viewport: THE critical fix — clips the sliding track ── */
+.gs-viewport {
+    flex: 1;
+    /* overflow MUST be hidden to prevent cards bleeding outside */
     overflow: hidden;
-    border-radius: 8px;
-    margin-bottom: 20px;
+    min-width: 0;
+    /* prevents flex child from overflowing */
+    position: relative;
 }
 
-#jaipur-Tours-container-image img {
-    height: 100vh;
+/* ── Track: slides horizontally, width set via JS ── */
+.gs-track {
+    display: flex;
+    /* gap is set inline via JS to match cardWidth calculation */
+    will-change: transform;
+    /* Do NOT set overflow here — let viewport handle it */
+}
+
+/* ── Individual card ── */
+.gs-card {
+    /* width is set inline via JS */
+    flex-shrink: 0;
+    overflow: hidden;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    cursor: pointer;
+    /* Ensure card never grows beyond assigned width */
+    min-width: 0;
+}
+
+.gs-img-wrap {
+    position: relative;
     width: 100%;
+    height: 380px;
+    overflow: hidden;
 }
 
-#jaipur-Tours-container-image img {
+.gs-img-wrap img {
+    width: 100%;
     height: 100%;
-    width: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.45s ease;
 }
 
-.popular-Tours img {
-    height: 100%;
-    width: 100%;
-    transition: transform 0.4s ease;
+.gs-card:hover .gs-img-wrap img {
+    transform: scale(1.06);
 }
 
-.popular-tour-overlay {
+.gs-overlay {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(to top, #000000cc, transparent);
-    color: white;
-    padding: 30px 20px;
-    opacity: 0;
-    transform: translateY(100%);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    pointer-events: none;
+    inset: 0;
+    background: rgba(0, 0, 0, 0);
+    transition: background 0.35s ease;
 }
 
-.popular-tour-overlay h3 {
-    font-size: 24px;
-    font-weight: 600;
-    margin-bottom: 8px;
+.gs-card:hover .gs-overlay {
+    background: rgba(0, 0, 0, 0.08);
 }
 
-.popular-tour-overlay p {
-    font-size: 16px;
-    letter-spacing: 1px;
-    line-height: 1.5;
+.gs-info {
+    padding: 22px 20px 26px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
-.popular-Tours:hover .popular-tour-overlay {
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto;
+.gs-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #383838;
+    margin-bottom: 10px;
+    letter-spacing: 0.2px;
+    font-family: Georgia, 'Times New Roman', serif;
 }
 
-.popular-Tours:hover img {
-    transform: scale(1.05);
+.gs-desc {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.65;
 }
 
-/* ===== RESPONSIVE DESIGN ===== */
+/* ── Dot indicators ── */
+.gs-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+}
 
+.gs-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: none;
+    background: #c8c4b4;
+    cursor: pointer;
+    padding: 0;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.gs-dot--active {
+    background: #2c3e50;
+    transform: scale(1.3);
+}
+
+/* ══════════════════════════════════════════
+   RESPONSIVE — 1400px
+   ══════════════════════════════════════════ */
+@media (max-width: 1400px) {
+    .fan-stage {
+        height: 540px;
+    }
+
+    .fan-center {
+        width: 25%;
+        height: 570px;
+    }
+
+    .fan-near-left {
+        width: 19%;
+        height: 490px;
+        transform: rotate(0deg) translateX(-340px) translateY(6px);
+    }
+
+    .fan-far-left {
+        width: 19%;
+        height: 440px;
+        transform: rotate(0deg) translateX(-562px) translateY(4px);
+    }
+
+    .fan-near-right {
+        width: 19%;
+        height: 490px;
+        transform: rotate(0deg) translateX(355px) translateY(4px);
+    }
+
+    .fan-far-right {
+        width: 19%;
+        height: 440px;
+        transform: rotate(0deg) translateX(578px) translateY(9px);
+    }
+}
+
+/* ══════════════════════════════════════════
+   RESPONSIVE — 1280px
+   ══════════════════════════════════════════ */
+@media (max-width: 1280px) {
+    .fan-stage {
+        height: 460px;
+    }
+
+    .fan-center {
+        width: 210px;
+        height: 370px;
+    }
+
+    .fan-near-left,
+    .fan-near-right {
+        width: 175px;
+        height: 305px;
+    }
+
+    .fan-far-left,
+    .fan-far-right {
+        width: 145px;
+        height: 255px;
+    }
+
+    .fan-near-left {
+        transform: rotate(-10deg) translateX(-140px) translateY(28px);
+    }
+
+    .fan-near-right {
+        transform: rotate(10deg) translateX(140px) translateY(28px);
+    }
+
+    .fan-far-left {
+        transform: rotate(-20deg) translateX(-265px) translateY(50px);
+    }
+
+    .fan-far-right {
+        transform: rotate(20deg) translateX(265px) translateY(50px);
+    }
+}
+
+/* ══════════════════════════════════════════
+   RESPONSIVE — 1024px
+   ══════════════════════════════════════════ */
 @media (max-width: 1024px) {
     .overlay_content h1 {
         font-size: 48px;
@@ -539,61 +478,145 @@
     }
 
     .awesome-section,
-    .discover-section,
-    .slider-section,
     .gallery-section {
-        padding: 60px 40px;
+        padding: 60px 30px;
     }
 
-    .awesome-title {
-        font-size: 60px;
-    }
-
-    .discover-title,
-    .slider-title,
     .gallery-section-title {
-        font-size: 40px;
+        font-size: 36px;
     }
 
-    .awesome-image:nth-child(1) {
-        height: 450px;
+    .fan-stage {
+        height: 400px;
     }
 
-    .awesome-image:nth-child(2) {
-        height: 380px;
-    }
-
-    .awesome-image:nth-child(3) {
+    .fan-center {
+        width: 185px;
         height: 320px;
     }
 
-    .discover-video {
-        height: 500px;
+    .fan-near-left,
+    .fan-near-right {
+        width: 152px;
+        height: 265px;
     }
 
-    .comparison-container {
-        height: 500px;
+    .fan-far-left,
+    .fan-far-right {
+        width: 125px;
+        height: 218px;
     }
 
-    .slider-nav.prev {
-        left: 10px;
+    .fan-near-left {
+        transform: rotate(-10deg) translateX(-120px) translateY(24px);
     }
 
-    .slider-nav.next {
-        right: 10px;
+    .fan-near-right {
+        transform: rotate(10deg) translateX(120px) translateY(24px);
+    }
+
+    .fan-far-left {
+        transform: rotate(-20deg) translateX(-228px) translateY(44px);
+    }
+
+    .fan-far-right {
+        transform: rotate(20deg) translateX(228px) translateY(44px);
+    }
+
+    .gs-img-wrap {
+        height: 240px;
+    }
+
+    .gs-title {
+        font-size: 17px;
     }
 }
 
-/* Tablet - Medium (768px and below) */
+/* ══════════════════════════════════════════
+   RESPONSIVE — 900px  (2-card slider)
+   ══════════════════════════════════════════ */
+@media (max-width: 900px) {
+    .awesome-section {
+        flex-direction: column;
+        padding: 50px 30px;
+        gap: 50px;
+        overflow: visible;
+    }
+
+    .awesome-right {
+        flex: unset;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .fan-stage {
+        height: 380px;
+    }
+
+    .fan-center {
+        width: 170px;
+        height: 300px;
+    }
+
+    .fan-near-left,
+    .fan-near-right {
+        width: 138px;
+        height: 240px;
+    }
+
+    .fan-far-left,
+    .fan-far-right {
+        width: 114px;
+        height: 198px;
+    }
+
+    .fan-near-left {
+        transform: rotate(-10deg) translateX(-108px) translateY(22px);
+    }
+
+    .fan-near-right {
+        transform: rotate(10deg) translateX(108px) translateY(22px);
+    }
+
+    .fan-far-left {
+        transform: rotate(-20deg) translateX(-206px) translateY(40px);
+    }
+
+    .fan-far-right {
+        transform: rotate(20deg) translateX(206px) translateY(40px);
+    }
+
+    .gs-img-wrap {
+        height: 210px;
+    }
+
+    .gs-info {
+        padding: 16px 14px 20px;
+    }
+
+    .gs-title {
+        font-size: 16px;
+    }
+
+    .gs-desc {
+        font-size: 13px;
+    }
+
+    .gs-side-btn {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+    }
+}
+
+/* ══════════════════════════════════════════
+   RESPONSIVE — 768px
+   ══════════════════════════════════════════ */
 @media (max-width: 768px) {
     .About_container_image {
         height: 500px;
     }
 
-    #UrbanTransformation-Slider-Section {
-        display: none;
-    }
-
     .overlay_content h1 {
         font-size: 36px;
     }
@@ -602,271 +625,250 @@
         font-size: 18px;
     }
 
-    .awesome-section {
-        flex-direction: column;
-        padding: 50px 30px;
-        gap: 40px;
-    }
-
-    .awesome-left {
-        padding-right: 0;
-        text-align: center;
-    }
-
-    .awesome-title {
-        font-size: 48px;
-        letter-spacing: 6px;
-        align-items: center;
-    }
-
-    .title-word-1,
-    .title-word-2 {
-        letter-spacing: 8px;
-    }
-
-    .awesome-stats {
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 30px;
-    }
-
-    .awesome-right {
-        width: 100%;
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .awesome-image {
-        width: 100%;
-        min-width: 100% !important;
-    }
-
-    .awesome-image:nth-child(1),
-    .awesome-image:nth-child(2),
-    .awesome-image:nth-child(3) {
-        height: 300px;
-    }
-
-    .discover-section {
-        flex-direction: column;
-        padding: 40px 30px;
-        gap: 40px;
-    }
-
-    .discover-right {
-        padding-left: 0;
-        text-align: center;
-    }
-
-    .discover-video {
-        height: 400px;
-    }
-
-    .discover-title,
-    .slider-title,
     .gallery-section-title {
-        font-size: 32px;
-    }
-
-    .discover-text {
-        font-size: 18px;
-    }
-
-    .slider-section,
-    .gallery-section {
-        padding: 50px 30px;
-    }
-
-    .comparison-container {
-        height: 400px;
-        flex-direction: column;
-    }
-
-    .before-half {
-        border-right: none;
-        border-bottom: 3px solid white;
-    }
-
-    .slider-info h3 {
-        font-size: 24px;
-    }
-
-    .slider-info p {
-        font-size: 14px;
-    }
-
-    .popular-Tours {
-        height: 380px;
-    }
-}
-
-/* Mobile - Large (480px and below) */
-@media (max-width: 480px) {
-    .About_container_image {
-        height: 500px;
-    }
-
-    .overlay_content h1 {
         font-size: 28px;
     }
 
-    .overlay_content p {
-        font-size: 18px;
-        letter-spacing: 1px;
-    }
-
-    .awesome-section,
-    .discover-section,
-    .slider-section,
     .gallery-section {
-        padding: 40px 20px;
+        padding: 45px 25px;
     }
 
-    .awesome-title {
-        font-size: 36px;
-        margin-bottom: 40px;
-        letter-spacing: 4px;
+    .gs-img-wrap {
+        height: 220px;
     }
 
-    .title-word-1,
-    .title-word-2 {
-        letter-spacing: 6px;
+    .fan-stage {
+        height: 320px;
     }
 
-    .discover-title,
-    .slider-title,
-    .gallery-section-title {
-        font-size: 26px;
-        margin-bottom: 30px;
+    .fan-center {
+        width: 150px;
+        height: 265px;
     }
 
-    .stat-number {
-        font-size: 32px;
+    .fan-near-left,
+    .fan-near-right {
+        width: 122px;
+        height: 214px;
     }
 
-    .stat-label {
-        font-size: 12px;
+    .fan-far-left,
+    .fan-far-right {
+        width: 100px;
+        height: 175px;
     }
 
-    .awesome-stats {
-        gap: 20px;
+    .fan-near-left {
+        transform: rotate(-10deg) translateX(-95px) translateY(20px);
     }
 
-    .awesome-section-button {
-        padding: 12px 30px;
-        font-size: 13px;
+    .fan-near-right {
+        transform: rotate(10deg) translateX(95px) translateY(20px);
     }
 
-    .awesome-image:nth-child(1),
-    .awesome-image:nth-child(2),
-    .awesome-image:nth-child(3) {
-        height: 250px;
+    .fan-far-left {
+        transform: rotate(-20deg) translateX(-180px) translateY(36px);
     }
 
-    .discover-video {
-        height: 300px;
+    .fan-far-right {
+        transform: rotate(20deg) translateX(180px) translateY(36px);
+    }
+}
+
+/* ══════════════════════════════════════════
+   RESPONSIVE — 600px
+   ══════════════════════════════════════════ */
+@media (max-width: 600px) {
+    .overlay_content h1 {
+        font-size: 30px;
     }
 
-    .discover-text {
+    .overlay_content p {
         font-size: 16px;
     }
 
-    .play-button svg {
-        width: 50px;
-        height: 50px;
+    .awesome-section {
+        padding: 40px 20px;
+        min-height: unset;
     }
 
-    .comparison-container {
-        height: 400px;
+    .fan-stage {
+        height: 300px;
     }
 
-    .slider-subtitle {
-        font-size: 20px;
-        letter-spacing: 1px;
-        margin-bottom: 40px;
+    .fan-center {
+        width: 135px;
+        height: 240px;
     }
 
-    .slider-info {
-        padding: 20px;
+    .fan-near-left,
+    .fan-near-right {
+        width: 112px;
+        height: 196px;
     }
 
-    .slider-info h3 {
-        font-size: 20px;
+    .fan-far-left,
+    .fan-far-right {
+        width: 92px;
+        height: 160px;
     }
 
-    .slider-category {
-        font-size: 12px;
-        padding: 4px 12px;
+    .fan-near-left {
+        transform: rotate(-10deg) translateX(-86px) translateY(18px);
     }
 
-    .slider-nav {
-        width: 40px;
-        height: 40px;
+    .fan-near-right {
+        transform: rotate(10deg) translateX(86px) translateY(18px);
     }
 
-    .slider-nav svg {
-        width: 20px;
-        height: 20px;
+    .fan-far-left {
+        transform: rotate(-20deg) translateX(-162px) translateY(34px);
     }
 
-    .popular-Tours {
-        height: 380px;
-        margin-bottom: 15px;
+    .fan-far-right {
+        transform: rotate(20deg) translateX(162px) translateY(34px);
     }
 
-    .popular-tour-overlay h3 {
-        font-size: 18px;
-    }
-
-    .popular-tour-overlay p {
-        font-size: 13px;
+    .fan-card {
+        border-width: 4px;
     }
 }
 
-@media (max-width: 360px) {
-    .overlay_content h1 {
-        font-size: 24px;
+/* ══════════════════════════════════════════
+   RESPONSIVE — 580px  (1-card slider)
+   ══════════════════════════════════════════ */
+@media (max-width: 580px) {
+    .gs-img-wrap {
+        height: 240px;
     }
 
-    .overlay_content p {
+    .gs-info {
+        padding: 18px 16px 22px;
+    }
+
+    .gs-title {
         font-size: 18px;
     }
 
-    .awesome-title {
-        font-size: 28px;
-        letter-spacing: 3px;
+    .gs-desc {
+        font-size: 14px;
+        max-width: 100%;
     }
 
-    .title-word-1,
-    .title-word-2 {
-        letter-spacing: 4px;
+    .gallery-section {
+        padding: 40px 16px;
     }
 
-    .discover-title,
-    .slider-title,
+    .gallery-section-title {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+
+    .gs-side-btn {
+        width: 38px;
+        height: 38px;
+        min-width: 38px;
+    }
+}
+
+/* ══════════════════════════════════════════
+   RESPONSIVE — 480px  (hide far fan cards)
+   ══════════════════════════════════════════ */
+@media (max-width: 480px) {
+    .overlay_content h1 {
+        font-size: 26px;
+    }
+
+    .overlay_content p {
+        font-size: 16px;
+    }
+
+    .awesome-section,
+    .gallery-section {
+        padding: 36px 18px;
+    }
+
     .gallery-section-title {
         font-size: 22px;
     }
 
-    .stat-number {
-        font-size: 28px;
+    .fan-far-left,
+    .fan-far-right {
+        display: none;
     }
 
-    .awesome-image:nth-child(1),
-    .awesome-image:nth-child(2),
-    .awesome-image:nth-child(3) {
-        height: 200px;
+    .fan-stage {
+        height: 280px;
     }
 
-    .discover-video {
+    .fan-center {
+        width: 150px;
+        height: 265px;
+    }
+
+    .fan-near-left,
+    .fan-near-right {
+        width: 120px;
+        height: 210px;
+    }
+
+    .fan-near-left {
+        transform: rotate(-12deg) translateX(-90px) translateY(20px);
+    }
+
+    .fan-near-right {
+        transform: rotate(12deg) translateX(90px) translateY(20px);
+    }
+
+    .fan-card {
+        border-width: 4px;
+    }
+}
+
+/* ══════════════════════════════════════════
+   RESPONSIVE — 360px  (smallest phones)
+   ══════════════════════════════════════════ */
+@media (max-width: 360px) {
+    .overlay_content h1 {
+        font-size: 22px;
+    }
+
+    .gallery-section-title {
+        font-size: 20px;
+    }
+
+    .fan-stage {
         height: 250px;
     }
 
-    .comparison-container {
-        height: 350px;
+    .fan-center {
+        width: 130px;
+        height: 230px;
     }
 
-    .popular-Tours {
+    .fan-near-left,
+    .fan-near-right {
+        width: 105px;
+        height: 184px;
+    }
+
+    .fan-near-left {
+        transform: rotate(-12deg) translateX(-78px) translateY(18px);
+    }
+
+    .fan-near-right {
+        transform: rotate(12deg) translateX(78px) translateY(18px);
+    }
+
+    .gs-img-wrap {
         height: 200px;
+    }
+
+    .gs-title {
+        font-size: 16px;
+    }
+
+    .fan-card {
+        border-width: 3px;
     }
 }

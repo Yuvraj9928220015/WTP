@@ -2,9 +2,9 @@
     "heritageItems": [
         {
             "id": 1,
-            "title": "Maharaj  Mansing Statue",
+            "title": "Maharaja Mansingh Statue",
             "shortDescription": "A striking bronze equestrian statue, capturing his royal valor and warrior spirit in lifelike detail.",
-            "mainImage": "/Heritage-1.jpg",
+            "mainImage": "/New-31.png",
             "gallery": [
                 {
                     "src": "/Heritage-1.jpg",
@@ -40,7 +40,7 @@
             "id": 2,
             "title": "Mashal at Jallianwala Bagh",
             "shortDescription": "A powerful flame-shaped tribute, symbolizing the eternal spirit of the innocent lives lost in the 1919 Jallianwala Bagh massacre.",
-            "mainImage": "/Heritage-2.JPG",
+            "mainImage": "/New-Jallianwala-Bagh.png",
             "gallery": [
                 {
                     "src": "/Heritage-2.JPG",
@@ -84,7 +84,7 @@
             "id": 3,
             "title": "Panch Batti, Jaipur",
             "shortDescription": "Diwali decoration is in full swing in Pink City, and we can feel festive vibes throughout the city. Just like a colorful bloom of temporary lights in the sky, our beautiful Jaipur will shine again.",
-            "mainImage": "/Heritage-6.jpg",
+            "mainImage": "/panch-batti-1.png",
             "gallery": [
                 {
                     "src": "/Heritage-6.jpg",
@@ -128,7 +128,7 @@
             "id": 4,
             "title": "Patrika Gate, Jaipur",
             "shortDescription": "Stands as a vibrant tapestry of Rajasthan, where every arch and mural artistically weaves together the soul, stories, and colors of its nine diverse regions.",
-            "mainImage": "/Heritage-7.JPG",
+            "mainImage": "/New-8.png",
             "gallery": [
                 {
                     "src": "/Heritage-7.JPG",
@@ -172,7 +172,7 @@
             "id": 6,
             "title": "Chambal Mata Statue, Chambal River Front, Kota",
             "shortDescription": "A world record of the tallest Marble statue, standing as a proud symbol of reverence, faith, and architectural brilliance.",
-            "mainImage": "/Heritage-9.JPG",
+            "mainImage": "/Chambal-Mata-Statue.png",
             "gallery": [
                 {
                     "src": "/Heritage-9.JPG",
@@ -216,7 +216,7 @@
             "id": 8,
             "title": "Teej ki Savari, Jaipur",
             "shortDescription": "Beautifully captures the joyous essence of the Teej festival—vibrant figures adorned in traditional attire traverse in rhythmic motion, all rendered in finely detailed bronze atop a gracefully sculpted pedestal.",
-            "mainImage": "/Heritage-11.jpg",
+            "mainImage": "/Teej-ki-Savari.png",
             "gallery": [
                 {
                     "src": "/Heritage-11.jpg",
@@ -257,54 +257,10 @@
             ]
         },
         {
-            "id": 10,
-            "title": "Gair Nritya Sculptures, Jaipur",
-            "shortDescription": "Each figure carved mid-dance, celebrating the tribal rhythm, martial grace, and unyielding spirit of Rajasthan's vibrant folk heritage.",
-            "mainImage": "/Heritage-14.JPG",
-            "gallery": [
-                {
-                    "src": "/Heritage-14.JPG",
-                    "alt": "Raja Mansing Statue Main View"
-                },
-                {
-                    "src": "/Heritage-14.JPG",
-                    "alt": "Raja Mansing Statue Detail 1"
-                },
-                {
-                    "src": "/Heritage-1.jpg",
-                    "alt": "Raja Mansing Statue Detail 2"
-                },
-                {
-                    "src": "/Heritage-1.jpg",
-                    "alt": "Raja Mansing Statue Main View"
-                },
-                {
-                    "src": "/Heritage-1.jpg",
-                    "alt": "Raja Mansing Statue Detail 1"
-                },
-                {
-                    "src": "/Heritage-1.jpg",
-                    "alt": "Raja Mansing Statue Detail 2"
-                }
-            ],
-            "location": "Jaipur, Rajasthan",
-            "yearBuilt": "2012",
-            "architect": "Folk Art Academy",
-            "detailedDescription": "The Gair Nritya sculptures represent one of Rajasthan's most energetic and vibrant folk dances. These bronze figures capture the dynamic movements and martial spirit of the Gair dance, which is performed during the Holi festival. The sculptures show dancers in traditional attire, holding sticks and captured in mid-movement, showcasing the strength and agility required for this dance form. Each figure demonstrates the precise choreography and the tribal rhythm that characterizes the Gair dance. The artwork preserves this important aspect of Rajasthani folk culture and serves as an educational tool for future generations. The sculptures highlight the importance of folk arts in maintaining cultural identity and the role of dance in celebrating festivals and community gatherings.",
-            "historicalSignificance": "Preserves the tradition of Gair dance, a martial folk dance that represents the warrior spirit and cultural heritage of Rajasthan.",
-            "visitingHours": "6:00 AM - 8:00 PM",
-            "entryFee": "Free",
-            "nearbyAttractions": [
-                "Rajasthan Folk Art Museum",
-                "Jawahar Kala Kendra",
-                "Birla Planetarium"
-            ]
-        },
-        {
             "id": 12,
             "title": "Kirti Stambh, Kota",
             "shortDescription": "A majestic Solanki-style tower rising from a sturdy stone base, showcasing Rajasthan's medieval craftsmanship.",
-            "mainImage": "/Heritage-16.jpg",
+            "mainImage": "/Heritage-16.png",
             "gallery": [
                 {
                     "src": "/Heritage-16.jpg",
@@ -348,7 +304,7 @@
             "id": 13,
             "title": "Kalbelia Nritya, Jaipur",
             "shortDescription": "The Dance of the Desert.",
-            "mainImage": "/Kalbelia.jpg",
+            "mainImage": "/0001_ (6).jpg",
             "gallery": [
                 {
                     "src": "/Heritage-16.jpg",
@@ -392,7 +348,7 @@
             "id": 14,
             "title": "Swarn Mahal, Kota",
             "shortDescription": "A Symbol of Royal Grandeur and Timeless Heritage",
-            "mainImage": "/SwarnMahal.jpg",
+            "mainImage": "/swarn-Mahal.jpg",
             "gallery": [
                 {
                     "src": "/Heritage-16.jpg",
@@ -437,50 +393,6 @@
             "title": "Ghatotkach Statue, Kota",
             "shortDescription": "A Symbol of Strength, Sacrifice, and Valor",
             "mainImage": "/0001_(786).jpeg",
-            "gallery": [
-                {
-                    "src": "/Heritage-16.jpg",
-                    "alt": "Raja Mansing Statue Main View"
-                },
-                {
-                    "src": "/Heritage-16.jpg",
-                    "alt": "Raja Mansing Statue Detail 1"
-                },
-                {
-                    "src": "/Heritage-16.jpg",
-                    "alt": "Raja Mansing Statue Detail 2"
-                },
-                {
-                    "src": "/Heritage-16.jpg",
-                    "alt": "Raja Mansing Statue Main View"
-                },
-                {
-                    "src": "/Heritage-1.jpg",
-                    "alt": "Raja Mansing Statue Detail 1"
-                },
-                {
-                    "src": "/Heritage-1.jpg",
-                    "alt": "Raja Mansing Statue Detail 2"
-                }
-            ],
-            "location": "Kota, Rajasthan",
-            "yearBuilt": "12th Century",
-            "architect": "Solanki Dynasty",
-            "detailedDescription": "The Kirti Stambh in Kota is a magnificent example of medieval Indian architecture, representing the glory of the Solanki dynasty. This towering structure showcases the exceptional craftsmanship of 12th-century artisans with its intricate stone carvings and architectural details. The tower rises majestically from a sturdy stone base, featuring multiple levels of decorative elements that tell stories of the era's cultural and religious significance. The Solanki-style architecture is evident in the geometric patterns, floral motifs, and sculptural elements that adorn the structure. The Kirti Stambh serves as a testament to the advanced architectural knowledge and artistic skills of medieval Indian craftsmen. The tower has withstood the test of time and continues to inspire visitors with its grandeur and historical significance.",
-            "historicalSignificance": "Represents the architectural achievements of the Solanki dynasty and showcases the advanced craftsmanship of medieval India.",
-            "visitingHours": "6:00 AM - 6:00 PM",
-            "entryFee": "₹10 for Indians, ₹50 for foreigners",
-            "nearbyAttractions": [
-                "City Palace Kota",
-                "Jagmandir Palace",
-                "Kota Garh"
-            ]
-        },
-        {
-            "id": 16,
-            "title": "Gair Nritya Sculptures, Jaipur",
-            "shortDescription": "Each figure carved mid-dance, celebrating the tribal rhythm, martial grace, and unyielding spirit of Rajasthan’s vibrant folk heritage",
-            "mainImage": "/JalMahalBaratMonument.jpg",
             "gallery": [
                 {
                     "src": "/Heritage-16.jpg",

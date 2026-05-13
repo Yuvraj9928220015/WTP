@@ -1,8 +1,52 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import "./Hospitals.css"
 
 export default function Hospitals() {
     const [currentSlide, setCurrentSlide] = useState(0);
+    const [modalImage, setModalImage] = useState(null);
+    const [visibleSections, setVisibleSections] = useState({
+        section1: false,
+        section2: false,
+        section3: false,
+    });
+
+    const section1Ref = useRef(null);
+    const section2Ref = useRef(null);
+    const section3Ref = useRef(null);
+
+      useEffect(() => {
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        const sectionId = entry.target.getAttribute('data-section');
+                        if (entry.isIntersecting) {
+                            setVisibleSections(prev => ({ ...prev, [sectionId]: true }));
+                        } else {
+                            setVisibleSections(prev => ({ ...prev, [sectionId]: false }));
+                        }
+                    });
+                },
+                {
+                    threshold: 0.3,
+                    rootMargin: '1px'
+                }
+            );
+    
+            if (section1Ref.current) observer.observe(section1Ref.current);
+            if (section2Ref.current) observer.observe(section2Ref.current);
+            if (section3Ref.current) observer.observe(section3Ref.current);
+    
+            return () => {
+                if (section1Ref.current) observer.unobserve(section1Ref.current);
+                if (section2Ref.current) observer.unobserve(section2Ref.current);
+                if (section3Ref.current) observer.unobserve(section3Ref.current);
+            };
+        }, []);
+    
+        const handleImageClick = (imgSrc) => setModalImage(imgSrc);
+        const handleCloseModal = () => setModalImage(null);
+        const handleModalClick = (e) => e.stopPropagation();
+    
 
     const properties = [
         {
@@ -17,7 +61,7 @@ export default function Hospitals() {
         },
         {
             id: 2,
-            image: "/tagore-hopital.jpg",
+            image: "/New-55.jpeg",
             price: "$850,000",
             address: "456 Market Street",
             sqft: "2,890",
@@ -163,43 +207,68 @@ export default function Hospitals() {
                             </div>
                         </div>
 
-                        {/* Properties Grid */}
-                        <div className="properties-grid">
-                            <div className="property-card featured-property">
-                                <div className="property-image-wrapper">
-                                    <img
-                                        src={properties[0].image}
-                                        alt="Featured Property"
-                                        className="property-image"
-                                    />
-                                    <button className="favorite-btn">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                        </svg>
-                                    </button>
+                        <div className="row project-row">
+                            {/* ✅ FIXED: section3Ref aur data-section="section3" — Medical ke liye alag */}
+
+                            <div data-aos="fade-right" className="col-lg-6 col-md-12">
+                                <div className="project-card" onClick={() => handleImageClick('/IPD-image.jpeg')}>
+                                    <div id='Section-image-container' className="image-container">
+                                        <img src="/IPD-image.jpeg" alt="Commercial Project" loading="lazy" />
+                                        <div className="overlay">
+                                            <div className="overlay-content">
+                                                <h3>IPD Tower</h3>
+                                                <p className="description">
+                                                    A transformative urban revitalization project near the Golden Temple, recreating the charm of old Amritsar through restored facades and pedestrian pathways
+                                                </p>
+                                                <button className="btn-view" onClick={(e) => e.stopPropagation()}>
+                                                    <a href="/medical-infrastructure">View Details</a>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
-                            {/* Grid of Smaller Properties - Only 3 properties */}
-                            <div className="properties-small-grid">
-                                {properties.slice(1, 4).map((property) => (
-                                    <div key={property.id} className="property-card small-property">
-                                        <div className="property-image-wrapper">
-                                            <img
-                                                src={property.image}
-                                                alt={property.address}
-                                                className="property-image"
-                                            />
-                                            <button className="favorite-btn">
-                                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                                </svg>
-                                            </button>
+                            <div data-aos="fade-left" className="col-lg-6 col-md-12">
+                                <div data-aos="zoom-out-left" className="row h-100">
+                                    <div className="col-12">
+                                        <div className="project-card" onClick={() => handleImageClick('/05_ EHCC.jpeg')}>
+                                            <div id='Section-image-container' className="image-container">
+                                                <img src="/05_ EHCC.jpeg" alt="WTP Project" loading="lazy" />
+                                                <div className="overlay">
+                                                    <div className="overlay-content">
+                                                        <h3>EHCC Hospital</h3>
+                                                        <p className="description">Kota's journey from tradition to innovation, embracing growth with balance</p>
+                                                        <button className="btn-view" onClick={(e) => e.stopPropagation()}>
+                                                            <a href="/medical-infrastructure">View Details</a>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                ))}
+                                    <div data-aos="zoom-out-left" className="col-lg-12 col-md-12 col-sm-12">
+                                        <div className="project-card" onClick={() => handleImageClick('/RHL-2.jpeg')}>
+                                            <div id='Section-image-container' className="image-container">
+                                                <img src="/RHL-2.jpeg" alt="Omex Chok" loading="lazy" />
+                                                <div className="overlay">
+                                                    <div className="overlay-content">
+                                                        <h3>RHL Hospital</h3>
+                                                        <p className="description">
+                                                            A serene heritage-themed garden inspired by peacock motifs, offering a vibrant blend of traditional Rajasthani landscape and design elements.
+                                                        </p>
+                                                        <button className="btn-view" onClick={(e) => e.stopPropagation()}>
+                                                            <a href="/medical-infrastructure">View Details</a>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
 
@@ -213,19 +282,19 @@ export default function Hospitals() {
                                         We create facilities that are not just buildings, but  <span className="highlight-text-about"> ecosystems of care and recovery:</span>
                                     </h2>
                                     <p className="about-description">
-                                        • Optimised patient flow and staff circulation 
+                                        • Optimised patient flow and staff circulation
                                     </p>
-                                     <p className="about-description">
-                                       • Optimised patient flow and staff circulation
+                                    <p className="about-description">
+                                        • Optimised patient flow and staff circulation
                                     </p>
-                                     <p className="about-description">
-                                       • Technology-enabled treatment and monitoring spaces 
+                                    <p className="about-description">
+                                        • Technology-enabled treatment and monitoring spaces
                                     </p>
-                                     <p className="about-description">
-                                      • Natural-light-rich interiors that support healing
+                                    <p className="about-description">
+                                        • Natural-light-rich interiors that support healing
                                     </p>
-                                     <p className="about-description">
-                                       • Energy-efficient and environmentally responsible design
+                                    <p className="about-description">
+                                        • Energy-efficient and environmentally responsible design
                                     </p>
                                 </div>
                             </div>

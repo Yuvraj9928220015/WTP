@@ -19,7 +19,6 @@ export default function Monuments() {
                     </div>
                 </div>
 
-
                 {/* *** NEW MONUMENTS GRID 2 *** */}
                 <div className="new-monuments-section">
                     <div className='About-section-content'>
@@ -28,7 +27,7 @@ export default function Monuments() {
                     <div className="monuments-collage-grid">
                         <div className="collage-right-column">
                             <div className="collage-card">
-                                <img src="/torandwar.jpg" alt="A tall, ancient stone tower against a blue sky" className="collage-image" />
+                                <img src="/torandwar.webp" alt="A tall, ancient stone tower against a blue sky" className="collage-image" />
                                 <div className="card-overlay">
                                     <div className="card-content">
                                         <h2 className="destination-title">Toran Dwar, Jaipur</h2>
@@ -44,7 +43,7 @@ export default function Monuments() {
 
                         <div className="collage-right-column">
                             <div className="collage-card">
-                                <img src="/WhatsAppImage-1.jpg" alt="A tall, ancient stone tower against a blue sky" className="collage-image" />
+                                <img src="/New-16.png" alt="A tall, ancient stone tower against a blue sky" className="collage-image" />
                                 <div className="card-overlay">
                                     <div className="card-content">
                                         <h2 className="destination-title">Patrika Gate, Jaipur</h2>
@@ -66,7 +65,7 @@ export default function Monuments() {
                         <div className="destinations-grid">
                             <div className="destination-card large-card-container">
                                 <img
-                                    src="Heritage-2.JPG"
+                                    src="Heritage-2.png"
                                     alt="Kelingking Beach"
                                     className="destination-image"
                                 />
@@ -91,7 +90,7 @@ export default function Monuments() {
                                     />
                                     <div className="card-overlay">
                                         <div className="card-content">
-                                            <h3 className="destination-title">Adalat Circle monument, Kot</h3>
+                                            <h3 className="destination-title">Adalat Circle monument, Kota</h3>
                                         </div>
                                         <div className="card-icon">
                                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -174,7 +173,7 @@ export default function Monuments() {
                         </div>
                         <div className="collage-right-column">
                             <div className="collage-card">
-                                <img src="monuments-7.jpg" alt="Modern interior with glass walls and structural beams" className="collage-image" />
+                                <img src="monuments-8.jpeg" alt="Modern interior with glass walls and structural beams" className="collage-image" />
                                 <div className="card-overlay">
                                     <div className="card-content">
                                         <h2 className="destination-title">Vivekananda Monument, Kota</h2>

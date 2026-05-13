@@ -1,191 +1,216 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { Building2, Warehouse, Home, Building, TreePine, ArrowRight, Award, Users, Target, Shield } from 'lucide-react';
+import React, { useState, useEffect, useRef } from 'react';
+import { ArrowRight, Clock, MapPin, Phone, Users, Maximize2, Star, ChevronLeft, ChevronRight, Menu, X, Facebook, Twitter, Instagram, Youtube, Rss, Mail } from 'lucide-react';
 import "./ModernArchitecture.css";
 
-import collectionsData from './collections.json';
+// ── DATA ──
+
+const rooms = [
+    {
+        id: 1,
+        badge: "ONLY 2 ROOMS LEFT",
+        image: "/ModernArchitecture-4.jpg",
+        guests: 2,
+        size: 30,
+        title: "STANDARD ROOM",
+        desc: "Most hotels and major hospitality companies have set industry standards to classify hotel types. An upscale full-service hotel facility offers luxury...",
+        price: 29,
+    },
+    {
+        id: 2,
+        badge: "ONLY 1 ROOM LEFT",
+        image: "/ModernArchitecture-1.jpg",
+        guests: 2,
+        size: 35,
+        title: "DELUXE ROOM",
+        desc: "Most hotels and major hospitality companies have set industry standards to classify hotel types. An upscale full-service hotel facility offers luxury...",
+        price: 39,
+    },
+    {
+        id: 3,
+        badge: "ONLY 3 ROOMS LEFT",
+        image: "/ModernArchitecture-3.jpg",
+        guests: 2,
+        size: 40,
+        title: "PREMIER ROOM",
+        desc: "Most hotels and major hospitality companies have set industry standards to classify hotel types. An upscale full-service hotel facility offers luxury...",
+        price: 49,
+    },
+];
+
+const testimonials = [
+    {
+        id: 1,
+        quote: "They were extremely accommodating and allowed us to check in early at like 10am. We got to hotel super early and I didn't wanna wait. So this was a big plus.",
+        author: "Doretta Mccourtney",
+        role: "Customer",
+    },
+    {
+        id: 2,
+        quote: "An absolutely breathtaking experience. The attention to detail in every corner of the hotel reflects true architectural mastery. The spaces were designed to make you feel at home yet in awe.",
+        author: "Rajiv Sharma",
+        role: "Business Traveler",
+    },
+    {
+        id: 3,
+        quote: "From the moment we arrived, every detail was perfect. The architectural design created an ambiance unlike any other. We will definitely be returning next year.",
+        author: "Priya Mehta",
+        role: "Leisure Guest",
+    },
+];
+
+// ── COMPONENT ──
 
 export default function ModernArchitecture() {
-    const [hoveredCard, setHoveredCard] = useState(null);
-    const [activeCollection, setActiveCollection] = useState(0);
+    const [menuOpen, setMenuOpen] = useState(false);
+    const [activeTestimonial, setActiveTestimonial] = useState(0);
+    const [scrolled, setScrolled] = useState(false);
 
-    console.log(activeCollection)
-
-
-    const propertyTypes = [
-        {
-            id: 1,
-            title: "Commercial",
-            count: "08 Projects",
-            icon: Building2,
-            colorClass: "blue"
-        },
-        {
-            id: 2,
-            title: "Hotels & Resorts",
-            count: "07 Projects",
-            icon: Warehouse,
-            colorClass: "green"
-        },
-        {
-            id: 3,
-            title: "Hospitals",
-            count: "08 Projects",
-            icon: Home,
-            colorClass: "purple"
-        },
-        {
-            id: 4,
-            title: "Residences",
-            count: "14 Projects",
-            icon: Building,
-            colorClass: "orange"
-        },
-        {
-            id: 5,
-            title: "Institutes ",
-            count: "03 Projects",
-            icon: TreePine,
-            colorClass: "teal"
-        }
-    ];
-
-    const collections = collectionsData;
-
-    const features = [
-        {
-            id: 1,
-            title: "Smart & Sustainable",
-            description: "Our designs integrate eco-conscious materials, smart systems, and energy-efficient techniques to shape the future of living.",
-            icon: Award
-        },
-        {
-            id: 2,
-            title: "Minimal Yet Meaningful",
-            description: "Clean lines, open layouts, and purposeful aesthetics ensure every inch of space speaks of sophistication and clarity.",
-            icon: Target
-        },
-        {
-            id: 3,
-            title: "Tech-Integrated Living",
-            description: "From intelligent lighting to automated comfort controls, our spaces are engineered to align with your digital lifestyle.",
-            icon: Users
-        },
-        {
-            id: 4,
-            title: "Human-Centric Design",
-            description: "Every project focuses on light, flow, and wellness — creating environments that enhance comfort, productivity, and connection",
-            icon: Shield
-        }
-    ];
-
+    // Scroll listener for sticky nav
     useEffect(() => {
-        const interval = setInterval(() => {
-            setActiveCollection(prev => (prev + 1) % collections.length);
-        }, 4000);
-        return () => clearInterval(interval);
-    }, [collections.length]);
+        const onScroll = () => setScrolled(window.scrollY > 60);
+        window.addEventListener('scroll', onScroll);
+        return () => window.removeEventListener('scroll', onScroll);
+    }, []);
+
+    // Auto-rotate testimonials
+    useEffect(() => {
+        const t = setInterval(() => {
+            setActiveTestimonial(prev => (prev + 1) % testimonials.length);
+        }, 5000);
+        return () => clearInterval(t);
+    }, []);
+
+    const prevTestimonial = () => setActiveTestimonial(p => (p - 1 + testimonials.length) % testimonials.length);
+    const nextTestimonial = () => setActiveTestimonial(p => (p + 1) % testimonials.length);
 
     return (
         <>
-            <div className="modern-architecture-container">
-                <div className="hero-section">
-                    <div className="hero-image-container">
-                        <img src="/Slider-2.jpg" alt="Modern Architecture Interior Design" className="hero-image" />
-                        <div className="hero-overlay">
-                            <div className="hero-content">
-                                <h1 className="hero-title">Modern Architecture</h1>
-                                <p className="hero-subtitle">Innovative Spaces. Timeless Design. </p>
-                            </div>
+            <div className="sh-root">
+
+                {/* ── HERO ── */}
+                <section className="sh-hero" id="home">
+                    <img src="/Slider-2.jpg" alt="Modern Architecture Interior" className="sh-hero__img" />
+                    <div className="sh-hero__overlay" />
+                    <div className="sh-hero__content">
+                        <p className="sh-hero__eyebrow">Architecture Studio</p>
+                        <h1 className="sh-hero__title">
+                            Modern<br />Architecture
+                        </h1>
+                        <p className="sh-hero__sub">
+                            Modern Architecture is the right choice for clients who are searching for a combination of innovation, beauty, and timeless design.
+                        </p>
+                        <a href="#rooms" className="sh-hero__cta">EXPLORE WORK</a>
+                    </div>
+                </section>
+
+                {/* ── INFO BAR ── */}
+                <div className="sh-infobar">
+                    <div className="sh-infobar__item">
+                        <Clock size={26} className="sh-infobar__icon" />
+                        <div>
+                            <p className="sh-infobar__label">WORKING HOURS</p>
+                            <p className="sh-infobar__val">Monday – Friday: 09:00 – 18:00</p>
+                        </div>
+                    </div>
+                    <div className="sh-infobar__item">
+                        <MapPin size={26} className="sh-infobar__icon" />
+                        <div>
+                            <p className="sh-infobar__label">STUDIO LOCATION</p>
+                            <p className="sh-infobar__val">100 Design Ave, Jaipur, RJ</p>
+                        </div>
+                    </div>
+                    <div className="sh-infobar__item">
+                        <Phone size={26} className="sh-infobar__icon" />
+                        <div>
+                            <p className="sh-infobar__label">CLIENT SUPPORT</p>
+                            <p className="sh-infobar__val">+91 98765 43210</p>
                         </div>
                     </div>
                 </div>
 
-                <div className="property-types-section">
-                    <div id='modern-container-fluid' className="container-fluid">
-                        <div className="section-header">
-                            <div className="section-badge"><span> Our Built Work</span></div>
-                            <h2 className="section-title">Explore Our Design<span className="section-title-accent"> Philosophy</span></h2>
-                            <p className="Modern-section-description">Architectural concepts that blend innovation, functionality, and elegance. Designed to suit modern lifestyles and evolving needs.</p>
-                        </div>
-
-                        <div className="property-grid">
-                            {propertyTypes.map((property, index) => {
-                                const IconComponent = property.icon;
-                                return (
-                                    <div key={property.id} className={`property-card ${property.colorClass} ${hoveredCard === property.id ? 'hovered' : ''}`} onMouseEnter={() => setHoveredCard(property.id)} onMouseLeave={() => setHoveredCard(null)} style={{ animationDelay: `${index * 0.1}s` }}>
-                                        <div className="property-card-inner">
-                                            <div className="property-card-bg"></div>
-                                            <div className="icon-container">
-                                                <div className="icon-wrapper"><IconComponent size={32} className="property-icon" /></div>
-                                            </div>
-                                            <div className="property-content">
-                                                <h3 className="property-title">{property.title}</h3>
-                                                <p className=''>{property.count}</p>
-                                            </div>
-                                        </div>
+                {/* ── OUR ROOMS / PROJECTS ── */}
+                <section className="sh-rooms" id="rooms">
+                    <div className="sh-rooms__bg" />
+                    <div className="sh-rooms__inner">
+                        <h2 className="sh-rooms__title">Our Projects</h2>
+                        <div className="sh-rooms__grid">
+                            {rooms.map((room, i) => (
+                                <div className="sh-room-card" key={room.id} style={{ animationDelay: `${i * 0.15}s` }}>
+                                    <div className="sh-room-card__img-wrap">
+                                        {/* <span className="sh-room-card__badge">{room.badge}</span> */}
+                                        <img src={room.image} alt={room.title} className="sh-room-card__img" />
                                     </div>
-                                );
-                            })}
+                                    <div className="sh-room-card__body">
+                                        <h3 className="sh-room-card__title">{room.title}</h3>
+                                        <p className="sh-room-card__desc">{room.desc}</p>
+                                        <a href="#contact" className="sh-room-card__cta">
+                                            BOOK NOW FOR ${room.price} <ArrowRight size={13} />
+                                        </a>
+                                    </div>
+                                </div>
+                            ))}
                         </div>
+                    </div>
+                </section>
 
-                        {/* =============================================== */}
-                        {/* === NEWLY REDESIGNED COLLECTIONS SECTION START === */}
-                        {/* =============================================== */}
-                        <div className="collections-section">
-                            <div className="collections-header">
-                                <div className="section-badge"><span>Featured Collections</span></div>
-                                <h2 className="section-title">Discover Our <span className="section-title-accent">Collections</span></h2>
+                {/* ── LUXURY BANNER ── */}
+                <div className="sh-luxury-container">
+                    <section className="sh-luxury" id="about">
+                        <div className="sh-luxury__images">
+                            <div className="sh-luxury__img-wrap sh-luxury__img-wrap--1">
+                                <img src="/Slider-2.jpg" alt="Luxury space 1" />
                             </div>
-                            <div className="image-collage-grid">
-                                {collections.slice(0, 5).map((collection, index) => (
-                                    <Link
-                                        to={`/collections/${collection.id}`}
-                                        key={collection.id}
-                                        className={`collage-item item-${index + 1}`}
-                                        style={{ textDecoration: 'none' }}
-                                    >
-                                        <img src={collection.cardImage} alt={collection.title} className="collage-image" />
-                                        <div className="collage-overlay">
-                                            <div className="collage-content">
-                                                <h3>{collection.title}</h3>
-                                                <div className="read-more">
-                                                    <span>READ MORE</span>
-                                                    <ArrowRight size={14} />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </Link>
+                            <div className="sh-luxury__img-wrap sh-luxury__img-wrap--2">
+                                <img src="/ModernArchitecture-1.jpg" alt="Luxury space 2" />
+                            </div>
+                        </div>
+                        <div className="sh-luxury__text">
+                            <h2 className="sh-luxury__title">The Architecture Experience You'll Remember</h2>
+                            <div className="sh-luxury__divider" />
+                            <p className="sh-luxury__desc">
+                                Every space we create is a story — told through light, material, and proportion. We believe great architecture isn't just seen; it's felt in the way a room makes you breathe easier and inspires you to create. Our work blends functionality with timeless elegance.
+                            </p>
+                            <a href="#contact" className="sh-luxury__cta">
+                                BOOK CONSULTATION <ArrowRight size={14} />
+                            </a>
+                        </div>
+                    </section>
+                </div>
+
+                {/* ── TESTIMONIALS ── */}
+                <section className="sh-testimonials" id="testimonials">
+                    <div className="sh-testimonials__bg" />
+                    <div className="sh-testimonials__inner">
+                        <h2 className="sh-testimonials__heading">Testimonials</h2>
+                        <div className="sh-testimonials__slider">
+                            <div className="sh-testimonials__quote-icon">"</div>
+                            <blockquote className="sh-testimonials__quote" key={activeTestimonial}>
+                                {testimonials[activeTestimonial].quote}
+                            </blockquote>
+                            <p className="sh-testimonials__author">
+                                {testimonials[activeTestimonial].author},&nbsp;
+                                <span>{testimonials[activeTestimonial].role}</span>
+                            </p>
+                            <div className="sh-testimonials__dots">
+                                {testimonials.map((_, i) => (
+                                    <button
+                                        key={i}
+                                        className={`sh-testimonials__dot ${i === activeTestimonial ? 'is-active' : ''}`}
+                                        onClick={() => setActiveTestimonial(i)}
+                                        aria-label={`Testimonial ${i + 1}`}
+                                    />
                                 ))}
                             </div>
-                        </div>
-                        {/* ============================================= */}
-                        {/* === NEWLY REDESIGNED COLLECTIONS SECTION END === */}
-                        {/* ============================================= */}
-
-
-                        <div className="why-us-section">
-                            <div className="collections-header">
-                                <div className="section-badge"><span>What Sets Us Apart</span></div>
-                                <h2 className="section-title">We don’t just meet standards — we set them</h2>
-                            </div>
-                            <div className="features-grid">
-                                {features.map((feature, index) => {
-                                    const IconComponent = feature.icon;
-                                    return (
-                                        <div key={feature.id} className="feature-item" style={{ animationDelay: `${index * 0.1}s` }}>
-                                            <div className="feature-icon"><IconComponent size={28} /></div>
-                                            <div className="feature-content">
-                                                <h4>{feature.title}</h4>
-                                                <p>{feature.description}</p>
-                                            </div>
-                                        </div>
-                                    );
-                                })}
+                            <div className="sh-testimonials__arrows">
+                                <button className="sh-testimonials__arrow" onClick={prevTestimonial} aria-label="Previous"><ChevronLeft size={18} /></button>
+                                <button className="sh-testimonials__arrow" onClick={nextTestimonial} aria-label="Next"><ChevronRight size={18} /></button>
                             </div>
                         </div>
                     </div>
-                </div>
+                </section>
+
+                {/* ── FOOTER ──*/}
+
             </div>
         </>
     );

@@ -10,10 +10,10 @@ export default function Sustainability() {
                         src="/Sustainability-Banner.JPG"
                         alt="Modern Architecture Interior Design"
                         loading="lazy"
-                    />
+                    /> 
                     <div className="image_overlay">
                         <div className="overlay_content">
-                            <h1>Sustainable</h1>
+                            <h1>sustainability</h1>
                             <div className="Sustainability-prag-section">
                                 <p className='Sustainability-prag'>
                                     At Sincere Architects, sustainability is not just a concept — it's the core of our design
@@ -91,7 +91,7 @@ export default function Sustainability() {
                                 </div>
                                 <div
                                     className="Sustainability-image"
-                                    style={{ backgroundImage: "url('/Sustainability-Bypass-Jaipur.jpg')" }}
+                                    style={{ backgroundImage: "url('/New-56.png')" }}
                                 ></div>
                             </div>
                         </section>
@@ -152,7 +152,7 @@ export default function Sustainability() {
                                 </div>
                                 <div
                                     className="Sustainability-image"
-                                    style={{ backgroundImage: "url('DSC_7308.jpg')" }}
+                                    style={{ backgroundImage: "url('New-17.png')" }}
                                 ></div>
                             </div>
                         </section>
